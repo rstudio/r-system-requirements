@@ -34,10 +34,19 @@
               "type": "object",
               "properties": {
                 "os": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "linux"
+                  ]
                 },
                 "distribution": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "debian",
+                    "ubuntu",
+                    "redhat",
+                    "centos"
+                  ]
                 },
                 "releases": {
                   "type": "array",
