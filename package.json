@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Database of System Requirements for R Packages",
   "scripts": {
-    "test": ""
+    "test": "npm run validate-json",
+    "validate-json": "eslint sysreqs/**"
   },
   "license": "MIT",
   "dependencies": {
