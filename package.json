@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "Database of System Requirements for R Packages",
   "scripts": {
-    "test": "npm run validate-json",
-    "validate-json": "eslint sysreqs/**"
+    "test": "npm run lint && npm run validate",
+    "lint": "eslint sysreqs/**",
+    "validate": "ajv -s schema.json -d 'sysreqs/*.json'"
   },
   "license": "MIT",
   "dependencies": {
