@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npm run lint && npm run validate",
     "lint": "eslint sysreqs/**",
-    "validate": "ajv -s schema.json -d 'sysreqs/*.json'"
+    "validate": "ajv -s schema.json -d 'sysreqs/*.json' --errors=json"
   },
   "license": "MIT",
   "dependencies": {
