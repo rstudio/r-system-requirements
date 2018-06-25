@@ -67,11 +67,6 @@
                   "required": [
                     "distribution"
                   ]
-                },
-                {
-                  "required": [
-                    "architecture"
-                  ]
                 }
               ],
               "additionalProperties": false
