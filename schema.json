@@ -4,7 +4,7 @@
   "properties": {
     "sysreqs": {
       "type": "array",
-      "minLength": 1,
+      "minItems": 1,
       "items": {
         "type": "string",
         "minLength": 1
@@ -18,7 +18,8 @@
           "packages": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           },
           "constraints": {
