@@ -43,11 +43,11 @@
                     "centos"
                   ]
                 },
-                "releases": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "releaseMin": {
+                  "type": "string"
+                },
+                "releaseMax": {
+                  "type": "string"
                 },
                 "architecture": {
                   "type": "string",
@@ -66,11 +66,6 @@
                 {
                   "required": [
                     "distribution"
-                  ]
-                },
-                {
-                  "required": [
-                    "releases"
                   ]
                 },
                 {
