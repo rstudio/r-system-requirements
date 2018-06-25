@@ -1,27 +1,27 @@
 {
-    "sysreqs": ["\\blibxml2\\b"],
-    "dependencies": [
+  "sysreqs": ["\\blibxml2\\b"],
+  "dependencies": [
+    {
+      "packages": ["libxml2-dev"],
+      "constraints": [
         {
-            "packages": ["libxml2-dev"],
-            "constraints": [
-                {
-                    "distribution": "ubuntu"
-                },
-                {
-                    "distribution": "debian"
-                }
-            ]
+          "distribution": "ubuntu"
         },
         {
-            "packages": ["libxml2-devel"],
-            "constraints": [
-                {
-                    "distribution": "centos"
-                },
-                {
-                    "distribution": "redhat"
-                }
-            ]
+          "distribution": "debian"
         }
-    ]
+      ]
+    },
+    {
+      "packages": ["libxml2-devel"],
+      "constraints": [
+        {
+          "distribution": "centos"
+        },
+        {
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
 }
