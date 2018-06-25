@@ -1,5 +1,4 @@
 {
-    "name": "libxml2",
     "sysreqs": "\\blibxml2\\b",
     "dependencies": [
         {

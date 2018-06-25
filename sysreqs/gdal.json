@@ -1,5 +1,4 @@
 {
-  "name": "GDAL",
   "sysreqs": [
     "\\bgdal\\b",
     "\\blibgdal\\b"
