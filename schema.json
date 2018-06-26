@@ -31,7 +31,8 @@
                 "os": {
                   "type": "string",
                   "enum": [
-                    "linux"
+                    "linux",
+                    "windows"
                   ]
                 },
                 "distribution": {
