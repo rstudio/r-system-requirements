@@ -1,0 +1,27 @@
+{
+  "sysreqs": ["\\bglu\\b"],
+  "dependencies": [
+    {
+      "packages": ["libglu1-mesa-dev"],
+      "constraints": [
+        {
+          "distribution": "ubuntu"
+        },
+        {
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["mesa-libGLU-devel"],
+      "constraints": [
+        {
+          "distribution": "centos"
+        },
+        {
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}
