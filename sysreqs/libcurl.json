@@ -1,0 +1,27 @@
+{
+  "sysreqs": ["\\blibcurl\\b"],
+  "dependencies": [
+    {
+      "packages": ["libcurl4-openssl-dev"],
+      "constraints": [
+        {
+          "distribution": "ubuntu"
+        },
+        {
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["libcurl-devel"],
+      "constraints": [
+        {
+          "distribution": "centos"
+        },
+        {
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}

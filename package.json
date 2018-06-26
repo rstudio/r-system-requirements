@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "description": "Database of System Requirements for R Packages",
   "scripts": {
-    "test": ""
+    "test": "npm run lint && npm run validate",
+    "lint": "eslint sysreqs/**",
+    "validate": "npm run validate-schema && npm run validate-rules",
+    "validate-schema": "ajv compile -s schema.json",
+    "validate-rules": "ajv -s schema.json -d 'sysreqs/*.json' --errors=json"
   },
   "license": "MIT",
   "dependencies": {
+    "ajv-cli": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-plugin-json": "^1.2.0"
   }

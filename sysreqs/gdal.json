@@ -1,0 +1,36 @@
+{
+  "sysreqs": [
+    "\\bgdal\\b",
+    "\\blibgdal\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "libgdal-dev",
+        "gdal-bin"
+      ],
+      "constraints": [
+        {
+          "distribution": "ubuntu"
+        },
+        {
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "gdal-devel",
+        "gdal"
+      ],
+      "constraints": [
+        {
+          "distribution": "centos"
+        },
+        {
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}
