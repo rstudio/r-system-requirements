@@ -1,0 +1,27 @@
+{
+  "sysreqs": ["\\bopengl\\b"],
+  "dependencies": [
+    {
+      "packages": ["libgl1-mesa-dev"],
+      "constraints": [
+        {
+          "distribution": "ubuntu"
+        },
+        {
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["mesa-libGL-devel"],
+      "constraints": [
+        {
+          "distribution": "centos"
+        },
+        {
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}
