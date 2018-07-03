@@ -63,11 +63,6 @@
                   "required": [
                     "os"
                   ]
-                },
-                {
-                  "required": [
-                    "distribution"
-                  ]
                 }
               ],
               "additionalProperties": false
