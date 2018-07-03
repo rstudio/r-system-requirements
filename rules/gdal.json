@@ -11,9 +11,11 @@
       ],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "ubuntu"
         },
         {
+          "os": "linux",
           "distribution": "debian"
         }
       ]
@@ -25,9 +27,11 @@
       ],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "centos"
         },
         {
+          "os": "linux",
           "distribution": "redhat"
         }
       ]

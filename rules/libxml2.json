@@ -5,9 +5,11 @@
       "packages": ["libxml2-dev"],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "ubuntu"
         },
         {
+          "os": "linux",
           "distribution": "debian"
         }
       ]
@@ -16,9 +18,11 @@
       "packages": ["libxml2-devel"],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "centos"
         },
         {
+          "os": "linux",
           "distribution": "redhat"
         }
       ]

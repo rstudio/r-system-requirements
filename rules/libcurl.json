@@ -5,9 +5,11 @@
       "packages": ["libcurl4-openssl-dev"],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "ubuntu"
         },
         {
+          "os": "linux",
           "distribution": "debian"
         }
       ]
@@ -16,9 +18,11 @@
       "packages": ["libcurl-devel"],
       "constraints": [
         {
+          "os": "linux",
           "distribution": "centos"
         },
         {
+          "os": "linux",
           "distribution": "redhat"
         }
       ]
