@@ -7,7 +7,7 @@
     "lint": "eslint sysreqs/**",
     "validate": "npm run validate-schema && npm run validate-rules",
     "validate-schema": "ajv compile -s schema.json",
-    "validate-rules": "ajv -s schema.json -d 'sysreqs/*.json' --errors=json"
+    "validate-rules": "ajv -s schema.json -d 'rules/*.json' --errors=json"
   },
   "license": "MIT",
   "dependencies": {
