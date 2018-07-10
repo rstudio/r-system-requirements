@@ -9,7 +9,7 @@
     "validate-schema": "ajv compile -s schema.json",
     "validate-rules": "ajv -s schema.json -d 'rules/*.json' --errors=json"
   },
-  "license": "GPLv2",
+  "license": "MIT",
   "dependencies": {
     "ajv-cli": "^3.0.0",
     "eslint": "^4.19.1",
