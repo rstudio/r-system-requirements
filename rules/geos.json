@@ -1,0 +1,18 @@
+{
+  "sysreqs": ["\\bgeos\\b"],
+  "dependencies": [
+    {
+      "packages": ["libgeos-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    }
+  ]
+}
