@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:xenial
+    steps:
+      - checkout
+      - run: cat /etc/os-release
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
