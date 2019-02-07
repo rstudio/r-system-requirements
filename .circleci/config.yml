@@ -18,6 +18,18 @@ jobs:
     steps:
       - checkout
       - run: cat /etc/os-release
+  centos6:
+    docker:
+      - image: centos:6
+    steps:
+      - checkout
+      - run: cat /etc/os-release
+  centos7:
+    docker:
+      - image: centos:7
+    steps:
+      - checkout
+      - run: cat /etc/os-release
 workflows:
   version: 2
   build:
@@ -25,3 +37,5 @@ workflows:
       - trusty
       - xenial
       - bionic
+      - centos6
+      - centos7
