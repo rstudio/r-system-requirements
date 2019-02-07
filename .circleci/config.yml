@@ -1,35 +1,39 @@
 version: 2
+
+defaults: &defaults
+  steps:
+    - checkout
+    - run: cat /etc/*-release
+
 jobs:
   trusty:
+    <<: *defaults
     docker:
       - image: ubuntu:trusty
-    steps:
-      - checkout
-      - run: cat /etc/os-release
   xenial:
+    <<: *defaults
     docker:
       - image: ubuntu:xenial
-    steps:
-      - checkout
-      - run: cat /etc/os-release
   bionic:
+    <<: *defaults
     docker:
       - image: ubuntu:bionic
-    steps:
-      - checkout
-      - run: cat /etc/os-release
+  jessie:
+    <<: *defaults
+    docker:
+      - image: debian:jessie
+  stretch:
+    <<: *defaults
+    docker:
+      - image: debian:stretch
   centos6:
+    <<: *defaults
     docker:
       - image: centos:6
-    steps:
-      - checkout
-      - run: cat /etc/os-release
   centos7:
+    <<: *defaults
     docker:
       - image: centos:7
-    steps:
-      - checkout
-      - run: cat /etc/os-release
 workflows:
   version: 2
   build:
@@ -37,5 +41,7 @@ workflows:
       - trusty
       - xenial
       - bionic
+      - jessie
+      - stretch
       - centos6
       - centos7
