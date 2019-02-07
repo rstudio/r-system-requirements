@@ -1,37 +1,65 @@
 version: 2
 
-defaults: &defaults
+install-jq: &install-jq
+  name: Install jq
+  command: |
+    wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+    chmod +x /usr/local/bin/jq
+
+test-ubuntu: &test-ubuntu
   steps:
     - checkout
     - run: cat /etc/*-release
+    - run: apt-get update -qq && apt-get install -y wget
+    - run:
+        <<: *install-jq
+    - run: DIST=ubuntu ./test/test-packages.sh
+
+test-debian: &test-debian
+  steps:
+    - checkout
+    - run: cat /etc/*-release
+    - run: apt-get update -qq && apt-get install -y wget
+    - run:
+        <<: *install-jq
+    - run: DIST=debian ./test/test-packages.sh
+
+test-centos: &test-centos
+  steps:
+    - checkout
+    - run: cat /etc/*-release
+    - run: yum update -y -q && yum install -y wget
+    - run:
+        <<: *install-jq
+    - run: DIST=centos ./test/test-packages.sh
 
 jobs:
   trusty:
-    <<: *defaults
+    <<: *test-ubuntu
     docker:
       - image: ubuntu:trusty
   xenial:
-    <<: *defaults
+    <<: *test-ubuntu
     docker:
       - image: ubuntu:xenial
   bionic:
-    <<: *defaults
+    <<: *test-ubuntu
     docker:
       - image: ubuntu:bionic
   jessie:
-    <<: *defaults
+    <<: *test-debian
     docker:
       - image: debian:jessie
   stretch:
-    <<: *defaults
+    <<: *test-debian
     docker:
       - image: debian:stretch
   centos6:
-    <<: *defaults
+    <<: *test-centos
     docker:
       - image: centos:6
   centos7:
-    <<: *defaults
+    <<: *test-centos
     docker:
       - image: centos:7
 workflows:
