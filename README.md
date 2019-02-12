@@ -1,6 +1,6 @@
-# rsysreqs-db
+# r-system-requirements
 
-[![Build Status](https://travis-ci.org/glin/rsysreqs-db.svg?branch=master)](https://travis-ci.org/glin/rsysreqs-db)
+[![Travis Build Status](https://travis-ci.com/rstudio/r-system-requirements.svg?branch=master)](https://travis-ci.com/rstudio/r-system-requirements)
 
 ### Testing
 
