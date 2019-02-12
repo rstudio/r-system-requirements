@@ -42,7 +42,9 @@
                     "debian",
                     "ubuntu",
                     "redhat",
-                    "centos"
+                    "centos",
+                    "sle",
+                    "opensuse"
                   ]
                 },
                 "releaseMin": {
