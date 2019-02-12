@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bgeos\\b"],
+  "patterns": ["\\bgeos\\b"],
   "dependencies": [
     {
       "packages": ["libgeos-dev"],

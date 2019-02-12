@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\budunits-2\\b"],
+  "patterns": ["\\budunits-2\\b"],
   "dependencies": [
     {
       "packages": ["libudunits2-dev"],

@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bjava\\b"],
+  "patterns": ["\\bjava\\b"],
   "dependencies": [
     {
       "packages": ["default-jdk"],

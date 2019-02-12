@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bgsl\\b", "\\bgnu scientific library\\b"],
+  "patterns": ["\\bgsl\\b", "\\bgnu scientific library\\b"],
   "dependencies": [
     {
       "packages": ["libgsl0-dev"],

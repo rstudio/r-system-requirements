@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bfreetype\\b"],
+  "patterns": ["\\bfreetype\\b"],
   "dependencies": [
     {
       "packages": ["libfreetype6-dev"],

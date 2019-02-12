@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bopengl\\b"],
+  "patterns": ["\\bopengl\\b"],
   "dependencies": [
     {
       "packages": ["libgl1-mesa-dev"],

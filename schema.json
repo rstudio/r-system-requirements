@@ -3,7 +3,7 @@
   "type": "object",
   "version": "1.0.0",
   "properties": {
-    "sysreqs": {
+    "patterns": {
       "type": "array",
       "minItems": 1,
       "items": {
@@ -75,7 +75,7 @@
     }
   },
   "required": [
-    "sysreqs",
+    "patterns",
     "dependencies"
   ],
   "additionalProperties": false

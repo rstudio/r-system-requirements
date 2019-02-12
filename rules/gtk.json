@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bgtk\\b"],
+  "patterns": ["\\bgtk\\b"],
   "dependencies": [
     {
       "packages": ["libgtk2.0-dev"],
