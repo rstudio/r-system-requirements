@@ -1,7 +1,7 @@
 {
-  "name": "rsysreqs-db",
-  "version": "0.1.0",
-  "description": "Database of System Requirements for R Packages",
+  "name": "r-system-requirements",
+  "version": "1.0.0",
+  "description": "Database of system requirements for R packages",
   "scripts": {
     "test": "npm run lint && npm run validate",
     "lint": "eslint rules/**",
