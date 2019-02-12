@@ -50,13 +50,6 @@
                 },
                 "releaseMax": {
                   "type": "string"
-                },
-                "architecture": {
-                  "type": "string",
-                  "enum": [
-                    "i386",
-                    "x86_64"
-                  ]
                 }
               },
               "anyOf": [
