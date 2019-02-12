@@ -4,7 +4,7 @@
   "description": "Database of System Requirements for R Packages",
   "scripts": {
     "test": "npm run lint && npm run validate",
-    "lint": "eslint sysreqs/**",
+    "lint": "eslint rules/**",
     "validate": "npm run validate-schema && npm run validate-rules",
     "validate-schema": "ajv compile -s schema.json",
     "validate-rules": "ajv -s schema.json -d 'rules/*.json' --errors=json"
