@@ -1,6 +1,6 @@
 # r-system-requirements
 
-[![Travis Build Status](https://travis-ci.com/rstudio/r-system-requirements.svg?branch=master)](https://travis-ci.com/rstudio/r-system-requirements)
+[![Travis Build Status](https://travis-ci.com/rstudio/r-system-requirements.svg?token=MNvJQsCy2iwsWpHV8ezP&branch=master)](https://travis-ci.com/rstudio/r-system-requirements)
 
 ### Testing
 
