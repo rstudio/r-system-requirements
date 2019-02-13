@@ -23,6 +23,15 @@ test_package_centos() {
     echo $found
 }
 
+test_package_opensuse() {
+    pkg=$1
+    found=$(zypper info "$pkg")
+    echo "$found"
+    if [[ "$found" == *"not found." ]]; then
+        exit 1
+    fi
+}
+
 find_packages() {
     file=$1
     dist=$2

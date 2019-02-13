@@ -33,6 +33,15 @@ test-centos: &test-centos
         <<: *install-jq
     - run: DIST=centos ./test/test-packages.sh
 
+test-opensuse: &test-opensuse
+  steps:
+    - checkout
+    - run: cat /etc/*-release
+    - run: zypper --quiet update && zypper install -y wget
+    - run:
+        <<: *install-jq
+    - run: DIST=opensuse ./test/test-packages.sh
+
 jobs:
   trusty:
     <<: *test-ubuntu
@@ -62,6 +71,10 @@ jobs:
     <<: *test-centos
     docker:
       - image: centos:7
+  opensuse42:
+    <<: *test-opensuse
+    docker:
+      - image: opensuse/leap:42
 workflows:
   version: 2
   build:
@@ -73,3 +86,4 @@ workflows:
       - stretch
       - centos6
       - centos7
+      - opensuse42
