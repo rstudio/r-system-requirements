@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bjags\\b"],
+  "patterns": ["\\bjags\\b"],
   "dependencies": [
     {
       "packages": ["jags"],

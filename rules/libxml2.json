@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\blibxml2\\b"],
+  "patterns": ["\\blibxml2\\b"],
   "dependencies": [
     {
       "packages": ["libxml2-dev"],

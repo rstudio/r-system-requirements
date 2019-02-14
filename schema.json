@@ -1,8 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "version": "1.0.0",
   "properties": {
-    "sysreqs": {
+    "patterns": {
       "type": "array",
       "minItems": 1,
       "items": {
@@ -31,8 +32,7 @@
                 "os": {
                   "type": "string",
                   "enum": [
-                    "linux",
-                    "windows"
+                    "linux"
                   ]
                 },
                 "distribution": {
@@ -41,20 +41,9 @@
                     "debian",
                     "ubuntu",
                     "redhat",
-                    "centos"
-                  ]
-                },
-                "releaseMin": {
-                  "type": "string"
-                },
-                "releaseMax": {
-                  "type": "string"
-                },
-                "architecture": {
-                  "type": "string",
-                  "enum": [
-                    "i386",
-                    "x86_64"
+                    "centos",
+                    "sle",
+                    "opensuse"
                   ]
                 }
               },
@@ -74,7 +63,7 @@
     }
   },
   "required": [
-    "sysreqs",
+    "patterns",
     "dependencies"
   ],
   "additionalProperties": false

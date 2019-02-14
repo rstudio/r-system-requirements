@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bgmp\\b"],
+  "patterns": ["\\bgmp\\b"],
   "dependencies": [
     {
       "packages": ["libgmp3-dev"],

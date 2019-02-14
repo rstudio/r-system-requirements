@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bglu\\b"],
+  "patterns": ["\\bglu\\b"],
   "dependencies": [
     {
       "packages": ["libglu1-mesa-dev"],

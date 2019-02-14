@@ -1,5 +1,5 @@
 {
-    "sysreqs": ["\\bopenssl\\b"],
+    "patterns": ["\\bopenssl\\b"],
     "dependencies": [
       {
         "packages": ["libssl-dev"],

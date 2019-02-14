@@ -1,5 +1,5 @@
 {
-  "sysreqs": ["\\bcairo\\b"],
+  "patterns": ["\\bcairo\\b"],
   "dependencies": [
     {
       "packages": ["libcairo2-dev"],
