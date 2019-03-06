@@ -37,7 +37,7 @@ test-opensuse: &test-opensuse
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: zypper --quiet update && zypper install -y wget
+    - run: zypper --quiet --non-interactive update && zypper --non-interactive install wget
     - run:
         <<: *install-jq
     - run: DIST=opensuse ./test/test-packages.sh
