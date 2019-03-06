@@ -35,6 +35,19 @@
           "distribution": "redhat"
         }
       ]
+    },
+    {
+      "pre_install": [
+        {
+          "script": "centos_epel.sh"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
     }
   ]
 }

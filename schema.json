@@ -16,6 +16,58 @@
       "items": {
         "type": "object",
         "properties": {
+          "pre_install": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "script": {
+                  "type": "string"
+                }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "command"
+                  ]
+                },
+                {
+                  "required": [
+                    "script"
+                  ]
+                }
+              ]
+            }
+          },
+          "post_install": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "script": {
+                  "type": "string"
+                }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "command"
+                  ]
+                },
+                {
+                  "required": [
+                    "script"
+                  ]
+                }
+              ]
+            }
+          },
           "packages": {
             "type": "array",
             "items": {
