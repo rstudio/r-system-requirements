@@ -1,6 +1,17 @@
 #!/bin/bash
 set -euo pipefail
 
+declare -A os_identifiers=(
+    [trusty]='ubuntu'
+    [xenial]='ubuntu'
+    [bionic]='ubuntu'
+    [jessie]='debian'
+    [stretch]='debian'
+    [centos6]='centos'
+    [centos7]='centos'
+    [opensuse42]='opensuse'
+)
+
 test_package_ubuntu() {
     pkg=$1
     found=$(apt-cache search --names-only "^${pkg}$")
@@ -33,17 +44,17 @@ test_package_opensuse() {
 }
 
 find_packages() {
-    file=$1
+    rule=$1
     dist=$2
-    pkgs=$(jq < "$file" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\") | .packages[])")
+    pkgs=$(jq < "$rule" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\") | .packages[])")
     echo $pkgs
 }
 
 test_packages() {
-    files=$1
+    rules=$1
     dist=$2
-    for file in $files; do
-        pkgs=$(find_packages "$file" $dist)
+    for rule in $rules; do
+        pkgs=$(find_packages "$rule" $dist)
         test_package="test_package_${dist}"
         echo $pkgs | jq -r .[] | while read pkg; do
             $test_package $pkg
@@ -51,7 +62,7 @@ test_packages() {
     done
 }
 
-FILES=${FILES:=rules/*.json}
-DIST=${DIST:=ubuntu}
+RULES=${RULES:-rules/*.json}
+DIST=${os_identifiers[$DIST]:-$DIST}
 
-test_packages "$FILES" $DIST
+test_packages "$RULES" $DIST
