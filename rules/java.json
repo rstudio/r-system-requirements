@@ -2,6 +2,11 @@
   "patterns": ["\\bjava\\b"],
   "dependencies": [
     {
+      "post_install": [
+        {
+          "command": "R CMD javareconf"
+        }
+      ],
       "packages": ["default-jdk"],
       "constraints": [
         {
