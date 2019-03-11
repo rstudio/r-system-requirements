@@ -28,11 +28,24 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
-        },
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "packages": [
+        "gdal-devel",
+        "gdal"
+      ],
+      "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "centos"
         }
       ]
     }
