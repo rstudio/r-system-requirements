@@ -20,6 +20,11 @@
       ]
     },
     {
+      "post_install": [
+        {
+          "command": "R CMD javareconf"
+        }
+      ],
       "packages": ["java-1.8.0-openjdk"],
       "constraints": [
         {
