@@ -19,11 +19,21 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
-        },
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "packages": ["udunits2-devel"],
+      "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "centos"
         }
       ]
     }
