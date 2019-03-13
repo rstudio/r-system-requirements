@@ -1,4 +1,4 @@
-FROM opensuse/leap:42
+FROM opensuse/leap:42.3
 
 RUN zypper --quiet --non-interactive update && \
     zypper --non-interactive install \

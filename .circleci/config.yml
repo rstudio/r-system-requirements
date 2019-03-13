@@ -74,7 +74,7 @@ jobs:
   opensuse42:
     <<: *test-opensuse
     docker:
-      - image: opensuse/leap:42
+      - image: opensuse/leap:42.3
 workflows:
   version: 2
   build:
