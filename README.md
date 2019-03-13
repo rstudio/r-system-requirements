@@ -5,24 +5,24 @@
 
 ### Testing
 
-To run the schema tests, you'll need [Node.js](https://nodejs.org/).
+#### Schema tests
 
-Install dependencies:
+To lint and validate rules against the schema, you'll need [Node.js](https://nodejs.org/).
 
 ```sh
+# Install dependencies
 npm install
-```
 
-Lint and validate rules against the [schema](schema.json):
-
-```sh
+# Run the tests
 npm test
 ```
 
-[Docker](https://www.docker.com/) images are provided to help test rules on
-different OSs.
+#### System package tests
 
-Supported tags:
+[Docker](https://www.docker.com/) images are provided to help validate system
+packages on supported OSs.
+
+Available tags:
 - `trusty` (Ubuntu 14.04)
 - `xenial` (Ubuntu 16.04)
 - `bionic` (Ubuntu 18.04)
@@ -30,22 +30,22 @@ Supported tags:
 - `stretch` (Debian 9)
 - `centos6` (CentOS 6)
 - `centos7` (CentOS 7)
-- `opensuse42` (OpenSUSE 42.3)
+- `opensuse42` (openSUSE 42.3)
 
 To build the images:
 
 ```sh
-# Build a specific image
+# Build a specific image (e.g. trusty)
 make build-trusty
 
 # Build all images
 make build-all
 ```
 
-To test rules:
+To test the rules:
 
 ```sh
-# Test a specific rule on an OS
+# Test a specific rule on an OS (e.g. trusty)
 make test-trusty RULES=rules/libcurl.json
 
 # Test a specific rule on all OSs
