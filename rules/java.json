@@ -36,6 +36,24 @@
           "distribution": "redhat"
         }
       ]
+    },
+    {
+      "post_install": [
+        {
+          "command": "R CMD javareconf"
+        }
+      ],
+      "packages": ["java-1_8_0-openjdk-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
     }
   ]
 }
