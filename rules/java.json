@@ -25,7 +25,7 @@
           "command": "R CMD javareconf"
         }
       ],
-      "packages": ["java-1.8.0-openjdk"],
+      "packages": ["java-1.8.0-openjdk-devel"],
       "constraints": [
         {
           "os": "linux",
