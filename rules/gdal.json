@@ -48,6 +48,22 @@
           "distribution": "centos"
         }
       ]
+    },
+    {
+      "packages": [
+        "gdal-devel",
+        "gdal"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
     }
   ]
 }
