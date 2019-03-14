@@ -26,6 +26,19 @@
           "distribution": "redhat"
         }
       ]
+    },
+    {
+      "packages": ["libcurl-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
     }
   ]
 }
