@@ -12,7 +12,10 @@ declare -A os_identifiers=(
     [stretch]='debian'
     [centos6]='centos'
     [centos7]='centos'
+    [rhel6]='redhat'
+    [rhel7]='redhat'
     [opensuse42]='opensuse'
+    [sle12]='sle'
 )
 
 test_package_ubuntu() {
@@ -27,6 +30,7 @@ test_package_ubuntu() {
 }
 
 test_package_debian() {
+    # Same as Ubuntu
     test_package_ubuntu "$@"
 }
 
@@ -37,6 +41,11 @@ test_package_centos() {
     echo $found
 }
 
+test_package_redhat() {
+    # Same as CentOS
+    test_package_centos "$@"
+}
+
 test_package_opensuse() {
     pkg=$1
     found=$(zypper info "$pkg")
@@ -44,6 +53,11 @@ test_package_opensuse() {
     if [[ "$found" == *"not found." ]]; then
         exit 1
     fi
+}
+
+test_package_sle() {
+    # Same as openSUSE
+    test_package_opensuse "$@"
 }
 
 find_dependencies() {
