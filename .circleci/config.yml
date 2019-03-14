@@ -28,7 +28,7 @@ test-centos: &test-centos
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: yum update -y -q && yum install -y epel-release wget
+    - run: yum update -y -q && yum install -y wget
     - run:
         <<: *install-jq
     - run: DIST=centos ./test/test-packages.sh
