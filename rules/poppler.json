@@ -1,0 +1,31 @@
+{
+  "patterns": ["\\bpoppler\\b"],
+  "dependencies": [
+    {
+      "packages": ["libpoppler-cpp-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["libpoppler-cpp0"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}
