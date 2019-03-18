@@ -17,6 +17,19 @@ npm install
 npm test
 ```
 
+To list R packages and system requirements matched by a rule:
+
+```sh
+# List matching system requirements for a rule
+npm run test-patterns -- rules/libcurl.json --verbose
+
+# List matching system requirements for all rules
+npm run test-patterns-all -- --verbose
+
+# Fail if a rule doesn't match any system requirements
+npm run test-patterns-all -- --strict
+```
+
 #### System package tests
 
 [Docker](https://www.docker.com/) images are provided to help validate system
