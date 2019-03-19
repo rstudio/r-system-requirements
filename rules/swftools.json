@@ -1,0 +1,27 @@
+{
+  "patterns": ["\\bswftools\\b", "\\bswf tools\\b"],
+  "dependencies": [
+    {
+      "packages": ["swftools"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["swftools"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
