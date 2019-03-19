@@ -1,0 +1,44 @@
+{
+    "patterns": ["\\bglib\\b"],
+    "dependencies": [
+      {
+        "packages": ["libglib2.0-dev"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["glib2-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          },
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
+        "packages": ["glib2-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          },
+          {
+            "os": "linux",
+            "distribution": "sle"
+          }
+        ]
+      }
+    ]
+  }
