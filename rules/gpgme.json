@@ -1,0 +1,40 @@
+{
+    "patterns": ["\\bgpgme\\b"],
+    "dependencies": [
+      {
+        "packages": ["libgpgme11-dev"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["gpgme-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          }
+        ]
+      },
+      {
+        "packages": ["libgpgme-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          },
+          {
+            "os": "linux",
+            "distribution": "sle"
+          }
+        ]
+      }
+    ]
+  }
