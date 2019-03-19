@@ -1,0 +1,59 @@
+{
+  "patterns": ["\\bnetcdf\\b", "\\bnetcdf4\\b"],
+  "dependencies": [
+    {
+      "packages": ["libnetcdf-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["netcdf-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["netcdf-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["netcdf-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    },
+    {
+      "packages": ["netcdf-gnu-hpc-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}
