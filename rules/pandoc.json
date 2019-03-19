@@ -1,0 +1,50 @@
+{
+    "patterns": ["\\bpandoc\\b"],
+    "dependencies": [
+      {
+        "packages": ["pandoc"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["pandoc"],
+        "pre_install": [
+          {
+            "command": "yum install -y epel-release"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          }
+        ]
+      },
+      {
+        "packages": ["pandoc"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
+        "packages": ["pandoc"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          }
+        ]
+      }
+    ]
+  }
