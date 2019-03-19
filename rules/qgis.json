@@ -1,0 +1,41 @@
+{
+  "patterns": ["\\bqgis\\b"],
+  "dependencies": [
+    {
+      "packages": ["libqgis-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["qgis-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["qgis-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}
