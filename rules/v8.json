@@ -16,11 +16,21 @@
     },
     {
       "packages": ["v8-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
       "constraints": [
         {
           "os": "linux",
           "distribution": "centos"
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["v8-devel"],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "redhat"
