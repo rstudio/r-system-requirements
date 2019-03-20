@@ -2,7 +2,7 @@
   "patterns": ["\\bcoin-or clp\\b"],
   "dependencies": [
     {
-      "packages": ["coinor-clp"],
+      "packages": ["coinor-libclp-dev"],
       "constraints": [
         {
           "os": "linux",
