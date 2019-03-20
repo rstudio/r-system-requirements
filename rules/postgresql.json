@@ -33,7 +33,12 @@
         {
           "os": "linux",
           "distribution": "opensuse"
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["postgresql96-devel"],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "sle"
