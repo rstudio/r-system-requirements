@@ -1,0 +1,44 @@
+{
+  "patterns": ["\\bmpfr\\b"],
+  "dependencies": [
+    {
+      "packages": ["libmpfr-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["mpfr-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["mpfr-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}

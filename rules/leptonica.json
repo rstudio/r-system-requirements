@@ -1,0 +1,50 @@
+{
+  "patterns": ["\\bleptonica\\b"],
+  "dependencies": [
+    {
+      "packages": ["libleptonica-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["leptonica-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["leptonica-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["leptonica-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

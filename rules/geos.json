@@ -13,6 +13,38 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "packages": ["geos-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "packages": ["geos-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["geos-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
     }
   ]
 }

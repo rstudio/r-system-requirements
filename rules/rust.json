@@ -1,0 +1,27 @@
+{
+  "patterns": ["\\brust\\b", "\\brustc\\b", "\\bcargo\\b"],
+  "dependencies": [
+    {
+      "packages": ["rustc", "cargo"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["rust", "cargo"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

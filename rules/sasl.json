@@ -1,0 +1,40 @@
+{
+  "patterns": ["\\bsasl\\b", "\\bcyrus sasl\\b"],
+  "dependencies": [
+    {
+      "packages": ["libsasl2-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["cyrus-sasl-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["cyrus-sasl-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

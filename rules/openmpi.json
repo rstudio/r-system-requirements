@@ -1,0 +1,40 @@
+{
+  "patterns": ["\\bopenmpi\\b", "\\bmpi\\b"],
+  "dependencies": [
+    {
+      "packages": ["libopenmpi-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["openmpi-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["openmpi-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}

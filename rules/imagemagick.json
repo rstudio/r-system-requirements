@@ -1,0 +1,49 @@
+{
+    "patterns": ["\\bimagemagick\\b", "\\bimage magick\\b"],
+    "dependencies": [
+      {
+        "packages": ["imagemagick", "libmagick++-dev"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["ImageMagick", "ImageMagick-c++-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          }
+        ]
+      },
+      {
+        "packages": ["ImageMagick", "ImageMagick-c++"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
+        "packages": ["ImageMagick", "ImageMagick-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          },
+          {
+            "os": "linux",
+            "distribution": "sle"
+          }
+        ]
+      }
+    ]
+  }

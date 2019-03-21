@@ -1,0 +1,40 @@
+{
+  "patterns": ["\\bbwidget\\b"],
+  "dependencies": [
+    {
+      "packages": ["bwidget"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["bwidget"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["bwidget"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}

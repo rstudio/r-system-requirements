@@ -36,6 +36,15 @@
           "distribution": "centos"
         }
       ]
+    },
+    {
+      "packages": ["udunits2-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
     }
   ]
 }

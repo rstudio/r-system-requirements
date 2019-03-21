@@ -1,0 +1,44 @@
+{
+    "patterns": ["\\bpython\\b"],
+    "dependencies": [
+      {
+        "packages": ["python"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["python"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          },
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
+        "packages": ["python"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          },
+          {
+            "os": "linux",
+            "distribution": "sle"
+          }
+        ]
+      }
+    ]
+  }

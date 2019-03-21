@@ -1,0 +1,44 @@
+{
+  "patterns": ["\\bfftw\\b", "\\bfftw3\\b", "\\blibfftw3\\b"],
+  "dependencies": [
+    {
+      "packages": ["libfftw3-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["fftw-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["fftw3-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}

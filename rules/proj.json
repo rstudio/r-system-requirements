@@ -1,0 +1,50 @@
+{
+  "patterns": ["\\bproj\\b", "\\bproj\\.4\\b"],
+  "dependencies": [
+    {
+      "packages": ["libproj-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["proj-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["proj-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

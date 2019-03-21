@@ -1,0 +1,50 @@
+{
+  "patterns": ["\\bmongodb\\b", "\\bmongo\\b"],
+  "dependencies": [
+    {
+      "packages": ["mongodb"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["mongodb"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    },
+    {
+      "packages": ["mongodb"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["mongodb"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

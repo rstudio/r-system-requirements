@@ -1,0 +1,27 @@
+{
+  "patterns": ["\\bpari/gp\\b", "\\bpari-gp\\b"],
+  "dependencies": [
+    {
+      "packages": ["pari-gp"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["pari-gp"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}

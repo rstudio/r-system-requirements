@@ -1,0 +1,44 @@
+{
+  "patterns": ["\\bpkg-config\\b", "\\bpkgconfig\\b"],
+  "dependencies": [
+    {
+      "packages": ["pkg-config"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["pkgconfig"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": ["pkg-config"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "patterns": ["\\blibmysqlclient\\b"],
+  "dependencies": [
+    {
+      "packages": ["libmysqlclient-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        }
+      ]
+    },
+    {
+      "packages": ["libmysqlclient-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        }
+      ]
+    }
+  ]
+}
