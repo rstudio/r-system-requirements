@@ -9,15 +9,6 @@
           "distribution": "ubuntu"
         }
       ]
-    },
-    {
-      "packages": ["libmysqlclient-devel"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "sle"
-        }
-      ]
     }
   ]
 }
