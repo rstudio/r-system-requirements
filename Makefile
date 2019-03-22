@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS = trusty xenial bionic jessie stretch centos6 centos7 opensuse42
+VARIANTS = trusty xenial bionic jessie stretch centos6 centos7 opensuse42 opensuse15
 
 RULES ?= rules/*.json
 
