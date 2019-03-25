@@ -36,15 +36,6 @@
           "distribution": "redhat"
         }
       ]
-    },
-    {
-      "packages": ["mongodb"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "opensuse"
-        }
-      ]
     }
   ]
 }

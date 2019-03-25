@@ -13,15 +13,6 @@
           "distribution": "debian"
         }
       ]
-    },
-    {
-      "packages": ["swftools"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "opensuse"
-        }
-      ]
     }
   ]
 }

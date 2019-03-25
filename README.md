@@ -44,6 +44,7 @@ Available tags:
 - `centos6` (CentOS 6)
 - `centos7` (CentOS 7)
 - `opensuse42` (openSUSE 42.3)
+- `opensuse15` (openSUSE 15.0)
 
 To build the images:
 

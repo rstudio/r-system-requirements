@@ -37,7 +37,7 @@
       ]
     },
     {
-      "packages": ["postgresql96-devel"],
+      "packages": ["postgresql10-devel"],
       "constraints": [
         {
           "os": "linux",

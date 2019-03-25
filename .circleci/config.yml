@@ -75,6 +75,10 @@ jobs:
     <<: *test-opensuse
     docker:
       - image: opensuse/leap:42.3
+  opensuse15:
+    <<: *test-opensuse
+    docker:
+      - image: opensuse/leap:15.0
 workflows:
   version: 2
   build:
@@ -87,3 +91,4 @@ workflows:
       - centos6
       - centos7
       - opensuse42
+      - opensuse15

@@ -13,15 +13,6 @@
           "distribution": "debian"
         }
       ]
-    },
-    {
-      "packages": ["jags"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "sle"
-        }
-      ]
     }
   ]
 }

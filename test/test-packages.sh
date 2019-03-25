@@ -15,7 +15,9 @@ declare -A os_identifiers=(
     [rhel6]='redhat'
     [rhel7]='redhat'
     [opensuse42]='opensuse'
+    [opensuse15]='opensuse'
     [sle12]='sle'
+    [sle15]='sle'
 )
 
 test_package_ubuntu() {
