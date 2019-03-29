@@ -55,7 +55,14 @@ const distro_template = function(os, name, distros) {
                                 "$ref": `#/definitions/versions/${name}`
                             }
                         },
-                        "required": ["at_least", "at_most"],
+                        "anyOf": [
+                            {
+                                "required": ["at_least"]
+                            },
+                            {
+                                "required": ["at_most"]
+                            }
+                        ],
                         "additionalProperties": false
                     }
                 },

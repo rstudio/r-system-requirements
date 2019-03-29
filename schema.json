@@ -171,9 +171,17 @@
                   "$ref": "#/definitions/versions/debian"
                 }
               },
-              "required": [
-                "at_least",
-                "at_most"
+              "anyOf": [
+                {
+                  "required": [
+                    "at_least"
+                  ]
+                },
+                {
+                  "required": [
+                    "at_most"
+                  ]
+                }
               ],
               "additionalProperties": false
             }
@@ -224,9 +232,17 @@
                   "$ref": "#/definitions/versions/ubuntu"
                 }
               },
-              "required": [
-                "at_least",
-                "at_most"
+              "anyOf": [
+                {
+                  "required": [
+                    "at_least"
+                  ]
+                },
+                {
+                  "required": [
+                    "at_most"
+                  ]
+                }
               ],
               "additionalProperties": false
             }
@@ -278,9 +294,17 @@
                   "$ref": "#/definitions/versions/centos"
                 }
               },
-              "required": [
-                "at_least",
-                "at_most"
+              "anyOf": [
+                {
+                  "required": [
+                    "at_least"
+                  ]
+                },
+                {
+                  "required": [
+                    "at_most"
+                  ]
+                }
               ],
               "additionalProperties": false
             }
@@ -331,9 +355,17 @@
                   "$ref": "#/definitions/versions/opensuse"
                 }
               },
-              "required": [
-                "at_least",
-                "at_most"
+              "anyOf": [
+                {
+                  "required": [
+                    "at_least"
+                  ]
+                },
+                {
+                  "required": [
+                    "at_most"
+                  ]
+                }
               ],
               "additionalProperties": false
             }
@@ -384,9 +416,17 @@
                   "$ref": "#/definitions/versions/sle"
                 }
               },
-              "required": [
-                "at_least",
-                "at_most"
+              "anyOf": [
+                {
+                  "required": [
+                    "at_least"
+                  ]
+                },
+                {
+                  "required": [
+                    "at_most"
+                  ]
+                }
               ],
               "additionalProperties": false
             }
