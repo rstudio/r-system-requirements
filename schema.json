@@ -80,33 +80,13 @@
             "minItems": 1,
             "items": {
               "type": "object",
-              "properties": {
-                "os": {
-                  "type": "string",
-                  "enum": [
-                    "linux"
-                  ]
-                },
-                "distribution": {
-                  "type": "string",
-                  "enum": [
-                    "debian",
-                    "ubuntu",
-                    "redhat",
-                    "centos",
-                    "sle",
-                    "opensuse"
-                  ]
-                }
-              },
-              "anyOf": [
-                {
-                  "required": [
-                    "os"
-                  ]
-                }
-              ],
-              "additionalProperties": false
+              "oneOf": [
+                { "$ref": "#/definitions/debian" },
+                { "$ref": "#/definitions/ubuntu" },
+                { "$ref": "#/definitions/centos" },
+                { "$ref": "#/definitions/opensuse" },
+                { "$ref": "#/definitions/sle" }
+              ]
             }
           }
         },
@@ -121,5 +101,224 @@
     "patterns",
     "dependencies"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "versions": {
+      "debian": {
+        "enum": [ "stretch", "buster" ]
+      },
+      "ubuntu": {
+        "enum": [ "xenial", "bionic" ]
+      },
+      "centos": {
+        "enum": [ "6", "7" ]
+      },
+      "opensuse": {
+        "enum": [ "42", "15" ]
+      },
+      "sle": {
+        "enum": [ "12", "15" ]
+      }
+    },
+    "debian": {
+      "properties": {
+        "os": { "const": "linux" },
+        "distribution": {
+          "const": "debian"
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "exactly": {
+              "$ref": "#/definitions/versions/debian"
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "at_least": {
+                  "$ref": "#/definitions/versions/debian"
+                },
+                "at_most": {
+                  "$ref": "#/definitions/versions/debian"
+                }
+              },
+              "required": [ "at_least", "at_most" ],
+              "additionalProperties": false
+            }
+          },
+          "oneOf": [
+            {
+              "required": [ "exactly" ]
+            },
+            {
+              "required": [ "range" ]
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "os" ],
+      "additionalProperties": false
+    },
+    "ubuntu": {
+      "properties": {
+        "os": { "const": "linux" },
+        "distribution": {
+          "const": "ubuntu"
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "exactly": {
+              "$ref": "#/definitions/versions/ubuntu"
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "at_least": {
+                  "$ref": "#/definitions/versions/ubuntu"
+                },
+                "at_most": {
+                  "$ref": "#/definitions/versions/ubuntu"
+                }
+              },
+              "required": [ "at_least", "at_most" ],
+              "additionalProperties": false
+            }
+          },
+          "oneOf": [
+            {
+              "required": [ "exactly" ]
+            },
+            {
+              "required": [ "range" ]
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "os" ],
+      "additionalProperties": false
+    },
+    "centos": {
+      "properties": {
+        "os": { "const": "linux" },
+        "distribution": {
+          "enum": [ "centos", "redhat" ]
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "exactly": {
+              "$ref": "#/definitions/versions/centos"
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "at_least": {
+                  "$ref": "#/definitions/versions/centos"
+                },
+                "at_most": {
+                  "$ref": "#/definitions/versions/centos"
+                }
+              },
+              "required": [ "at_least", "at_most" ],
+              "additionalProperties": false
+            }
+          },
+          "oneOf": [
+            {
+              "required": [ "exactly" ]
+            },
+            {
+              "required": [ "range" ]
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "os" ],
+      "additionalProperties": false
+    },
+    "opensuse": {
+      "properties": {
+        "os": { "const": "linux" },
+        "distribution": {
+          "const": "opensuse"
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "exactly": {
+              "$ref": "#/definitions/versions/opensuse"
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "at_least": {
+                  "$ref": "#/definitions/versions/opensuse"
+                },
+                "at_most": {
+                  "$ref": "#/definitions/versions/opensuse"
+                }
+              },
+              "required": [ "at_least", "at_most" ],
+              "additionalProperties": false
+            }
+          },
+          "oneOf": [
+            {
+              "required": [ "exactly" ]
+            },
+            {
+              "required": [ "range" ]
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "os" ],
+      "additionalProperties": false
+    },
+    "sle": {
+      "properties": {
+        "os": { "const": "linux" },
+        "distribution": {
+          "const": "sle"
+        },
+        "version": {
+          "type": "object",
+          "properties": {
+            "exactly": {
+              "$ref": "#/definitions/versions/sle"
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "at_least": {
+                  "$ref": "#/definitions/versions/sle"
+                },
+                "at_most": {
+                  "$ref": "#/definitions/versions/sle"
+                }
+              },
+              "required": [ "at_least", "at_most" ],
+              "additionalProperties": false
+            }
+          },
+          "oneOf": [
+            {
+              "required": [ "exactly" ]
+            },
+            {
+              "required": [ "range" ]
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "os" ],
+      "additionalProperties": false
+    }
+  }
 }
