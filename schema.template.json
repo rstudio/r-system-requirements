@@ -91,6 +91,9 @@
                   "$ref": "#/definitions/centos"
                 },
                 {
+                  "$ref": "#/definitions/redhat"
+                },
+                {
                   "$ref": "#/definitions/opensuse"
                 },
                 {
