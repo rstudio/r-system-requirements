@@ -6,17 +6,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu",
-          "version": [
-            {
-              "operator":  ">=",
-              "value": "xenial"
-            },
-            {
-              "operator":  "<=",
-              "value": "bionic"
-            }
-          ]
+          "distribution": "ubuntu"
         },
         {
           "os": "linux",
@@ -29,22 +19,11 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos",
-          "version": [
-            {
-              "operator": "!=",
-              "value": "6"
-            }
-          ]
+          "distribution": "centos"
         },
         {
           "os": "linux",
-          "distribution": "redhat",
-          "version": [
-            {
-              "value": "6"
-            }
-          ]
+          "distribution": "redhat"
         }
       ]
     },
