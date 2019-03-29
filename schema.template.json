@@ -89,7 +89,7 @@
                 },
                 {
                   "$ref": "#/definitions/centos"
-                },`
+                },
                 {
                   "$ref": "#/definitions/opensuse"
                 },
