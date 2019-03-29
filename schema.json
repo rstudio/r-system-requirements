@@ -151,7 +151,9 @@
           "const": "linux"
         },
         "distribution": {
-          "const": "debian"
+          "enum": [
+            "debian"
+          ]
         },
         "version": {
           "type": "object",
@@ -202,7 +204,9 @@
           "const": "linux"
         },
         "distribution": {
-          "const": "ubuntu"
+          "enum": [
+            "ubuntu"
+          ]
         },
         "version": {
           "type": "object",
@@ -307,7 +311,9 @@
           "const": "linux"
         },
         "distribution": {
-          "const": "opensuse"
+          "enum": [
+            "opensuse"
+          ]
         },
         "version": {
           "type": "object",
@@ -358,7 +364,9 @@
           "const": "linux"
         },
         "distribution": {
-          "const": "sle"
+          "enum": [
+            "sle"
+          ]
         },
         "version": {
           "type": "object",
