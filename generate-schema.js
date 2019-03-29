@@ -1,5 +1,8 @@
 let fs = require('fs')
 
+// Define the supported operating systems, distributions, and versions here.
+// Typically, this should be the only thing you modify when adding an OS,
+// distribution, and/or version.
 const distros = [
     {
         "name": "debian",
@@ -28,6 +31,7 @@ const distros = [
     }
 ]
 
+// The template for each distribution. Typically, you should not need to modify this.
 const distro_template = function(os, name, distros) {
     return {
         "properties": {
