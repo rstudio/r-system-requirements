@@ -1,38 +1,7 @@
 let fs = require('fs')
 
-// Define the supported operating systems, distributions, and versions here.
-// Typically, this should be the only thing you modify when adding an OS,
-// distribution, and/or version.
-const distros = [
-    {
-        "name": "debian",
-        "distros": [ "debian" ],
-        "versions": [ "stretch", "buster" ]
-    },
-    {
-        "name": "ubuntu",
-        "distros": [ "ubuntu" ],
-        "versions": [ "xenial", "bionic" ]
-    },
-    {
-        "name": "centos",
-        "distros": [ "centos", "redhat" ],
-        "versions": [ "6", "7" ]
-    },
-    {
-        "name": "opensuse",
-        "distros": [ "opensuse" ],
-        "versions": [ "42", "15" ]
-    },
-    {
-        "name": "sle",
-        "distros": [ "sle" ],
-        "versions": [ "12", "15" ]
-    }
-]
-
 // The template for each distribution. Typically, you should not need to modify this.
-const distro_template = function(os, name, distros) {
+const system_template = function(os, name, distros) {
     return {
         "properties": {
             "os": {"const": os},
@@ -62,6 +31,14 @@ const distro_template = function(os, name, distros) {
     }
 }
 
+// Define the supported operating systems, distributions, and versions in
+// `systems.json`. Typically, this should be the only thing you modify when
+// adding an OS, distribution, and/or version.
+//
+// Read in the systems list
+const systemsText = fs.readFileSync('systems.json')
+const systems = JSON.parse(systemsText)
+
 // Read in the template and parse it. This will become the schema.
 const template = fs.readFileSync('schema.template.json')
 const schema = JSON.parse(template)
@@ -72,21 +49,21 @@ const defs = {
 }
 
 // Create the definitions.
-for (let i=0; i < distros.length; i++) {
-    const distro = distros[i]
-    let distroEnum = []
-    for (let i=0; i < distro.versions.length; i++) {
-        const ver = distro.versions[i]
-        distroEnum = distroEnum.concat(ver)
+for (let i=0; i < systems.length; i++) {
+    const system = systems[i]
+    let versionsEnum = []
+    for (let i=0; i < system.versions.length; i++) {
+        const ver = system.versions[i]
+        versionsEnum = versionsEnum.concat(ver)
     }
 
     // Each distribution needs a version definition...
-    defs.versions[distro.name] = {
-        enum: distroEnum
+    defs.versions[system.name] = {
+        enum: versionsEnum
     }
 
     // ...and also a definition named after the distribution.
-    defs[distro.name] = distro_template('linux', distro.name, distro.distros)
+    defs[system.name] = system_template('linux', system.name, system.distros)
 }
 
 // Insert the definitions in the schema and write it to disk.

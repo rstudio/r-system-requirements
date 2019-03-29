@@ -1,0 +1,27 @@
+[
+    {
+        "name": "debian",
+        "distros": [ "debian" ],
+        "versions": [ "stretch", "buster" ]
+    },
+    {
+        "name": "ubuntu",
+        "distros": [ "ubuntu" ],
+        "versions": [ "xenial", "bionic" ]
+    },
+    {
+        "name": "centos",
+        "distros": [ "centos", "redhat" ],
+        "versions": [ "6", "7" ]
+    },
+    {
+        "name": "opensuse",
+        "distros": [ "opensuse" ],
+        "versions": [ "42", "15" ]
+    },
+    {
+        "name": "sle",
+        "distros": [ "sle" ],
+        "versions": [ "12", "15" ]
+    }
+]
