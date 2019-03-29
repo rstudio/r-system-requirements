@@ -156,49 +156,30 @@
           ]
         },
         "version": {
-          "type": "object",
-          "properties": {
-            "exactly": {
-              "$ref": "#/definitions/versions/debian"
-            },
-            "range": {
-              "type": "object",
-              "properties": {
-                "at_least": {
-                  "$ref": "#/definitions/versions/debian"
-                },
-                "at_most": {
-                  "$ref": "#/definitions/versions/debian"
-                }
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "==",
+                  "<",
+                  ">",
+                  "<=",
+                  ">=",
+                  "!="
+                ]
               },
-              "anyOf": [
-                {
-                  "required": [
-                    "at_least"
-                  ]
-                },
-                {
-                  "required": [
-                    "at_most"
-                  ]
-                }
-              ],
-              "additionalProperties": false
-            }
-          },
-          "oneOf": [
-            {
-              "required": [
-                "exactly"
-              ]
+              "value": {
+                "$ref": "#/definitions/versions/debian"
+              }
             },
-            {
-              "required": [
-                "range"
-              ]
-            }
-          ],
-          "additionalProperties": false
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -217,49 +198,30 @@
           ]
         },
         "version": {
-          "type": "object",
-          "properties": {
-            "exactly": {
-              "$ref": "#/definitions/versions/ubuntu"
-            },
-            "range": {
-              "type": "object",
-              "properties": {
-                "at_least": {
-                  "$ref": "#/definitions/versions/ubuntu"
-                },
-                "at_most": {
-                  "$ref": "#/definitions/versions/ubuntu"
-                }
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "==",
+                  "<",
+                  ">",
+                  "<=",
+                  ">=",
+                  "!="
+                ]
               },
-              "anyOf": [
-                {
-                  "required": [
-                    "at_least"
-                  ]
-                },
-                {
-                  "required": [
-                    "at_most"
-                  ]
-                }
-              ],
-              "additionalProperties": false
-            }
-          },
-          "oneOf": [
-            {
-              "required": [
-                "exactly"
-              ]
+              "value": {
+                "$ref": "#/definitions/versions/ubuntu"
+              }
             },
-            {
-              "required": [
-                "range"
-              ]
-            }
-          ],
-          "additionalProperties": false
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -279,49 +241,30 @@
           ]
         },
         "version": {
-          "type": "object",
-          "properties": {
-            "exactly": {
-              "$ref": "#/definitions/versions/centos"
-            },
-            "range": {
-              "type": "object",
-              "properties": {
-                "at_least": {
-                  "$ref": "#/definitions/versions/centos"
-                },
-                "at_most": {
-                  "$ref": "#/definitions/versions/centos"
-                }
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "==",
+                  "<",
+                  ">",
+                  "<=",
+                  ">=",
+                  "!="
+                ]
               },
-              "anyOf": [
-                {
-                  "required": [
-                    "at_least"
-                  ]
-                },
-                {
-                  "required": [
-                    "at_most"
-                  ]
-                }
-              ],
-              "additionalProperties": false
-            }
-          },
-          "oneOf": [
-            {
-              "required": [
-                "exactly"
-              ]
+              "value": {
+                "$ref": "#/definitions/versions/centos"
+              }
             },
-            {
-              "required": [
-                "range"
-              ]
-            }
-          ],
-          "additionalProperties": false
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -340,49 +283,30 @@
           ]
         },
         "version": {
-          "type": "object",
-          "properties": {
-            "exactly": {
-              "$ref": "#/definitions/versions/opensuse"
-            },
-            "range": {
-              "type": "object",
-              "properties": {
-                "at_least": {
-                  "$ref": "#/definitions/versions/opensuse"
-                },
-                "at_most": {
-                  "$ref": "#/definitions/versions/opensuse"
-                }
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "==",
+                  "<",
+                  ">",
+                  "<=",
+                  ">=",
+                  "!="
+                ]
               },
-              "anyOf": [
-                {
-                  "required": [
-                    "at_least"
-                  ]
-                },
-                {
-                  "required": [
-                    "at_most"
-                  ]
-                }
-              ],
-              "additionalProperties": false
-            }
-          },
-          "oneOf": [
-            {
-              "required": [
-                "exactly"
-              ]
+              "value": {
+                "$ref": "#/definitions/versions/opensuse"
+              }
             },
-            {
-              "required": [
-                "range"
-              ]
-            }
-          ],
-          "additionalProperties": false
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -401,49 +325,30 @@
           ]
         },
         "version": {
-          "type": "object",
-          "properties": {
-            "exactly": {
-              "$ref": "#/definitions/versions/sle"
-            },
-            "range": {
-              "type": "object",
-              "properties": {
-                "at_least": {
-                  "$ref": "#/definitions/versions/sle"
-                },
-                "at_most": {
-                  "$ref": "#/definitions/versions/sle"
-                }
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "==",
+                  "<",
+                  ">",
+                  "<=",
+                  ">=",
+                  "!="
+                ]
               },
-              "anyOf": [
-                {
-                  "required": [
-                    "at_least"
-                  ]
-                },
-                {
-                  "required": [
-                    "at_most"
-                  ]
-                }
-              ],
-              "additionalProperties": false
-            }
-          },
-          "oneOf": [
-            {
-              "required": [
-                "exactly"
-              ]
+              "value": {
+                "$ref": "#/definitions/versions/sle"
+              }
             },
-            {
-              "required": [
-                "range"
-              ]
-            }
-          ],
-          "additionalProperties": false
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

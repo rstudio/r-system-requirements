@@ -40,41 +40,21 @@ const distro_template = function(os, name, distros) {
                 "enum": distros,
             },
             "version": {
-                "type": "object",
-                "properties": {
-                    "exactly": {
-                        "$ref": `#/definitions/versions/${name}`
-                    },
-                    "range": {
-                        "type": "object",
-                        "properties": {
-                            "at_least": {
-                                "$ref": `#/definitions/versions/${name}`
-                            },
-                            "at_most": {
-                                "$ref": `#/definitions/versions/${name}`
-                            }
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "minLength": 1,
+                    "properties": {
+                        "operator": {
+                            "enum": [ "==", "<", ">", "<=", ">=", "!=" ]
                         },
-                        "anyOf": [
-                            {
-                                "required": ["at_least"]
-                            },
-                            {
-                                "required": ["at_most"]
-                            }
-                        ],
-                        "additionalProperties": false
-                    }
-                },
-                "oneOf": [
-                    {
-                        "required": ["exactly"]
+                        "value": {
+                            "$ref": `#/definitions/versions/${name}`
+                        },
                     },
-                    {
-                        "required": ["range"]
-                    }
-                ],
-                "additionalProperties": false
+                    "required": [ "value" ],
+                    "additionalProperties": false
+                },
             }
         },
         "required": ["os"],
