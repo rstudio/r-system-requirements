@@ -75,12 +75,16 @@ const distro_template = function(os, name, distros) {
     }
 }
 
+// Read in the template and parse it. This will become the schema.
 const template = fs.readFileSync('schema.template.json')
 const schema = JSON.parse(template)
+
+// Define a variable to hold the definitions that we'll insert in the schema.
 const defs = {
     versions: {}
 }
 
+// Create the definitions.
 for (let i=0; i < distros.length; i++) {
     const distro = distros[i]
     let distroEnum = []
@@ -88,11 +92,16 @@ for (let i=0; i < distros.length; i++) {
         const ver = distro.versions[i]
         distroEnum = distroEnum.concat(ver)
     }
+
+    // Each distribution needs a version definition...
     defs.versions[distro.name] = {
         enum: distroEnum
     }
+
+    // ...and also a definition named after the distribution.
     defs[distro.name] = distro_template('linux', distro.name, distro.distros)
 }
 
+// Insert the definitions in the schema and write it to disk.
 schema.definitions = defs
 fs.writeFileSync("schema.json", JSON.stringify(schema, null, 2))
