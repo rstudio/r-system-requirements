@@ -19,7 +19,28 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": [ "7" ]
+        },
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": [ "7" ]
+        }
+      ]
+    },
+    {
+      "packages": ["openmpi-1.10-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": [ "6" ]
+        },
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": [ "6" ]
         }
       ]
     },

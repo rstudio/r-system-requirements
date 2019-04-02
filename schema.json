@@ -91,6 +91,9 @@
                   "$ref": "#/definitions/centos"
                 },
                 {
+                  "$ref": "#/definitions/redhat"
+                },
+                {
                   "$ref": "#/definitions/opensuse"
                 },
                 {
@@ -116,14 +119,14 @@
     "versions": {
       "debian": {
         "enum": [
-          "stretch",
-          "buster"
+          "8",
+          "9"
         ]
       },
       "ubuntu": {
         "enum": [
-          "xenial",
-          "bionic"
+          "16.04",
+          "18.04"
         ]
       },
       "centos": {
@@ -132,16 +135,22 @@
           "7"
         ]
       },
+      "redhat": {
+        "enum": [
+          "6",
+          "7"
+        ]
+      },
       "opensuse": {
         "enum": [
-          "42",
-          "15"
+          "42.3",
+          "15.0"
         ]
       },
       "sle": {
         "enum": [
-          "12",
-          "15"
+          "12.3",
+          "15.0"
         ]
       }
     },
@@ -151,34 +160,12 @@
           "const": "linux"
         },
         "distribution": {
-          "enum": [
-            "debian"
-          ]
+          "const": "debian"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
-            "type": "object",
-            "minLength": 1,
-            "properties": {
-              "operator": {
-                "enum": [
-                  "==",
-                  "<",
-                  ">",
-                  "<=",
-                  ">=",
-                  "!="
-                ]
-              },
-              "value": {
-                "$ref": "#/definitions/versions/debian"
-              }
-            },
-            "required": [
-              "value"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/versions/debian"
           }
         }
       },
@@ -193,34 +180,12 @@
           "const": "linux"
         },
         "distribution": {
-          "enum": [
-            "ubuntu"
-          ]
+          "const": "ubuntu"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
-            "type": "object",
-            "minLength": 1,
-            "properties": {
-              "operator": {
-                "enum": [
-                  "==",
-                  "<",
-                  ">",
-                  "<=",
-                  ">=",
-                  "!="
-                ]
-              },
-              "value": {
-                "$ref": "#/definitions/versions/ubuntu"
-              }
-            },
-            "required": [
-              "value"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/versions/ubuntu"
           }
         }
       },
@@ -235,35 +200,32 @@
           "const": "linux"
         },
         "distribution": {
-          "enum": [
-            "centos",
-            "redhat"
-          ]
+          "const": "centos"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
-            "type": "object",
-            "minLength": 1,
-            "properties": {
-              "operator": {
-                "enum": [
-                  "==",
-                  "<",
-                  ">",
-                  "<=",
-                  ">=",
-                  "!="
-                ]
-              },
-              "value": {
-                "$ref": "#/definitions/versions/centos"
-              }
-            },
-            "required": [
-              "value"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/versions/centos"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "redhat": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "redhat"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/redhat"
           }
         }
       },
@@ -278,34 +240,12 @@
           "const": "linux"
         },
         "distribution": {
-          "enum": [
-            "opensuse"
-          ]
+          "const": "opensuse"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
-            "type": "object",
-            "minLength": 1,
-            "properties": {
-              "operator": {
-                "enum": [
-                  "==",
-                  "<",
-                  ">",
-                  "<=",
-                  ">=",
-                  "!="
-                ]
-              },
-              "value": {
-                "$ref": "#/definitions/versions/opensuse"
-              }
-            },
-            "required": [
-              "value"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/versions/opensuse"
           }
         }
       },
@@ -320,34 +260,12 @@
           "const": "linux"
         },
         "distribution": {
-          "enum": [
-            "sle"
-          ]
+          "const": "sle"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
-            "type": "object",
-            "minLength": 1,
-            "properties": {
-              "operator": {
-                "enum": [
-                  "==",
-                  "<",
-                  ">",
-                  "<=",
-                  ">=",
-                  "!="
-                ]
-              },
-              "value": {
-                "$ref": "#/definitions/versions/sle"
-              }
-            },
-            "required": [
-              "value"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/versions/sle"
           }
         }
       },

@@ -1,0 +1,26 @@
+[
+    {
+        "distribution": "debian",
+        "versions": [ "8", "9" ]
+    },
+    {
+        "distribution": "ubuntu",
+        "versions": [ "16.04", "18.04" ]
+    },
+    {
+        "distribution": "centos",
+        "versions": [ "6", "7" ]
+    },
+    {
+        "distribution": "redhat",
+        "versions": [ "6", "7" ]
+    },
+    {
+        "distribution": "opensuse",
+        "versions": [ "42.3", "15.0" ]
+    },
+    {
+        "distribution": "sle",
+        "versions": [ "12.3", "15.0" ]
+    }
+]

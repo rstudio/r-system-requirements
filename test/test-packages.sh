@@ -20,6 +20,22 @@ declare -A os_identifiers=(
     [sle15]='sle'
 )
 
+declare -A versions=(
+    [trusty]='14.04'
+    [xenial]='16.04'
+    [bionic]='18.04'
+    [jessie]='8'
+    [stretch]='9'
+    [centos6]='6'
+    [centos7]='7'
+    [rhel6]='6'
+    [rhel7]='7'
+    [opensuse42]='42.3'
+    [opensuse15]='15.0'
+    [sle12]='12.3'
+    [sle15]='15.0'
+)
+
 test_package_ubuntu() {
     pkg=$1
     found=$(apt-cache search --names-only "^${pkg}$")
@@ -65,7 +81,8 @@ test_package_sle() {
 find_dependencies() {
     rule=$1
     dist=$2
-    deps=$(jq < "$rule" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\"))")
+    version=$3
+    deps=$(jq < "$rule" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\")) | map(select(.constraints[] | .versions | . == null or contains([\"$version\"])))")
     echo $deps
 }
 
@@ -86,10 +103,11 @@ run_extra_cmd() {
 test_packages() {
     rules=$1
     dist=$2
+    version=$3
     test_package="test_package_${dist}"
     for rule in $rules; do
         # Find all dependencies for this distro
-        deps=$(find_dependencies "$rule" $dist)
+        deps=$(find_dependencies "$rule" $dist $version)
         jq -c ".[]" <<< "$deps" | while read dep; do
             # Run any pre-install commands (e.g. adding a repo)
             pre_install_cmds=$(echo "$dep" | jq ".pre_install[]?")
@@ -106,6 +124,7 @@ test_packages() {
 }
 
 RULES=${RULES:-rules/*.json}
+VER=${versions[$DIST]:-$VER}
 DIST=${os_identifiers[$DIST]:-$DIST}
 
-test_packages "$RULES" $DIST
+test_packages "$RULES" $DIST $VER
