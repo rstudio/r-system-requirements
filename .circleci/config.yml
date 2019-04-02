@@ -45,38 +45,56 @@ test-opensuse: &test-opensuse
 jobs:
   trusty:
     <<: *test-ubuntu
+    environment:
+      VER: 14.04
     docker:
       - image: ubuntu:trusty
   xenial:
     <<: *test-ubuntu
+    environment:
+      VER: 16.04
     docker:
       - image: ubuntu:xenial
   bionic:
     <<: *test-ubuntu
+    environment:
+      VER: 18.04
     docker:
       - image: ubuntu:bionic
   jessie:
     <<: *test-debian
+    environment:
+      VER: 8
     docker:
       - image: debian:jessie
   stretch:
     <<: *test-debian
+    environment:
+      VER: 9
     docker:
       - image: debian:stretch
   centos6:
     <<: *test-centos
+    environment:
+      VER: 6
     docker:
       - image: centos:6
   centos7:
     <<: *test-centos
+    environment:
+      VER: 7
     docker:
       - image: centos:7
   opensuse42:
     <<: *test-opensuse
+    environment:
+      VER: 42.3
     docker:
       - image: opensuse/leap:42.3
   opensuse15:
     <<: *test-opensuse
+    environment:
+      VER: 15.0
     docker:
       - image: opensuse/leap:15.0
 workflows:
