@@ -1,28 +1,15 @@
 let fs = require('fs')
 
 // The template for each distribution. Typically, you should not need to modify this.
-const system_template = function(os, name, distros) {
+const system_template = function(os, distribution) {
     return {
         "properties": {
-            "os": {"const": os},
-            "distribution": {
-                "enum": distros,
-            },
-            "version": {
+            "os": { "const": os },
+            "distribution": { "const": distribution },
+            "versions": {
                 "type": "array",
                 "items": {
-                    "type": "object",
-                    "minLength": 1,
-                    "properties": {
-                        "operator": {
-                            "enum": [ "==", "<", ">", "<=", ">=", "!=" ]
-                        },
-                        "value": {
-                            "$ref": `#/definitions/versions/${name}`
-                        },
-                    },
-                    "required": [ "value" ],
-                    "additionalProperties": false
+                    "$ref": `#/definitions/versions/${distribution}`
                 },
             }
         },
@@ -58,12 +45,12 @@ for (let i=0; i < systems.length; i++) {
     }
 
     // Each distribution needs a version definition...
-    defs.versions[system.name] = {
+    defs.versions[system.distribution] = {
         enum: versionsEnum
     }
 
     // ...and also a definition named after the distribution.
-    defs[system.name] = system_template('linux', system.name, system.distros)
+    defs[system.distribution] = system_template('linux', system.distribution)
 }
 
 // Insert the definitions in the schema and write it to disk.
