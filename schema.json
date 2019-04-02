@@ -80,33 +80,26 @@
             "minItems": 1,
             "items": {
               "type": "object",
-              "properties": {
-                "os": {
-                  "type": "string",
-                  "enum": [
-                    "linux"
-                  ]
-                },
-                "distribution": {
-                  "type": "string",
-                  "enum": [
-                    "debian",
-                    "ubuntu",
-                    "redhat",
-                    "centos",
-                    "sle",
-                    "opensuse"
-                  ]
-                }
-              },
-              "anyOf": [
+              "oneOf": [
                 {
-                  "required": [
-                    "os"
-                  ]
+                  "$ref": "#/definitions/debian"
+                },
+                {
+                  "$ref": "#/definitions/ubuntu"
+                },
+                {
+                  "$ref": "#/definitions/centos"
+                },
+                {
+                  "$ref": "#/definitions/redhat"
+                },
+                {
+                  "$ref": "#/definitions/opensuse"
+                },
+                {
+                  "$ref": "#/definitions/sle"
                 }
-              ],
-              "additionalProperties": false
+              ]
             }
           }
         },
@@ -121,5 +114,165 @@
     "patterns",
     "dependencies"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "versions": {
+      "debian": {
+        "enum": [
+          "8",
+          "9"
+        ]
+      },
+      "ubuntu": {
+        "enum": [
+          "16.04",
+          "18.04"
+        ]
+      },
+      "centos": {
+        "enum": [
+          "6",
+          "7"
+        ]
+      },
+      "redhat": {
+        "enum": [
+          "6",
+          "7"
+        ]
+      },
+      "opensuse": {
+        "enum": [
+          "42.3",
+          "15.0"
+        ]
+      },
+      "sle": {
+        "enum": [
+          "12.3",
+          "15.0"
+        ]
+      }
+    },
+    "debian": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "debian"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/debian"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "ubuntu": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "ubuntu"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/ubuntu"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "centos": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "centos"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/centos"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "redhat": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "redhat"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/redhat"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "opensuse": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "opensuse"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/opensuse"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "sle": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "sle"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/sle"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    }
+  }
 }

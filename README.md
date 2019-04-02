@@ -3,6 +3,16 @@
 [![Travis Build Status](https://travis-ci.com/rstudio/r-system-requirements.svg?token=MNvJQsCy2iwsWpHV8ezP&branch=master)](https://travis-ci.com/rstudio/r-system-requirements)
 [![CircleCI Build Status](https://circleci.com/gh/rstudio/r-system-requirements.svg?style=svg&circle-token=a281bb1cf9155796c3b112a77fce743cbdbff93d)](https://circleci.com/gh/rstudio/r-system-requirements)
 
+### Schema
+
+The JSON schema is defined in the file `schema.json`. Do not modify this file directly,
+since it is automatically generated. Instead, modify `schema.template.json` and then run
+`npm run generate-schema`. The `generate-schema` target is automatically run when running
+`npm test`.
+
+If you need to modify the distros and/or versions supported in the schema definitions, 
+modify `generate-schema.js`.
+
 ### Testing
 
 #### Schema tests

@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Database of system requirements for R packages",
   "scripts": {
-    "test": "npm run lint && npm run validate && npm run test-patterns-all",
+    "test": "npm run generate-schema && npm run lint && npm run validate && npm run test-patterns-all",
     "lint": "eslint rules/**",
     "validate": "npm run validate-schema && npm run validate-rules",
     "validate-schema": "ajv compile -s schema.json",
     "validate-rules": "ajv -s schema.json -d 'rules/*.json' --errors=json",
+    "generate-schema": "node generate-schema.js",
     "test-patterns": "node test/test-patterns.js",
     "test-patterns-all": "node test/test-patterns.js rules/**"
   },
