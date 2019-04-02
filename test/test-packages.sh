@@ -124,7 +124,7 @@ test_packages() {
 }
 
 RULES=${RULES:-rules/*.json}
-VER=${versions[$DIST]:-}
+VER=${versions[$DIST]:-$VER}
 DIST=${os_identifiers[$DIST]:-$DIST}
 
 test_packages "$RULES" $DIST $VER
