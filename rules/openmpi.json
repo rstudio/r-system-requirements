@@ -20,12 +20,12 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "version": [ "7" ]
+          "versions": [ "7" ]
         },
         {
           "os": "linux",
           "distribution": "centos",
-          "version": [ "7" ]
+          "versions": [ "7" ]
         }
       ]
     },
@@ -35,12 +35,12 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "version": [ "6" ]
+          "versions": [ "6" ]
         },
         {
           "os": "linux",
           "distribution": "centos",
-          "version": [ "6" ]
+          "versions": [ "6" ]
         }
       ]
     },

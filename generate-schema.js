@@ -6,7 +6,7 @@ const system_template = function(os, distribution) {
         "properties": {
             "os": { "const": os },
             "distribution": { "const": distribution },
-            "version": {
+            "versions": {
                 "type": "array",
                 "items": {
                     "$ref": `#/definitions/versions/${distribution}`

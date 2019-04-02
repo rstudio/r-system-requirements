@@ -162,7 +162,7 @@
         "distribution": {
           "const": "debian"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/debian"
@@ -182,7 +182,7 @@
         "distribution": {
           "const": "ubuntu"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/ubuntu"
@@ -202,7 +202,7 @@
         "distribution": {
           "const": "centos"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/centos"
@@ -222,7 +222,7 @@
         "distribution": {
           "const": "redhat"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/redhat"
@@ -242,7 +242,7 @@
         "distribution": {
           "const": "opensuse"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/opensuse"
@@ -262,7 +262,7 @@
         "distribution": {
           "const": "sle"
         },
-        "version": {
+        "versions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/sle"
