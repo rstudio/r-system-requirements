@@ -82,7 +82,7 @@ find_dependencies() {
     rule=$1
     dist=$2
     version=$3
-    deps=$(jq < "$rule" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\")) | map(select(.constraints[] | .versions | . == null or contains([\"$version\"])))")
+    deps=$(jq < "$rule" | jq ".dependencies | map(select(.constraints[] | .distribution == \"$dist\" and (.versions | . == null or contains([\"$version\"]))))")
     echo $deps
 }
 
