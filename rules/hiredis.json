@@ -16,6 +16,36 @@
     },
     {
       "packages": ["hiredis-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["hiredis-devel"],
+      "pre_install": [
+        {
+          "command": "yum localinstall -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["hiredis-devel"],
       "constraints": [
         {
           "os": "linux",
