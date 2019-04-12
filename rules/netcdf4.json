@@ -45,6 +45,16 @@
           "distribution": "opensuse"
         }
       ]
+    },
+    {
+      "packages": ["netcdf-gnu-hpc-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["12.3"]
+        }
+      ]
     }
   ]
 }

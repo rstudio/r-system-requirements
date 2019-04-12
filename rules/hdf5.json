@@ -43,6 +43,11 @@
         {
           "os": "linux",
           "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["12.3"]
         }
       ]
     }
