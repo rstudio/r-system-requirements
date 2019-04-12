@@ -24,6 +24,26 @@
       ]
     },
     {
+      "packages": ["libarchive"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["libarchive3-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["6"]
+        }
+      ]
+    },
+    {
       "packages": ["libarchive-devel"],
       "constraints": [
         {
