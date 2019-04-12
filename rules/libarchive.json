@@ -35,6 +35,11 @@
     },
     {
       "packages": ["libarchive3-devel"],
+      "pre_install": [
+        {
+          "command": "yum localinstall -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
+        }
+      ],
       "constraints": [
         {
           "os": "linux",

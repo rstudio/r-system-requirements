@@ -24,12 +24,28 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["6"]
         }
       ]
     },
     {
       "packages": ["protobuf-compiler"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["protobuf-compiler"],
+      "pre_install": [
+        {
+          "command": "yum localinstall -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
+        }
+      ],
       "constraints": [
         {
           "os": "linux",

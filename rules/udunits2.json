@@ -16,10 +16,31 @@
     },
     {
       "packages": ["udunits2-devel"],
+      "pre_install": [
+        {
+          "command": "yum localinstall -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
+        }
+      ],
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["6"]
+        }
+      ]
+    },
+    {
+      "packages": ["udunits2-devel"],
+      "pre_install": [
+        {
+          "command": "yum localinstall -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },
