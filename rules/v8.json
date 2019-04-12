@@ -36,6 +36,16 @@
           "distribution": "redhat"
         }
       ]
+    },
+    {
+      "packages": ["v8-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse",
+          "versions": ["42.3"]
+        }
+      ]
     }
   ]
 }
