@@ -24,6 +24,15 @@
       ]
     },
     {
+      "packages": ["libsndfile"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
       "packages": ["libsndfile-devel"],
       "constraints": [
         {

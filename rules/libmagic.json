@@ -23,7 +23,18 @@
         },
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["6"]
+        }
+      ]
+    },
+    {
+      "packages": ["file-libs"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },

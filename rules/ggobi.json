@@ -13,6 +13,36 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "packages": ["ggobi-devel"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["6"]
+        }
+      ]
+    },
+    {
+      "packages": ["ggobi-devel"],
+      "pre_install": [
+        {
+          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["6"]
+        }
+      ]
     }
   ]
 }

@@ -15,6 +15,36 @@
       ]
     },
     {
+      "packages": ["mysql"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["6"]
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["6"]
+        }
+      ]
+    },
+    {
+      "packages": ["mariadb"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
       "packages": ["mariadb"],
       "constraints": [
         {

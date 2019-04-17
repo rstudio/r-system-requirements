@@ -24,11 +24,25 @@
       ]
     },
     {
+      "packages": ["redland"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
       "packages": ["libredland-devel"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["12.3"]
         }
       ]
     }

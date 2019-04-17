@@ -24,6 +24,15 @@
         ]
       },
       {
+        "packages": ["gpgme"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
         "packages": ["libgpgme-devel"],
         "constraints": [
           {
