@@ -10,17 +10,17 @@ packages often note these dependencies inside their DESCRIPTION files, but this
 information is free-form text that varies by package. 
 
 This repository contains a catalog of "rules" that can be used to systematically
-identify these dependencies and generate programmatic commands to install them.
+identify these dependencies and generate commands to install them.
 
 You may be expecting to see a list like:
 
-| package | Requirements Field | Dependency |
+| Package | SystemRequirements Field | Dependency |
 | ------  | ----------- | ----- | 
 | rgdal   | "for building from source: GDAL >= ..." | libgdal-dev |
 
 
 Storing this information as a table in this format is not efficient. Many R
-packages do not have any system dependencies, so the table would be vert
+packages do not have any system dependencies, so the table would be very
 sparse. Moreover, R packages are added at an exponential rate, so maintaining
 this data would be nearly impossible.
 
@@ -43,10 +43,10 @@ support for these rules. Please file questions in [RStudio
 Community](https://community.rstudio.com) or open an issue in this repository.
 
 A similar project is maintained by [R-Hub](https://github.com/r-hub/sysreqsdb).
-The primary difference between the two catalogs is in the data format and the
-test coverage.
+The two catalogs have different data formats, test coverage, and target
+different operating systems.
 
-## Test Coverage
+## Rule Coverage
 
 The rules presented in this repository are extensively tested with the following process:
 
@@ -82,13 +82,26 @@ that have system requirements but are not frequently used.
 | No Rules| 90.1% | 90.1% | 90% | 90.1% | 90% | 90.2% | 
 | With Rules | 98.5% | 99.2% | 98.1% | 98.6% | 96.1% | 96.3% | 
 
-Both tests run with R 3.5.2 for all CRAN packages as of April 4, 2019.
+Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
+
+## Operating Systems
+
+The rules in this catalog are designed to be used with the following
+distributions:  
+
+- Ubuntu 14.04,16.04,18.04  
+- Debian 8,9  
+- CentOS 6,7  
+- Red Hat Enterprise Linux 6,7  
+- openSUSE 42.3, 15.0  
+- SUSE Linux Enterprise 12.3, 15.0  
 
 ---
 
 # For Developers
 
-We welcome contributions to this catalog, please open a pull request.
+We welcome contributions to this catalog, open an issue to report a bug or
+request a rule.
 
 ### Schema
 
