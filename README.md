@@ -196,7 +196,7 @@ Other examples:
 | ----- | ---- | ----------- |
 | `os` | String | Operating system. Only `"linux"` is supported for now. |
 | `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"` |
-| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [Operating Systems](#operating-systems) or the [schema](schema.json) for supported values by OS. Example: `["16.04", "18.04"]` for Ubuntu. |
+| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["16.04", "18.04"]` for Ubuntu. |
 
 #### Pre/post-install actions
 
@@ -314,4 +314,4 @@ modify this file directly, since it is automatically generated. Instead, modify
 `generate-schema` target is automatically run when running `npm test`.
 
 If you need to modify the distros and/or versions supported in the schema definitions, 
-modify `generate-schema.js`.
+modify [`systems.json`](systems.json).
