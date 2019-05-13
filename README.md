@@ -98,20 +98,147 @@ distributions:
 
 ---
 
-# For Developers
+## For Developers
 
-We welcome contributions to this catalog, open an issue to report a bug or
-request a rule.
+We welcome contributions to this catalog! To report a bug or request a rule,
+please open an issue in this repository. To add or update a rule, fork this
+repository and submit a pull request.
 
-### Schema
+### Overview
 
-The JSON schema is defined in the file `schema.json`. Do not modify this file directly,
-since it is automatically generated. Instead, modify `schema.template.json` and then run
-`npm run generate-schema`. The `generate-schema` target is automatically run when running
-`npm test`.
+Each system requirement rule is described by a JSON file in the [`rules`](rules)
+directory. The file is named <code><i>rule-name</i>.json</code>, where
+*`rule-name`* is typically the name of the system dependency.
 
-If you need to modify the distros and/or versions supported in the schema definitions, 
-modify `generate-schema.js`.
+For example, here's an excerpt from a rule for the Protocol Buffers (protobuf)
+library at [`rules/libprotobuf.json`](rules/libprotobuf.json).
+
+```js
+{
+  "patterns": ["\\blibprotobuf\\b"],  // regex which matches "libprotobuf" or "LIBPROTOBUF; libxml2"
+  "dependencies": [
+    {
+      "packages": ["protobuf-devel"],  // to install the package: "yum install protobuf-devel"
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"  // add the EPEL repository before installing
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",  // make these instructions specific to CentOS 6
+          "versions": ["6"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Other examples:
+- Simple rule: [git.json](rules/git.json)
+- OS version constraints (package names vary by OS version): [libmysqlclient.json](rules/libmysqlclient.json)
+- Pre-install steps (adding the EPEL repo on CentOS/RHEL): [gdal.json](rules/gdal.json)
+- Post-install steps (reconfiguring R for Java): [java.json](rules/java.json)
+
+### JSON Fields
+
+```js
+{
+  "patterns": [...],
+  "dependencies": [
+    {
+      "packages": [...],
+      "constraints": [
+        {
+          "os": ...,
+          "distribution": ...,
+          "versions": [...]
+        }
+      ],
+      "pre_install": [
+        {
+          "command": ...,
+          "script": ...
+        }
+      ],
+      "post_install": [
+        {
+          "command": ...,
+          "script": ...
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### Top-level fields
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `patterns` | Array | Regular expressions to match `SystemRequirements` fields. Case-insensitive. Note that the escape character must be escaped itself (`\\.` to match a dot). Use word boundaries (`\\b`) for more accurate matches.<br/>Example: `["\\bgnu make\\b", "\\bgmake\\b"]` to match `GNU Make` or `gmake; OpenSSL` |
+| `dependencies` | Array | Rules for installing the dependency on one or more operating systems. See [dependencies](#dependencies). |
+
+#### Dependencies
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `packages` | Array | Packages installed through the default system package manager (e.g. apt, yum, zypper). Examples: `["libxml2-dev"]`, `["tcl", "tk"]` |
+| `constraints` | Array | One or more operating system constraints. See [constraints](#constraints). |
+| `pre_install` | Array | Optional commands or scripts to run before installing packages (e.g. adding a third-party repository). See [pre/post-install actions](#prepost-install-actions).
+| `pre_install` | Array | Optional commands or scripts to run after installing packages (e.g. cleaning up). See [pre/post-install actions](#prepost-install-actions).
+
+#### Constraints
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `os` | String | Operating system. Only `"linux"` is supported for now. |
+| `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"` |
+| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [Operating Systems](#operating-systems) or the [schema](schema.json) for supported values by OS. Example: `["16.04", "18.04"]` for Ubuntu. |
+
+#### Pre/post-install actions
+
+Pre-install and post-install actions can be specified as either a `command` or
+`script`. Commands are preferred unless there's complicated logic involved.
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `command` | String | A shell command. Example: `"yum install -y epel-release"` |
+| `script` | String | A shell script found in the [`scripts`](scripts) directory. Example: `"centos_epel.sh"` |
+
+### Adding a rule
+
+A typical workflow for adding a new rule:
+
+1. Come up with regular expressions to match all R packages with the system
+   dependency. See [`sysreqs.json`](test/sysreqs.json) for a sample list of
+   CRAN packages and their `SystemRequirements` fields.
+   Note that the applicable R packages don't have to be on CRAN; they can be on
+   GitHub or other repositories, such as Bioconductor and rOpenSci.
+2. Determine the system packages and any pre/post-install steps if needed.
+   The more operating systems covered, the better, but it's fine if only some
+   operating systems are covered.
+
+   Useful resources for finding packages across different OSs:
+   - https://pkgs.org
+   - https://repology.org
+
+   Or to search for packages on each OS:
+   ```sh
+   # Ubuntu/Debian
+   apt-cache search <package-name>
+
+   # CentOS/RHEL
+   yum search <package-name>
+
+   # openSUSE/SLE
+   zypper search <package-name>
+   ```
+3. Add the new rule as a <code><i>rule-name</i>.json</code> file in the `rules` directory.
+4. Run the schema tests and (optionally) the system package tests locally.
+5. Submit a pull request.
 
 ### Testing
 
@@ -178,3 +305,13 @@ make test-all RULES=rules/libcurl.json
 # Test all rules on all OSs
 make test-all
 ```
+
+### Schema
+
+The JSON schema is defined in the file [`schema.json`](schema.json). Do not
+modify this file directly, since it is automatically generated. Instead, modify
+`schema.template.json` and then run `npm run generate-schema`. The
+`generate-schema` target is automatically run when running `npm test`.
+
+If you need to modify the distros and/or versions supported in the schema definitions, 
+modify `generate-schema.js`.
