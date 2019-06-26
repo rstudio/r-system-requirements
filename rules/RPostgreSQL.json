@@ -1,0 +1,20 @@
+{
+  "patterns": ["\\bRPostgreSQL\\b"], 
+  "dependencies": [
+    {
+      "packages": ["RPostgreSQL"],
+      "pre_install": [
+      {
+        "command": "yum install -y postgresql-devel"
+        }
+      ],
+      "constraints": [
+      {
+        "os": "linux",
+        "distrubution": "centos",
+        "versions": ["7"]
+        }
+      ]
+    }
+  ]
+}
