@@ -1,0 +1,35 @@
+{
+  "patterns": [
+    "\\bglpk\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "libglpk-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        }
+      ]
+    },
+    {
+      "pre_install" : [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "packages": [
+        "glpk-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        }
+      ]
+    }
+  ]
+}
