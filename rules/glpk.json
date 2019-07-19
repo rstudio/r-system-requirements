@@ -1,6 +1,6 @@
 {
   "patterns": [
-    "\\bRglpk\\b"
+    "\\bglpk\\b"
   ],
   "dependencies": [
     {
