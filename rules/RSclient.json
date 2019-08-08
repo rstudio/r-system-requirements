@@ -1,0 +1,28 @@
+{
+  "patterns": ["\\bRSclient\\b"],
+  "dependencies": [
+    {
+      "packages": [
+        "libssl-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "openssl-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        }
+      ]
+    }
+  ]
+}
