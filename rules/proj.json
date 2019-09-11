@@ -59,7 +59,7 @@
       ]
     },
     {
-      "packages": ["libproj-devel"],
+      "packages": ["libproj-devel", "proj"],
       "constraints": [
         {
           "os": "linux",
