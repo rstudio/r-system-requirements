@@ -33,7 +33,7 @@
       ]
     },
     {
-      "packages": ["libssh2-devel"],
+      "packages": ["libopenssl-devel", "libssh2-devel"],
       "constraints": [
         {
           "os": "linux",
