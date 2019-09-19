@@ -103,6 +103,24 @@
           "distribution": "opensuse"
         }
       ]
+    },
+    {
+      "packages": ["gdal-devel", "gdal"],
+      "pre_install": [
+        {
+          "command": "zypper addrepo https://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12/standard/openSUSE:Backports:SLE-12.repo"
+        },
+        {
+          "command": "zypper --gpg-auto-import-keys refresh"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["12.3"]
+        }
+      ]
     }
   ]
 }
