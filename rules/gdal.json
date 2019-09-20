@@ -11,7 +11,7 @@
       ],
       "pre_install": [
         { "command": "apt-get install -y software-properties-common" },
-        { "command": "add-apt-repository ppa:ubuntugis/ppa" },
+        { "command": "add-apt-repository -y ppa:ubuntugis/ppa" },
         { "command": "apt-get update" }
       ],
       "constraints": [
