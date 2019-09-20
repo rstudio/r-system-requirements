@@ -5,7 +5,7 @@
     },
     {
         "distribution": "ubuntu",
-        "versions": [ "16.04", "18.04" ]
+        "versions": [ "14.04", "16.04", "18.04" ]
     },
     {
         "distribution": "centos",

@@ -9,10 +9,29 @@
         "libgdal-dev",
         "gdal-bin"
       ],
+      "pre_install": [
+        { "command": "apt-get install -y software-properties-common" },
+        { "command": "add-apt-repository ppa:ubuntugis/ppa" },
+        { "command": "apt-get update" }
+      ],
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu"
+          "distribution": "ubuntu",
+          "versions": ["14.04", "16.04"]
+        }
+      ]
+    },
+    {
+      "packages": [
+        "libgdal-dev",
+        "gdal-bin"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["18.04"]
         },
         {
           "os": "linux",
@@ -82,6 +101,24 @@
         {
           "os": "linux",
           "distribution": "opensuse"
+        }
+      ]
+    },
+    {
+      "packages": ["gdal-devel", "gdal"],
+      "pre_install": [
+        {
+          "command": "zypper addrepo https://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12/standard/openSUSE:Backports:SLE-12.repo"
+        },
+        {
+          "command": "zypper --gpg-auto-import-keys refresh"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["12.3"]
         }
       ]
     }
