@@ -188,7 +188,7 @@ Other examples:
 | `packages` | Array | Packages installed through the default system package manager (e.g. apt, yum, zypper). Examples: `["libxml2-dev"]`, `["tcl", "tk"]` |
 | `constraints` | Array | One or more operating system constraints. See [constraints](#constraints). |
 | `pre_install` | Array | Optional commands or scripts to run before installing packages (e.g. adding a third-party repository). See [pre/post-install actions](#prepost-install-actions).
-| `pre_install` | Array | Optional commands or scripts to run after installing packages (e.g. cleaning up). See [pre/post-install actions](#prepost-install-actions).
+| `post_install` | Array | Optional commands or scripts to run after installing packages (e.g. cleaning up). See [pre/post-install actions](#prepost-install-actions).
 
 #### Constraints
 
