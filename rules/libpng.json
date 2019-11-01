@@ -28,7 +28,7 @@
       ]
     },
     {
-      "packages": ["libpng16-devel"],
+      "packages": ["libpng16-compat-devel"],
       "constraints": [
         {
           "os": "linux",
@@ -37,11 +37,6 @@
         {
           "os": "linux",
           "distribution": "sle"
-        }
-      ],
-      "post_install": [
-        {
-          "command": "ln -s /usr/bin/libpng16-config /usr/bin/libpng-config"
         }
       ]
     }
