@@ -28,7 +28,7 @@
       ]
     },
     {
-      "packages": ["libpng16-devel"],
+      "packages": ["libpng16-compat-devel"],
       "constraints": [
         {
           "os": "linux",
