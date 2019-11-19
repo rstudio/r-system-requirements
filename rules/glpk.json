@@ -27,7 +27,7 @@
         {
           "os": "linux",
           "distribution": "centos",
-          "versions": ["7"]
+          "versions": ["7", "8"]
         }
       ]
     }
