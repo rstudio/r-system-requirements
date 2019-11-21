@@ -32,6 +32,20 @@
     {
       "packages": ["leptonica-devel"],
       "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled PowerTools" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["leptonica-devel"],
+      "pre_install": [
         {
           "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
         }

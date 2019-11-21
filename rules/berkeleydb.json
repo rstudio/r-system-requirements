@@ -40,7 +40,7 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["7"]
+          "versions": ["7", "8"]
         }
       ]
     },

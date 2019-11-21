@@ -49,6 +49,16 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["rust", "cargo"],
+      "constraints": [
+        {
+          "os": "linux",
           "distribution": "opensuse"
         }
       ]
