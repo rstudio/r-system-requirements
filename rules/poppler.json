@@ -16,6 +16,16 @@
     },
     {
       "packages": ["poppler-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["6", "7"]
+        }
+      ]
+    },
+    {
+      "packages": ["poppler-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled PowerTools" }
@@ -34,7 +44,17 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["8"]
+          "versions": ["6", "8"]
+        }
+      ]
+    },
+    {
+      "packages": ["poppler-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },
