@@ -9,11 +9,11 @@
     },
     {
         "distribution": "centos",
-        "versions": [ "6", "7" ]
+        "versions": [ "6", "7", "8" ]
     },
     {
         "distribution": "redhat",
-        "versions": [ "6", "7" ]
+        "versions": [ "6", "7", "8" ]
     },
     {
         "distribution": "opensuse",

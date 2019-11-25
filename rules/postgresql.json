@@ -19,11 +19,28 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["6", "7"]
         },
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["6", "7"]
+        }
+      ]
+    },
+    {
+      "packages": ["postgresql-server-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
         }
       ]
     },

@@ -24,7 +24,22 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["6", "7"]
+        }
+      ]
+    },
+    {
+      "packages": ["leptonica-devel"],
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled PowerTools" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
         }
       ]
     },

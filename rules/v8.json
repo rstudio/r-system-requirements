@@ -24,7 +24,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["6", "7"]
         }
       ]
     },

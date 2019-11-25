@@ -35,7 +35,7 @@
         {
           "os": "linux",
           "distribution": "centos",
-          "versions": ["7"]
+          "versions": ["7", "8"]
         }
       ]
     },
@@ -61,6 +61,16 @@
           "os": "linux",
           "distribution": "redhat",
           "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["libwebp-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
         }
       ]
     },

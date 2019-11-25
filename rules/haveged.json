@@ -15,7 +15,7 @@
         ]
       },
       {
-        "packages": ["haveged"],
+        "packages": ["haveged-devel"],
         "pre_install": [
           {
             "command": "yum install -y epel-release"
@@ -29,7 +29,7 @@
         ]
       },
       {
-        "packages": ["haveged"],
+        "packages": ["haveged-devel"],
         "pre_install": [
           {
             "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "packages": ["haveged"],
+        "packages": ["haveged-devel"],
         "pre_install": [
           {
             "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
@@ -55,6 +55,21 @@
             "os": "linux",
             "distribution": "redhat",
             "versions": ["7"]
+          }
+        ]
+      },
+      {
+        "packages": ["haveged-devel"],
+        "pre_install": [
+          {
+            "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "versions": ["8"]
           }
         ]
       },

@@ -85,6 +85,12 @@ jobs:
       VER: 7
     docker:
       - image: centos:7
+  centos8:
+    <<: *test-centos
+    environment:
+      VER: 8
+    docker:
+      - image: centos:8
   opensuse42:
     <<: *test-opensuse
     environment:
@@ -108,5 +114,6 @@ workflows:
       - stretch
       - centos6
       - centos7
+      - centos8
       - opensuse42
       - opensuse15

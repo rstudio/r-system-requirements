@@ -58,16 +58,16 @@ for the package into the Docker container.
 If the package install is successful, there is a high chance the existing rules
 are sufficient. If the install fails, there is an indication that a rule is
 missing. This process is repeated for all CRAN packages across 6 Linux
-distributions: Ubuntu 16/18, CentOS 6/7, openSUSE 42/15.  
+distributions: Ubuntu 16/18, CentOS 6/7/8, openSUSE 42/15.  
 
 The results are summarized below:
 
 *Percentage of CRAN Packages that Install Successfully*
 
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 6 |  CentOS 7 |  openSUSE 42.3 |  openSUSE 15.0 | 
-| --- | ---   | --------  | --------  | --------- | -------------- | -------------- |
-| No Rules| 78% | 78.1% | 77.4% | 77.8% | 77.7% | 78.2% |
-| With Rules | 93.5% | 95.8% | 91.9% | 93.7% | 88.5% | 89.7% | 
+| | Ubuntu 16 | Ubuntu 18 |  CentOS 6 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 | 
+| --- | ---   | --------  | --------  | --------- | -------- | -------------- | -------------- |
+| No Rules| 78% | 78.1% | 77.4% | 77.8% | | 77.7% | 78.2% |
+| With Rules | 93.5% | 95.8% | 91.9% | 93.7% | | 88.5% | 89.7% | 
 
 
 *Percentage Weighted by Downloads*
@@ -77,10 +77,10 @@ download. This metric indicates how good the rules are for the majority of
 packages R users are likely to install, discounting the long tail of packages
 that have system requirements but are not frequently used.
 
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 6 |  CentOS 7 |  openSUSE 42.3 |  openSUSE 15.0 | 
-| --- | ---   | --------  | --------  | --------- | -------------- | -------------- |
-| No Rules| 90.1% | 90.1% | 90% | 90.1% | 90% | 90.2% | 
-| With Rules | 98.5% | 99.2% | 98.1% | 98.6% | 96.1% | 96.3% | 
+| | Ubuntu 16 | Ubuntu 18 |  CentOS 6 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 | 
+| --- | ---   | --------  | --------  | --------- | -------- | -------------- | -------------- |
+| No Rules| 90.1% | 90.1% | 90% | 90.1% | | 90% | 90.2% | 
+| With Rules | 98.5% | 99.2% | 98.1% | 98.6% | | 96.1% | 96.3% | 
 
 Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
@@ -91,7 +91,7 @@ distributions:
 
 - Ubuntu 14.04,16.04,18.04  
 - Debian 8,9  
-- CentOS 6,7  
+- CentOS 6,7,8
 - Red Hat Enterprise Linux 6,7  
 - openSUSE 42.3, 15.0  
 - SUSE Linux Enterprise 12.3, 15.0  
@@ -280,6 +280,7 @@ Available tags:
 - `stretch` (Debian 9)
 - `centos6` (CentOS 6)
 - `centos7` (CentOS 7)
+- `centos8` (CentOS 8)
 - `opensuse42` (openSUSE 42.3)
 - `opensuse15` (openSUSE 15.0)
 

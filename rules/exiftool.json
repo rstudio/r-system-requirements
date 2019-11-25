@@ -60,6 +60,21 @@
     },
     {
       "packages": ["perl-Image-ExifTool"],
+      "pre_install": [
+        {
+          "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["perl-Image-ExifTool"],
       "constraints": [
         {
           "os": "linux",
