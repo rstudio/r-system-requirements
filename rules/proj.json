@@ -24,7 +24,23 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["6", "7"]
+        }
+      ]
+    },
+    {
+      "packages": ["proj-devel"],
+      "pre_install": [
+        {
+          "command": "dnf install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
         }
       ]
     },
