@@ -50,6 +50,17 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-icu",
+        "mingw-w64-i686-icu"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }

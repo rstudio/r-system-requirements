@@ -2,20 +2,25 @@ let fs = require('fs')
 
 // The template for each distribution. Typically, you should not need to modify this.
 const system_template = function(os, distribution) {
-    return {
+    let tmpl = {
         "properties": {
             "os": { "const": os },
-            "distribution": { "const": distribution },
-            "versions": {
-                "type": "array",
-                "items": {
-                    "$ref": `#/definitions/versions/${distribution}`
-                },
-            }
         },
         "required": ["os"],
         "additionalProperties": false
     }
+
+    if (distribution !== undefined) {
+        tmpl["properties"]["distribution"] = { "const": distribution }
+        tmpl["properties"]["versions"] = {
+            "type": "array",
+            "items": {
+                "$ref": `#/definitions/versions/${distribution}`
+            },
+        }
+    }
+
+    return tmpl
 }
 
 // Define the supported operating systems, distributions, and versions in
@@ -39,18 +44,27 @@ const defs = {
 for (let i=0; i < systems.length; i++) {
     const system = systems[i]
     let versionsEnum = []
-    for (let i=0; i < system.versions.length; i++) {
-        const ver = system.versions[i]
-        versionsEnum = versionsEnum.concat(ver)
+
+    if (system.versions !== undefined) {
+        for (let i = 0; i < system.versions.length; i++) {
+            const ver = system.versions[i]
+            versionsEnum = versionsEnum.concat(ver)
+        }
     }
 
-    // Each distribution needs a version definition...
-    defs.versions[system.distribution] = {
+    // Key on the distribution, except for Windows where this is irrelevant
+    let key = system.distribution
+    if (key === undefined) {
+        key = system.os
+    }
+
+    // Each distribution (or OS) needs a version definition...
+    defs.versions[key] = {
         enum: versionsEnum
     }
 
-    // ...and also a definition named after the distribution.
-    defs[system.distribution] = system_template('linux', system.distribution)
+    // ...and also a definition named after the distribution or OS.
+    defs[key] = system_template(system.os, system.distribution)
 }
 
 // Insert the definitions in the schema and write it to disk.
