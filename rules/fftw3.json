@@ -39,6 +39,17 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-fftw",
+        "mingw-w64-i686-fftw"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }

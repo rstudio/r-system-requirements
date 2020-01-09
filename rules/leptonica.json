@@ -81,6 +81,17 @@
           "distribution": "opensuse"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-leptonica",
+        "mingw-w64-i686-leptonica"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }

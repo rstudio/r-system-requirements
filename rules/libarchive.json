@@ -75,6 +75,17 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-libarchive",
+        "mingw-w64-i686-libarchive"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }
