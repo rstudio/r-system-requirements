@@ -39,6 +39,17 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-curl",
+        "mingw-w64-i686-curl"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }
