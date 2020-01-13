@@ -86,17 +86,6 @@
             "distribution": "sle"
           }
         ]
-      },
-    {
-      "packages": [
-        "mingw-w64-x86_64-python3",
-        "mingw-w64-i686-python3"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
-    }
+      }
     ]
   }

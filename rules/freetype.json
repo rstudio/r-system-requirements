@@ -39,17 +39,6 @@
           "distribution": "sle"
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-freetype",
-        "mingw-w64-i686-freetype"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

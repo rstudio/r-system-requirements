@@ -60,17 +60,6 @@
           "versions": ["8"]
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-glpk",
-        "mingw-w64-i686-glpk"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

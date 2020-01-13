@@ -39,17 +39,6 @@
           "distribution": "sle"
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-libpng",
-        "mingw-w64-i686-libpng"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

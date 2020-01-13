@@ -76,17 +76,6 @@
           "distribution": "sle"
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-protobuf",
-        "mingw-w64-i686-protobuf"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }
