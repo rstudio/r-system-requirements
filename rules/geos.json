@@ -113,17 +113,6 @@
           "distribution": "opensuse"
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-geos",
-        "mingw-w64-i686-geos"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

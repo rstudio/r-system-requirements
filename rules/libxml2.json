@@ -39,17 +39,6 @@
           "distribution": "sle"
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-libxml2",
-        "mingw-w64-i686-libxml2"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

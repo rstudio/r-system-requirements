@@ -39,17 +39,6 @@
             "distribution": "sle"
           }
         ]
-      },
-      {
-        "packages": [
-          "mingw-w64-x86_64-zlib",
-          "mingw-w64-i686-zlib"
-        ],
-        "constraints": [
-          {
-            "os": "windows"
-          }
-        ]
       }
     ]
   }

@@ -102,17 +102,6 @@
           "versions": ["12.3"]
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-hdf5",
-        "mingw-w64-i686-hdf5"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }

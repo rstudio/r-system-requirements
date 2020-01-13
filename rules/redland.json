@@ -60,17 +60,6 @@
           "versions": ["12.3"]
         }
       ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-redland",
-        "mingw-w64-i686-redland"
-      ],
-      "constraints": [
-        {
-          "os": "windows"
-        }
-      ]
     }
   ]
 }
