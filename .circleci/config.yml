@@ -117,3 +117,22 @@ workflows:
       - centos8
       - opensuse42
       - opensuse15
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - trusty
+      - xenial
+      - bionic
+      - jessie
+      - stretch
+      - centos6
+      - centos7
+      - centos8
+      - opensuse42
+      - opensuse15
