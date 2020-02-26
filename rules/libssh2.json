@@ -29,16 +29,6 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos",
-          "versions": ["8"]
-        }
-      ]
-    },
-    {
-      "packages": ["libssh2"],
-      "constraints": [
-        {
-          "os": "linux",
           "distribution": "redhat"
         }
       ]
