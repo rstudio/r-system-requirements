@@ -18,7 +18,25 @@
         {
           "os": "linux",
           "distribution": "ubuntu",
-          "versions": ["14.04", "16.04"]
+          "versions": ["14.04"]
+        }
+      ]
+    },
+    {
+      "packages": [
+        "libgdal-dev=2.2.2+dfsg-1~xenial1",
+        "gdal-bin=2.2.2+dfsg-1~xenial1"
+      ],
+      "pre_install": [
+        { "command": "apt-get install -y software-properties-common" },
+        { "command": "add-apt-repository -y ppa:ubuntugis/ppa" },
+        { "command": "apt-get update" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["16.04"]
         }
       ]
     },
