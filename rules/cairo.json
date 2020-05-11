@@ -39,6 +39,17 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-cairo",
+        "mingw-w64-i686-cairo"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }
