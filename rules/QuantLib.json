@@ -1,0 +1,37 @@
+{
+  "patterns": [
+    "\\bQuantLib\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "libquantlib0-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "QuantLib-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    }
+  ]
+}
