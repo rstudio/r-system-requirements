@@ -1,0 +1,52 @@
+{
+  "patterns": [
+    "\\blibjq\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "jq-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "libjq-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "libjq-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "sle"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
