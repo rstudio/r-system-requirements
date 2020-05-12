@@ -11,10 +11,6 @@
         {
           "os": "linux",
           "distribution": "ubuntu"
-        },
-        {
-          "os": "linux",
-          "distribution": "debian"
         }
       ]
     },
@@ -23,6 +19,10 @@
         "chromium"
       ],
       "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian"
+        },
         {
           "os": "linux",
           "distribution": "centos"
