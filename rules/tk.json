@@ -1,0 +1,45 @@
+{
+  "patterns": [
+    "\\btk\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "tk-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "tk-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
