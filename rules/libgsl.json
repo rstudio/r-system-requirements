@@ -1,0 +1,45 @@
+{
+  "patterns": [
+    "\\blibgsl\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "libgsl-dev"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "gsl-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
