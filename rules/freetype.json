@@ -1,5 +1,5 @@
 {
-  "patterns": ["\\bfreetype\\b"],
+  "patterns": ["\\bfreetype\\b", "\\bfreetype2\\b"],
   "dependencies": [
     {
       "packages": ["libfreetype6-dev"],
