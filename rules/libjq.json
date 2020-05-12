@@ -30,7 +30,8 @@
         },
         {
           "os": "linux",
-          "distribution": "debian"
+          "distribution": "debian",
+          "versions": ["9"]
         }
       ]
     },
