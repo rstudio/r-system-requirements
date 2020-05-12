@@ -1,0 +1,45 @@
+{
+  "patterns": [
+    "\\bchromium\\b"
+  ],
+  "dependencies": [
+    {
+      "packages": [
+        "chromium-browser"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": [
+        "chromium"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        },
+        {
+          "os": "linux",
+          "distribution": "sle"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
