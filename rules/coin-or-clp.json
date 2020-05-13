@@ -13,6 +13,17 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "packages": [
+        "mingw-w64-x86_64-coinor-cbc",
+        "mingw-w64-i686-coinor-cbc"
+      ],
+      "constraints": [
+        {
+          "os": "windows"
+        }
+      ]
     }
   ]
 }
