@@ -10,11 +10,13 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["7"]
         },
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },
