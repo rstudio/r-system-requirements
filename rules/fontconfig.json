@@ -1,8 +1,12 @@
 {
-  "patterns": ["\\blibgsl\\b", "\\bgsl\\b", "\\bgnu scientific library\\b"],
+  "patterns": [
+    "\\bfontconfig\\b"
+  ],
   "dependencies": [
     {
-      "packages": ["libgsl0-dev"],
+      "packages": [
+        "libfontconfig1-dev"
+      ],
       "constraints": [
         {
           "os": "linux",
@@ -15,7 +19,9 @@
       ]
     },
     {
-      "packages": ["gsl-devel"],
+      "packages": [
+        "fontconfig-devel"
+      ],
       "constraints": [
         {
           "os": "linux",
@@ -24,30 +30,14 @@
         {
           "os": "linux",
           "distribution": "redhat"
-        }
-      ]
-    },
-    {
-      "packages": ["gsl-devel"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "opensuse"
         },
         {
           "os": "linux",
           "distribution": "sle"
-        }
-      ]
-    },
-    {
-      "packages": [
-        "mingw-w64-x86_64-gsl",
-        "mingw-w64-i686-gsl"
-      ],
-      "constraints": [
+        },
         {
-          "os": "windows"
+          "os": "linux",
+          "distribution": "opensuse"
         }
       ]
     }
