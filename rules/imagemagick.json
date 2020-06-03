@@ -19,7 +19,23 @@
         "constraints": [
           {
             "os": "linux",
-            "distribution": "centos"
+            "distribution": "centos",
+            "versions": ["6", "7"]
+          }
+        ]
+      },
+      {
+        "packages": ["ImageMagick", "ImageMagick-c++-devel"],
+        "pre_install": [
+          { "command": "dnf install -y dnf-plugins-core" },
+          { "command": "dnf config-manager --set-enabled PowerTools" },
+          { "command": "dnf install -y epel-release" }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos",
+            "versions": ["8"]
           }
         ]
       },
@@ -28,7 +44,23 @@
         "constraints": [
           {
             "os": "linux",
-            "distribution": "redhat"
+            "distribution": "redhat",
+            "versions": ["6", "7"]
+          }
+        ]
+      },
+      {
+        "packages": ["ImageMagick", "ImageMagick-c++"],
+        "pre_install": [
+          {
+            "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "versions": ["8"]
           }
         ]
       },
