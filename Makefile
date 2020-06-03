@@ -11,7 +11,7 @@ build-$(variant):
 
 test-$(variant):
 	for rule in $(RULES); do \
-		docker run -it --rm -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh; \
+		docker run -it --rm -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh || exit 1; \
 	done
 
 bash-$(variant):
