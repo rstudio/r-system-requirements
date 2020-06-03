@@ -61,6 +61,12 @@ jobs:
       VER: 18.04
     docker:
       - image: ubuntu:bionic
+  focal:
+    <<: *test-ubuntu
+    environment:
+      VER: 20.04
+    docker:
+      - image: ubuntu:focal
   jessie:
     <<: *test-debian
     environment:
@@ -110,6 +116,7 @@ workflows:
       - trusty
       - xenial
       - bionic
+      - focal
       - jessie
       - stretch
       - centos6
@@ -129,6 +136,7 @@ workflows:
       - trusty
       - xenial
       - bionic
+      - focal
       - jessie
       - stretch
       - centos6

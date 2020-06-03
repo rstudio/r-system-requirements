@@ -86,15 +86,15 @@ Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
 ## Operating Systems
 
-The rules in this catalog are designed to be used with the following
-distributions:  
+The rules in this catalog support the following operating systems:
 
-- Ubuntu 14.04,16.04,18.04  
-- Debian 8,9  
-- CentOS 6,7,8
-- Red Hat Enterprise Linux 6,7  
-- openSUSE 42.3, 15.0  
-- SUSE Linux Enterprise 12.3, 15.0  
+- Ubuntu 14.04, 16.04, 18.04, 20.04
+- Debian 8, 9
+- CentOS 6, 7, 8
+- Red Hat Enterprise Linux 6, 7, 8
+- openSUSE 42.3, 15.0
+- SUSE Linux Enterprise 12.3, 15.0
+- Windows (for R 4.0+ only)
 
 ---
 
@@ -276,6 +276,7 @@ Available tags:
 - `trusty` (Ubuntu 14.04)
 - `xenial` (Ubuntu 16.04)
 - `bionic` (Ubuntu 18.04)
+- `focal` (Ubuntu 20.04)
 - `jessie` (Debian 8)
 - `stretch` (Debian 9)
 - `centos6` (CentOS 6)
