@@ -31,7 +31,7 @@
         {
           "os": "linux",
           "distribution": "ubuntu",
-          "versions": ["18.04"]
+          "versions": ["18.04", "20.04"]
         },
         {
           "os": "linux",
