@@ -267,6 +267,12 @@ npm run test-patterns-all -- --verbose
 npm run test-patterns-all -- --strict
 ```
 
+To update the list of R packages and system requirements used for testing, run:
+
+```sh
+make update-sysreqs
+```
+
 #### System package tests
 
 [Docker](https://www.docker.com/) images are provided to help validate system
