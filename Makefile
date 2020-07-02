@@ -28,3 +28,6 @@ $(foreach variant,$(VARIANTS), \
 build-all: $(BUILD_IMAGES)
 
 test-all: $(TEST_IMAGES)
+
+update-sysreqs:
+	cd test && Rscript get-sysreqs.R > sysreqs.json
