@@ -94,6 +94,43 @@
       ]
     },
     {
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled PowerTools" },
+        { "command": "dnf install -y epel-release" }
+      ],
+      "packages": [
+        "gdal-devel",
+        "gdal",
+        "sqlite-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms" },
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm" }
+      ],
+      "packages": [
+        "gdal-devel",
+        "gdal",
+        "sqlite-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
       "packages": [
         "gdal-devel",
         "gdal"
