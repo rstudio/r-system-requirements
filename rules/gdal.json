@@ -146,7 +146,7 @@
       "packages": ["gdal-devel", "gdal"],
       "pre_install": [
         {
-          "command": "zypper addrepo https://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12/standard/openSUSE:Backports:SLE-12.repo"
+          "command": "zypper repos openSUSE_Backports_SLE-12 || zypper addrepo https://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12/standard/openSUSE:Backports:SLE-12.repo"
         },
         {
           "command": "zypper --gpg-auto-import-keys refresh"
