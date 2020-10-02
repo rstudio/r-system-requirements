@@ -1,0 +1,31 @@
+{
+  "patterns": ["\\bharfbuzz\\b"],
+  "dependencies": [
+    {
+      "packages": ["libharfbuzz-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        }
+      ]
+    },
+    {
+      "packages": ["harfbuzz-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    }
+  ]
+}
