@@ -79,12 +79,6 @@ jobs:
       VER: 9
     docker:
       - image: debian:stretch
-  centos6:
-    <<: *test-centos
-    environment:
-      VER: 6
-    docker:
-      - image: centos:6
   centos7:
     <<: *test-centos
     environment:
@@ -119,7 +113,6 @@ workflows:
       - focal
       - jessie
       - stretch
-      - centos6
       - centos7
       - centos8
       - opensuse42
@@ -139,7 +132,6 @@ workflows:
       - focal
       - jessie
       - stretch
-      - centos6
       - centos7
       - centos8
       - opensuse42
