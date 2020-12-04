@@ -78,7 +78,7 @@ packages R users are likely to install, discounting the long tail of packages
 that have system requirements but are not frequently used.
 
 | | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 | 
-| --- | ---   | --------  | --------  | --------- | -------- | -------------- | -------------- |
+| --- | ---   | --------  | --------  | -------- | -------------- | -------------- |
 | No Rules| 90.1% | 90.1% | 90.1% | | 90% | 90.2% | 
 | With Rules | 98.5% | 99.2% | 98.6% | | 96.1% | 96.3% | 
 
