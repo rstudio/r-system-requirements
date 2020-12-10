@@ -5,7 +5,7 @@
       "packages": ["libgit2-dev"],
       "pre_install": [
         { "command": "apt-get install -y software-properties-common" },
-        { "command": "add-apt-repository -y ppa:ppa:cran/libgit2" },
+        { "command": "add-apt-repository -y ppa:cran/libgit2" },
         { "command": "apt-get update" }
       ],
       "constraints": [
