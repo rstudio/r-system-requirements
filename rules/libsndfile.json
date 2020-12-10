@@ -28,7 +28,7 @@
       "packages": ["libsndfile-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
-        { "command": "dnf config-manager --set-enabled PowerTools" }
+        { "command": "dnf config-manager --set-enabled powertools" }
       ],
       "constraints": [
         {
