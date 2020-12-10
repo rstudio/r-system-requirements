@@ -3,6 +3,21 @@
   "dependencies": [
     {
       "packages": ["libgit2-dev"],
+      "pre_install": [
+        { "command": "apt-get install -y software-properties-common" },
+        { "command": "add-apt-repository -y ppa:ppa:cran/libgit2" },
+        { "command": "apt-get update" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["16.04", "18.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
       "constraints": [
         {
           "os": "linux",
