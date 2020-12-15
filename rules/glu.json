@@ -28,7 +28,7 @@
       ]
     },
     {
-      "packages": ["libGLU1"],
+      "packages": ["glu-devel"],
       "constraints": [
         {
           "os": "linux",
