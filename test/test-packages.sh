@@ -18,8 +18,10 @@ declare -A os_identifiers=(
     [rhel8]='redhat'
     [opensuse42]='opensuse'
     [opensuse15]='opensuse'
+    [opensuse152]='opensuse'
     [sle12]='sle'
     [sle15]='sle'
+    [sle152]='sle'
 )
 
 declare -A versions=(
@@ -36,8 +38,10 @@ declare -A versions=(
     [rhel8]='8'
     [opensuse42]='42.3'
     [opensuse15]='15.0'
+    [opensuse152]='15.2'
     [sle12]='12.3'
     [sle15]='15.0'
+    [sle152]='15.2'
 )
 
 test_package_ubuntu() {

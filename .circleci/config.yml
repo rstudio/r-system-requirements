@@ -103,6 +103,12 @@ jobs:
       VER: 15.0
     docker:
       - image: opensuse/leap:15.0
+  opensuse152:
+    <<: *test-opensuse
+    environment:
+      VER: 15.2
+    docker:
+      - image: opensuse/leap:15.2
 workflows:
   version: 2
   build:
@@ -117,6 +123,7 @@ workflows:
       - centos8
       - opensuse42
       - opensuse15
+      - opensuse152
   nightly:
     triggers:
       - schedule:
@@ -136,3 +143,4 @@ workflows:
       - centos8
       - opensuse42
       - opensuse15
+      - opensuse152
