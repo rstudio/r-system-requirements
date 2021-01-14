@@ -92,8 +92,8 @@ The rules in this catalog support the following operating systems:
 - Debian 8, 9
 - CentOS 7, 8
 - Red Hat Enterprise Linux 7, 8
-- openSUSE 42.3, 15.0
-- SUSE Linux Enterprise 12.3, 15.0
+- openSUSE 42.3, 15.0, 15.2
+- SUSE Linux Enterprise 12 SP3, 15, 15 SP2
 - Windows (for R 4.0+ only)
 
 ---
@@ -289,6 +289,7 @@ Available tags:
 - `centos8` (CentOS 8)
 - `opensuse42` (openSUSE 42.3)
 - `opensuse15` (openSUSE 15.0)
+- `opensuse152` (openSUSE 15.2)
 
 To build the images:
 

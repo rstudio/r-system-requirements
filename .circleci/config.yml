@@ -46,63 +46,69 @@ jobs:
   trusty:
     <<: *test-ubuntu
     environment:
-      VER: 14.04
+      VER: '14.04'
     docker:
       - image: ubuntu:trusty
   xenial:
     <<: *test-ubuntu
     environment:
-      VER: 16.04
+      VER: '16.04'
     docker:
       - image: ubuntu:xenial
   bionic:
     <<: *test-ubuntu
     environment:
-      VER: 18.04
+      VER: '18.04'
     docker:
       - image: ubuntu:bionic
   focal:
     <<: *test-ubuntu
     environment:
-      VER: 20.04
+      VER: '20.04'
     docker:
       - image: ubuntu:focal
   jessie:
     <<: *test-debian
     environment:
-      VER: 8
+      VER: '8'
     docker:
       - image: debian:jessie
   stretch:
     <<: *test-debian
     environment:
-      VER: 9
+      VER: '9'
     docker:
       - image: debian:stretch
   centos7:
     <<: *test-centos
     environment:
-      VER: 7
+      VER: '7'
     docker:
       - image: centos:7
   centos8:
     <<: *test-centos
     environment:
-      VER: 8
+      VER: '8'
     docker:
       - image: centos:8
   opensuse42:
     <<: *test-opensuse
     environment:
-      VER: 42.3
+      VER: '42.3'
     docker:
       - image: opensuse/leap:42.3
   opensuse15:
     <<: *test-opensuse
     environment:
-      VER: 15.0
+      VER: '15.0'
     docker:
       - image: opensuse/leap:15.0
+  opensuse152:
+    <<: *test-opensuse
+    environment:
+      VER: '15.2'
+    docker:
+      - image: opensuse/leap:15.2
 workflows:
   version: 2
   build:
@@ -117,6 +123,7 @@ workflows:
       - centos8
       - opensuse42
       - opensuse15
+      - opensuse152
   nightly:
     triggers:
       - schedule:
@@ -136,3 +143,4 @@ workflows:
       - centos8
       - opensuse42
       - opensuse15
+      - opensuse152

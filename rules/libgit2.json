@@ -110,7 +110,7 @@
         {
           "os": "linux",
           "distribution": "sle",
-          "versions": ["15.0"]
+          "versions": ["15.0", "15.2"]
         }
       ]
     },
