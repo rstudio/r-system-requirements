@@ -2,7 +2,7 @@
   "patterns": ["\\btesseract\\b"],
   "dependencies": [
     {
-      "packages": ["libtesseract-dev"],
+      "packages": ["libtesseract-dev", "tesseract-ocr-eng"],
       "constraints": [
         {
           "os": "linux",
