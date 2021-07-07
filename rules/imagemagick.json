@@ -65,7 +65,7 @@
         ]
       },
       {
-        "packages": ["ImageMagick", "ImageMagick-devel"],
+        "packages": ["ImageMagick", "ImageMagick-devel", "libMagick++-devel"],
         "constraints": [
           {
             "os": "linux",
