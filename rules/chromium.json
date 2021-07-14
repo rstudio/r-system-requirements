@@ -10,7 +10,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu"
+          "distribution": "ubuntu",
+          "versions": [ "14.04", "16.04", "18.04" ]
         }
       ]
     },
