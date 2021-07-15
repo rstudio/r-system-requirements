@@ -1,0 +1,42 @@
+{
+  "patterns": [
+    "\\bchrome\\b"
+  ],
+  "dependencies": [
+    {
+      "pre_install": [
+        { "command": "apt-get install -y gnupg wget" },
+        { "command": "if [ -z $(which google-chrome) ]; then wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; fi" },
+        { "command": "if [ -z $(which google-chrome) ]; then DEBIAN_FRONTEND='noninteractive' apt-get install -y /tmp/google-chrome.deb; fi" }
+      ],
+      "packages": [],
+      "post_install": [
+        { "command": "[ -e /tmp/google-chrome.deb ] && rm /tmp/google-chrome.deb" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["16.04", "18.04", "20.04"]
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        { "command": "yum install -y which" },
+        { "command": "if [ -z $(which google-chrome) ]; then wget -O - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm > /tmp/google-chrome.rpm; fi" },
+        { "command": "if [ -z $(which google-chrome) ]; then yum install -y /tmp/google-chrome.rpm; fi" }
+      ],
+      "packages": [],
+      "post_install": [
+        { "command": "[ -e /tmp/google-chrome.rpm ] && rm /tmp/google-chrome.rpm" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos"
+        }
+      ]
+    }
+  ]
+}
