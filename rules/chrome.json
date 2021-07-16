@@ -5,9 +5,9 @@
   "dependencies": [
     {
       "pre_install": [
-        { "command": "apt-get install -y gnupg wget" },
-        { "command": "if [ -z $(which google-chrome) ]; then wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; fi" },
-        { "command": "if [ -z $(which google-chrome) ]; then DEBIAN_FRONTEND='noninteractive' apt-get install -y /tmp/google-chrome.deb; fi" }
+        { "command": "[ $(which google-chrome) ] || apt-get install -y gnupg wget" },
+        { "command": "[ $(which google-chrome) ] || wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" },
+        { "command": "DEBIAN_FRONTEND='noninteractive'; [ $(which google-chrome) ] || apt-get install -y /tmp/google-chrome.deb" }
       ],
       "packages": [],
       "post_install": [
@@ -24,8 +24,8 @@
     {
       "pre_install": [
         { "command": "yum install -y which" },
-        { "command": "if [ -z $(which google-chrome) ]; then wget -O - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm > /tmp/google-chrome.rpm; fi" },
-        { "command": "if [ -z $(which google-chrome) ]; then yum install -y /tmp/google-chrome.rpm; fi" }
+        { "command": "[ $(which google-chrome) ] || wget -O /tmp/google-chrome.rpm https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm" },
+        { "command": "[ $(which google-chrome) ] || yum install -y /tmp/google-chrome.rpm" }
       ],
       "packages": [],
       "post_install": [
