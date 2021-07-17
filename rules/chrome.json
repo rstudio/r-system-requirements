@@ -7,7 +7,7 @@
       "pre_install": [
         { "command": "[ $(which google-chrome) ] || apt-get install -y gnupg wget" },
         { "command": "[ $(which google-chrome) ] || wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" },
-        { "command": "DEBIAN_FRONTEND='noninteractive'; [ $(which google-chrome) ] || apt-get install -y /tmp/google-chrome.deb" }
+        { "command": "[ $(which google-chrome) ] || DEBIAN_FRONTEND='noninteractive' apt-get install -y /tmp/google-chrome.deb" }
       ],
       "packages": [],
       "post_install": [
