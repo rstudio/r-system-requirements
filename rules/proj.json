@@ -105,7 +105,7 @@
         {
           "os": "linux",
           "distribution": "opensuse",
-          "versions": ["15.2"]
+          "versions": ["15.2", "15.3"]
         }
       ]
     },
