@@ -2,6 +2,7 @@ FROM ubuntu:xenial
 
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    apt-transport-https \
     wget
 
 # Install jq

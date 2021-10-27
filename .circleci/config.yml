@@ -10,7 +10,7 @@ test-ubuntu: &test-ubuntu
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: apt-get update -qq && apt-get install -y wget
+    - run: apt-get update -qq && apt-get install -y apt-transport-https wget
     - run:
         <<: *install-jq
     - run: DIST=ubuntu ./test/test-packages.sh
