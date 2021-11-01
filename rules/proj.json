@@ -100,7 +100,7 @@
       ]
     },
     {
-      "packages": ["libproj19", "proj"],
+      "packages": ["proj-devel", "proj"],
       "constraints": [
         {
           "os": "linux",
