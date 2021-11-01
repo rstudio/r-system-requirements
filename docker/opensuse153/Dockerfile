@@ -1,8 +1,7 @@
-FROM ubuntu:xenial
+FROM opensuse/leap:15.3
 
-RUN apt-get update -qq && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    apt-transport-https \
+RUN zypper --quiet --non-interactive update && \
+    zypper --non-interactive install \
     wget
 
 # Install jq
