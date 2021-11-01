@@ -10,7 +10,7 @@ test-ubuntu: &test-ubuntu
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: apt-get update -qq && apt-get install -y apt-transport-https
+    - run: apt-get update -qq && apt-get install -y apt-transport-https curl
     - run:
         <<: *install-jq
     - run: DIST=ubuntu ./test/test-packages.sh
@@ -19,6 +19,7 @@ test-debian: &test-debian
   steps:
     - checkout
     - run: cat /etc/*-release
+    - run: apt-get update -qq && apt-get install -y curl
     - run:
         <<: *install-jq
     - run: DIST=debian ./test/test-packages.sh
@@ -35,6 +36,7 @@ test-opensuse: &test-opensuse
   steps:
     - checkout
     - run: cat /etc/*-release
+    - run: zypper --quiet --non-interactive update && zypper --non-interactive install curl
     - run:
         <<: *install-jq
     - run: DIST=opensuse ./test/test-packages.sh
