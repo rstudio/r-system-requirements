@@ -2,7 +2,8 @@ FROM opensuse/leap:42.3
 
 RUN zypper --quiet --non-interactive update && \
     zypper --non-interactive install \
-    curl
+    curl && \
+    zypper clean --all
 
 # Install jq
 RUN curl -fsSL -o /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
