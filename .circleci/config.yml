@@ -3,14 +3,14 @@ version: 2
 install-jq: &install-jq
   name: Install jq
   command: |
-    wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+    curl -fsSL -o /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
     chmod +x /usr/local/bin/jq
 
 test-ubuntu: &test-ubuntu
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: apt-get update -qq && apt-get install -y apt-transport-https wget
+    - run: apt-get update -qq && apt-get install -y apt-transport-https curl
     - run:
         <<: *install-jq
     - run: DIST=ubuntu ./test/test-packages.sh
@@ -19,7 +19,7 @@ test-debian: &test-debian
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: apt-get update -qq && apt-get install -y wget
+    - run: apt-get update -qq && apt-get install -y curl
     - run:
         <<: *install-jq
     - run: DIST=debian ./test/test-packages.sh
@@ -28,7 +28,6 @@ test-centos: &test-centos
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: yum update -y -q && yum install -y wget
     - run:
         <<: *install-jq
     - run: DIST=centos ./test/test-packages.sh
@@ -37,7 +36,7 @@ test-opensuse: &test-opensuse
   steps:
     - checkout
     - run: cat /etc/*-release
-    - run: zypper --quiet --non-interactive update && zypper --non-interactive install wget
+    - run: zypper --quiet --non-interactive update && zypper --non-interactive install curl
     - run:
         <<: *install-jq
     - run: DIST=opensuse ./test/test-packages.sh
