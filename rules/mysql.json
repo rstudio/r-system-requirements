@@ -1,5 +1,5 @@
 {
-  "patterns": ["\\bmysql\\b"],
+  "patterns": ["\\bmysql.*server\\b"],
   "dependencies": [
     {
       "packages": ["mysql-server"],
