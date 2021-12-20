@@ -11,7 +11,7 @@
       ],
       "packages": [],
       "post_install": [
-        { "command": "[ -e /tmp/google-chrome.deb ] && rm /tmp/google-chrome.deb" }
+        { "command": "rm -f /tmp/google-chrome.deb" }
       ],
       "constraints": [
         {
@@ -29,7 +29,7 @@
       ],
       "packages": [],
       "post_install": [
-        { "command": "[ -e /tmp/google-chrome.rpm ] && rm /tmp/google-chrome.rpm" }
+        { "command": "rm -f /tmp/google-chrome.rpm" }
       ],
       "constraints": [
         {
