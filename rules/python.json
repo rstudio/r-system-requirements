@@ -2,7 +2,7 @@
     "patterns": ["\\bpython\\b"],
     "dependencies": [
       {
-        "packages": ["python"],
+        "packages": ["python3"],
         "constraints": [
           {
             "os": "linux",
