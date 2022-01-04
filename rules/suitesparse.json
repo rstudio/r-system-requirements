@@ -23,10 +23,6 @@
         },
         {
           "os": "linux",
-          "distribution": "fedora"
-        },
-        {
-          "os": "linux",
           "distribution": "opensuse"
         },
         {
