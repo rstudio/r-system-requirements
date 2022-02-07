@@ -89,7 +89,7 @@ jobs:
     environment:
       VER: '8'
     docker:
-      - image: centos:8
+      - image: rockylinux:8
   opensuse42:
     <<: *test-opensuse
     environment:
