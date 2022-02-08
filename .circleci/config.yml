@@ -42,18 +42,6 @@ test-opensuse: &test-opensuse
     - run: DIST=opensuse ./test/test-packages.sh
 
 jobs:
-  trusty:
-    <<: *test-ubuntu
-    environment:
-      VER: '14.04'
-    docker:
-      - image: ubuntu:trusty
-  xenial:
-    <<: *test-ubuntu
-    environment:
-      VER: '16.04'
-    docker:
-      - image: ubuntu:xenial
   bionic:
     <<: *test-ubuntu
     environment:
@@ -66,12 +54,6 @@ jobs:
       VER: '20.04'
     docker:
       - image: ubuntu:focal
-  jessie:
-    <<: *test-debian
-    environment:
-      VER: '8'
-    docker:
-      - image: debian:jessie
   stretch:
     <<: *test-debian
     environment:
@@ -96,12 +78,6 @@ jobs:
       VER: '42.3'
     docker:
       - image: opensuse/leap:42.3
-  opensuse15:
-    <<: *test-opensuse
-    environment:
-      VER: '15.0'
-    docker:
-      - image: opensuse/leap:15.0
   opensuse152:
     <<: *test-opensuse
     environment:
@@ -118,16 +94,12 @@ workflows:
   version: 2
   build:
     jobs:
-      - trusty
-      - xenial
       - bionic
       - focal
-      - jessie
       - stretch
       - centos7
       - centos8
       - opensuse42
-      - opensuse15
       - opensuse152
       - opensuse153
   nightly:
@@ -139,15 +111,11 @@ workflows:
               only:
                 - master
     jobs:
-      - trusty
-      - xenial
       - bionic
       - focal
-      - jessie
       - stretch
       - centos7
       - centos8
       - opensuse42
-      - opensuse15
       - opensuse152
       - opensuse153
