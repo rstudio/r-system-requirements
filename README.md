@@ -88,12 +88,12 @@ Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 14.04, 16.04, 18.04, 20.04
-- Debian 8, 9
+- Ubuntu 18.04, 20.04
+- Debian 9
 - CentOS 7, 8
 - Red Hat Enterprise Linux 7, 8
-- openSUSE 42.3, 15.0, 15.2, 15.3
-- SUSE Linux Enterprise 12 SP3, 15, 15 SP2, 15 SP3
+- openSUSE 42.3, 15.2, 15.3
+- SUSE Linux Enterprise 12 SP3, 15 SP2, 15 SP3
 - Windows (for R 4.0+ only)
 
 ---
@@ -196,7 +196,7 @@ Other examples:
 | ----- | ---- | ----------- |
 | `os` | String | Operating system. Only `"linux"` is supported for now. |
 | `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"` |
-| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["16.04", "18.04"]` for Ubuntu. |
+| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["18.04"]` for Ubuntu. |
 
 #### Pre/post-install actions
 
@@ -279,24 +279,20 @@ make update-sysreqs
 packages on supported OSs.
 
 Available tags:
-- `trusty` (Ubuntu 14.04)
-- `xenial` (Ubuntu 16.04)
 - `bionic` (Ubuntu 18.04)
 - `focal` (Ubuntu 20.04)
-- `jessie` (Debian 8)
 - `stretch` (Debian 9)
 - `centos7` (CentOS 7)
 - `centos8` (CentOS 8)
 - `opensuse42` (openSUSE 42.3)
-- `opensuse15` (openSUSE 15.0)
 - `opensuse152` (openSUSE 15.2)
 - `opensuse153` (openSUSE 15.3)
 
 To build the images:
 
 ```sh
-# Build a specific image (e.g. trusty)
-make build-trusty
+# Build a specific image (e.g. focal)
+make build-focal
 
 # Build all images
 make build-all
@@ -305,8 +301,8 @@ make build-all
 To test the rules:
 
 ```sh
-# Test a specific rule on an OS (e.g. trusty)
-make test-trusty RULES=rules/libcurl.json
+# Test a specific rule on an OS (e.g. focal)
+make test-focal RULES=rules/libcurl.json
 
 # Test a specific rule on all OSs
 make test-all RULES=rules/libcurl.json
