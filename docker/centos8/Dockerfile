@@ -1,4 +1,4 @@
-FROM centos:8
+FROM rockylinux:8
 
 RUN dnf upgrade -y -q && \
     dnf install -y \
