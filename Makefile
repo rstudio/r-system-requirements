@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS = bionic focal stretch centos7 centos8 opensuse42 opensuse152 opensuse153
+VARIANTS = bionic focal stretch centos7 centos8 opensuse42 opensuse153
 
 RULES ?= rules/*.json
 
