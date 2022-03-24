@@ -78,12 +78,6 @@ jobs:
       VER: '42.3'
     docker:
       - image: opensuse/leap:42.3
-  opensuse152:
-    <<: *test-opensuse
-    environment:
-      VER: '15.2'
-    docker:
-      - image: opensuse/leap:15.2
   opensuse153:
     <<: *test-opensuse
     environment:
@@ -100,7 +94,6 @@ workflows:
       - centos7
       - centos8
       - opensuse42
-      - opensuse152
       - opensuse153
   nightly:
     triggers:
@@ -117,5 +110,4 @@ workflows:
       - centos7
       - centos8
       - opensuse42
-      - opensuse152
       - opensuse153

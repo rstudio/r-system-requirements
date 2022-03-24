@@ -13,10 +13,8 @@ declare -A os_identifiers=(
     [rhel7]='redhat'
     [rhel8]='redhat'
     [opensuse42]='opensuse'
-    [opensuse152]='opensuse'
     [opensuse153]='opensuse'
     [sle12]='sle'
-    [sle152]='sle'
     [sle153]='sle'
 )
 
@@ -29,10 +27,8 @@ declare -A versions=(
     [rhel7]='7'
     [rhel8]='8'
     [opensuse42]='42.3'
-    [opensuse152]='15.2'
     [opensuse153]='15.3'
     [sle12]='12.3'
-    [sle152]='15.2'
     [sle153]='15.3'
 )
 
