@@ -44,8 +44,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu",
-          "versions": ["18.04", "20.04"]
+          "distribution": "ubuntu"
         },
         {
           "os": "linux",
