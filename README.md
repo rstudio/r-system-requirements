@@ -1,6 +1,6 @@
 # System Requirements for R Packages
 
-[![Travis Build Status](https://travis-ci.com/rstudio/r-system-requirements.svg?token=MNvJQsCy2iwsWpHV8ezP&branch=master)](https://travis-ci.com/rstudio/r-system-requirements)
+[![CI Status](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml/badge.svg)](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml)
 [![CircleCI Build Status](https://circleci.com/gh/rstudio/r-system-requirements.svg?style=svg&circle-token=a281bb1cf9155796c3b112a77fce743cbdbff93d)](https://circleci.com/gh/rstudio/r-system-requirements)
 
 R packages can depend on one another, but they can also depend on software
@@ -88,7 +88,7 @@ Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 18.04, 20.04
+- Ubuntu 18.04, 20.04, 22.04
 - Debian 9
 - CentOS 7, 8
 - Red Hat Enterprise Linux 7, 8
@@ -281,6 +281,7 @@ packages on supported OSs.
 Available tags:
 - `bionic` (Ubuntu 18.04)
 - `focal` (Ubuntu 20.04)
+- `jammy` (Ubuntu 22.04)
 - `stretch` (Debian 9)
 - `centos7` (CentOS 7)
 - `centos8` (CentOS 8)

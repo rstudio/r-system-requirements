@@ -54,6 +54,12 @@ jobs:
       VER: '20.04'
     docker:
       - image: ubuntu:focal
+  jammy:
+    <<: *test-ubuntu
+    environment:
+      VER: '22.04'
+    docker:
+      - image: ubuntu:jammy
   stretch:
     <<: *test-debian
     environment:
@@ -90,6 +96,7 @@ workflows:
     jobs:
       - bionic
       - focal
+      - jammy
       - stretch
       - centos7
       - centos8
@@ -102,10 +109,11 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - bionic
       - focal
+      - jammy
       - stretch
       - centos7
       - centos8

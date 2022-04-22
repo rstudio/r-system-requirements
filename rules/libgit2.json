@@ -22,7 +22,7 @@
         {
           "os": "linux",
           "distribution": "ubuntu",
-          "versions": ["20.04"]
+          "versions": ["20.04", "22.04"]
         }
       ]
     },
