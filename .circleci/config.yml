@@ -78,12 +78,6 @@ jobs:
       VER: '8'
     docker:
       - image: rockylinux:8
-  opensuse42:
-    <<: *test-opensuse
-    environment:
-      VER: '42.3'
-    docker:
-      - image: opensuse/leap:42.3
   opensuse153:
     <<: *test-opensuse
     environment:
@@ -100,7 +94,6 @@ workflows:
       - stretch
       - centos7
       - centos8
-      - opensuse42
       - opensuse153
   nightly:
     triggers:
@@ -117,5 +110,4 @@ workflows:
       - stretch
       - centos7
       - centos8
-      - opensuse42
       - opensuse153
