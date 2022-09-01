@@ -71,6 +71,20 @@
       ]
     },
     {
+      "packages": ["nodejs-libs"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
+        }
+      ]
+    },
+    {
       "packages": ["v8-devel"],
       "constraints": [
         {

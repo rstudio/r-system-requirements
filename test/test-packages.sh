@@ -10,8 +10,10 @@ declare -A os_identifiers=(
     [jammy]='ubuntu'
     [centos7]='centos'
     [centos8]='centos'
+    [rockylinux9]='rockylinux'
     [rhel7]='redhat'
     [rhel8]='redhat'
+    [rhel9]='redhat'
     [opensuse153]='opensuse'
     [sle153]='sle'
 )
@@ -22,8 +24,10 @@ declare -A versions=(
     [jammy]='22.04'
     [centos7]='7'
     [centos8]='8'
+    [rockylinux9]='9'
     [rhel7]='7'
     [rhel8]='8'
+    [rhel9]='9'
     [opensuse153]='15.3'
     [sle153]='15.3'
 )
@@ -49,6 +53,11 @@ test_package_centos() {
     printf "$pkg | "
     found=$(yum list -q "$pkg")
     echo $found
+}
+
+test_package_rockylinux() {
+    # Same as CentOS
+    test_package_centos "$@"
 }
 
 test_package_redhat() {

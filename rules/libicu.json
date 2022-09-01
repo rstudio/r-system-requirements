@@ -23,8 +23,11 @@
         },
         {
           "os": "linux",
-          "distribution": "redhat",
-          "versions": ["7", "8"]
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
         }
       ]
     },

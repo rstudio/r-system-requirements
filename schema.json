@@ -91,6 +91,9 @@
                   "$ref": "#/definitions/centos"
                 },
                 {
+                  "$ref": "#/definitions/rockylinux"
+                },
+                {
                   "$ref": "#/definitions/redhat"
                 },
                 {
@@ -142,11 +145,17 @@
           "8"
         ]
       },
+      "rockylinux": {
+        "enum": [
+          "9"
+        ]
+      },
       "redhat": {
         "enum": [
           "6",
           "7",
-          "8"
+          "8",
+          "9"
         ]
       },
       "opensuse": {
@@ -221,6 +230,26 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/centos"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "rockylinux": {
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "rockylinux"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/rockylinux"
           }
         }
       },

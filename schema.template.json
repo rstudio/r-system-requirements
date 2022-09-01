@@ -91,6 +91,9 @@
                   "$ref": "#/definitions/centos"
                 },
                 {
+                  "$ref": "#/definitions/rockylinux"
+                },
+                {
                   "$ref": "#/definitions/redhat"
                 },
                 {

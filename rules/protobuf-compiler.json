@@ -56,6 +56,19 @@
     {
       "packages": ["protobuf-compiler"],
       "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled crb" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        }
+      ]
+    },
+    {
+      "packages": ["protobuf-compiler"],
+      "pre_install": [
         {
           "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
         }
@@ -65,6 +78,19 @@
           "os": "linux",
           "distribution": "redhat",
           "versions": ["6"]
+        }
+      ]
+    },
+    {
+      "packages": ["protobuf-compiler"],
+      "pre_install": [
+        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
         }
       ]
     },

@@ -15,13 +15,15 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos",
-          "versions": ["7", "8"]
+          "distribution": "centos"
         },
         {
           "os": "linux",
-          "distribution": "redhat",
-          "versions": ["7", "8"]
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
         },
         {
           "os": "linux",

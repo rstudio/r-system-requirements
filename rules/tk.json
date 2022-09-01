@@ -29,6 +29,10 @@
         },
         {
           "os": "linux",
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
           "distribution": "redhat"
         },
         {

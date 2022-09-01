@@ -75,6 +75,19 @@
       ]
     },
     {
+      "packages": ["geos-devel"],
+      "pre_install": [
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
+        }
+      ]
+    },
+    {
       "pre_install": [
         {
           "command": "yum install -y epel-release"
@@ -101,6 +114,10 @@
           "os": "linux",
           "distribution": "centos",
           "versions": ["8"]
+        },
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
         }
       ]
     },
