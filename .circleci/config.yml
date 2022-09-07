@@ -83,6 +83,12 @@ jobs:
       VER: '15.3'
     docker:
       - image: opensuse/leap:15.3
+  opensuse154:
+    <<: *test-opensuse
+    environment:
+      VER: '15.4'
+    docker:
+      - image: opensuse/leap:15.4
 workflows:
   version: 2
   build:
@@ -94,6 +100,7 @@ workflows:
       - centos8
       - rockylinux9
       - opensuse153
+      - opensuse154
   nightly:
     triggers:
       - schedule:
@@ -110,3 +117,4 @@ workflows:
       - centos8
       - rockylinux9
       - opensuse153
+      - opensuse154
