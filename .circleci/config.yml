@@ -15,15 +15,6 @@ test-ubuntu: &test-ubuntu
         <<: *install-jq
     - run: DIST=ubuntu ./test/test-packages.sh
 
-test-debian: &test-debian
-  steps:
-    - checkout
-    - run: cat /etc/*-release
-    - run: apt-get update -qq && apt-get install -y curl
-    - run:
-        <<: *install-jq
-    - run: DIST=debian ./test/test-packages.sh
-
 test-centos: &test-centos
   steps:
     - checkout
@@ -60,12 +51,6 @@ jobs:
       VER: '22.04'
     docker:
       - image: ubuntu:jammy
-  stretch:
-    <<: *test-debian
-    environment:
-      VER: '9'
-    docker:
-      - image: debian:stretch
   centos7:
     <<: *test-centos
     environment:
@@ -91,7 +76,6 @@ workflows:
       - bionic
       - focal
       - jammy
-      - stretch
       - centos7
       - centos8
       - opensuse153
@@ -107,7 +91,6 @@ workflows:
       - bionic
       - focal
       - jammy
-      - stretch
       - centos7
       - centos8
       - opensuse153
