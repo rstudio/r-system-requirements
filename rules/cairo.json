@@ -2,7 +2,7 @@
   "patterns": ["\\bcairo\\b"],
   "dependencies": [
     {
-      "packages": ["libcairo2-dev"],
+      "packages": ["libcairo2-dev", "libXt-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "packages": ["cairo-devel"],
+      "packages": ["cairo-devel", "libXt-devel"],
       "constraints": [
         {
           "os": "linux",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "packages": ["cairo-devel"],
+      "packages": ["cairo-devel", "libXt-devel"],
       "constraints": [
         {
           "os": "linux",
