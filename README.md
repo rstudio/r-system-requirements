@@ -92,8 +92,8 @@ The rules in this catalog support the following operating systems:
 - CentOS 7, 8
 - Rocky Linux 9
 - Red Hat Enterprise Linux 7, 8, 9
-- openSUSE 15.3
-- SUSE Linux Enterprise 15 SP3
+- openSUSE 15.3, 15.4
+- SUSE Linux Enterprise 15 SP3, 15 SP4
 - Windows (for R 4.0+ only)
 
 ---
@@ -286,6 +286,7 @@ Available tags:
 - `centos8` (CentOS 8)
 - `rockylinux9` (Rocky Linux 9)
 - `opensuse153` (openSUSE 15.3)
+- `opensuse154` (openSUSE 15.4)
 
 To build the images:
 

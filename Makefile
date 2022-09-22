@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS = bionic focal jammy centos7 centos8 rockylinux9 opensuse153
+VARIANTS = bionic focal jammy centos7 centos8 rockylinux9 opensuse153 opensuse154
 
 RULES ?= rules/*.json
 

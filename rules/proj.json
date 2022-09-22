@@ -122,7 +122,7 @@
         {
           "os": "linux",
           "distribution": "opensuse",
-          "versions": ["15.2", "15.3"]
+          "versions": ["15.2", "15.3", "15.4"]
         }
       ]
     },

@@ -15,7 +15,9 @@ declare -A os_identifiers=(
     [rhel8]='redhat'
     [rhel9]='redhat'
     [opensuse153]='opensuse'
+    [opensuse154]='opensuse'
     [sle153]='sle'
+    [sle154]='sle'
 )
 
 declare -A versions=(
@@ -29,7 +31,9 @@ declare -A versions=(
     [rhel8]='8'
     [rhel9]='9'
     [opensuse153]='15.3'
+    [opensuse154]='15.4'
     [sle153]='15.3'
+    [sle154]='15.4'
 )
 
 test_package_ubuntu() {
