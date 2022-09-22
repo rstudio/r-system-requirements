@@ -25,11 +25,37 @@
       ]
     },
     {
+      "packages": ["libssh2-devel"],
+      "pre_install": [
+        { "command": "dnf install -y epel-release" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        }
+      ]
+    },
+    {
       "packages": ["libssh2"],
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["7", "8"]
+        }
+      ]
+    },
+    {
+      "packages": ["libssh2-devel"],
+      "pre_install": [
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
         }
       ]
     },

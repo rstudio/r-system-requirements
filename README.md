@@ -90,7 +90,8 @@ The rules in this catalog support the following operating systems:
 
 - Ubuntu 18.04, 20.04, 22.04
 - CentOS 7, 8
-- Red Hat Enterprise Linux 7, 8
+- Rocky Linux 9
+- Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.3
 - SUSE Linux Enterprise 15 SP3
 - Windows (for R 4.0+ only)
@@ -283,6 +284,7 @@ Available tags:
 - `jammy` (Ubuntu 22.04)
 - `centos7` (CentOS 7)
 - `centos8` (CentOS 8)
+- `rockylinux9` (Rocky Linux 9)
 - `opensuse153` (openSUSE 15.3)
 
 To build the images:

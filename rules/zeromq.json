@@ -47,6 +47,18 @@
     {
       "packages": ["zeromq-devel"],
       "pre_install": [
+        { "command": "dnf install -y epel-release" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        }
+      ]
+    },
+    {
+      "packages": ["zeromq-devel"],
+      "pre_install": [
         {
           "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
         }
@@ -86,6 +98,19 @@
           "os": "linux",
           "distribution": "redhat",
           "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["zeromq-devel"],
+      "pre_install": [
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
         }
       ]
     },

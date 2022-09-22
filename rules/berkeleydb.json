@@ -15,32 +15,19 @@
       ]
     },
     {
-      "packages": ["db4-devel"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "centos",
-          "versions": ["6"]
-        },
-        {
-          "os": "linux",
-          "distribution": "redhat",
-          "versions": ["6"]
-        }
-      ]
-    },
-    {
       "packages": ["libdb-devel"],
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos",
-          "versions": ["7", "8"]
+          "distribution": "centos"
         },
         {
           "os": "linux",
-          "distribution": "redhat",
-          "versions": ["7", "8"]
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
         }
       ]
     },

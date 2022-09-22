@@ -64,8 +64,12 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
           "distribution": "redhat",
-          "versions": ["8"]
+          "versions": ["8", "9"]
         }
       ]
     },

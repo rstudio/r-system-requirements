@@ -41,6 +41,10 @@
             "os": "linux",
             "distribution": "centos",
             "versions": ["8"]
+          },
+          {
+            "os": "linux",
+            "distribution": "rockylinux"
           }
         ]
       },
@@ -86,6 +90,19 @@
             "os": "linux",
             "distribution": "redhat",
             "versions": ["8"]
+          }
+        ]
+      },
+      {
+        "packages": ["haveged-devel"],
+        "pre_install": [
+          { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm" }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "versions": ["9"]
           }
         ]
       },

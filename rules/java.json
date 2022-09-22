@@ -33,7 +33,25 @@
         },
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["7", "8"]
+        }
+      ]
+    },
+    {
+      "post_install": [
+        { "command": "R CMD javareconf" }
+      ],
+      "packages": ["java-11-openjdk-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
         }
       ]
     },

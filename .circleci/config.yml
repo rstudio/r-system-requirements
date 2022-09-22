@@ -23,6 +23,14 @@ test-centos: &test-centos
         <<: *install-jq
     - run: DIST=centos ./test/test-packages.sh
 
+test-rockylinux: &test-rockylinux
+  steps:
+    - checkout
+    - run: cat /etc/*-release
+    - run:
+        <<: *install-jq
+    - run: DIST=rockylinux ./test/test-packages.sh
+
 test-opensuse: &test-opensuse
   steps:
     - checkout
@@ -63,6 +71,12 @@ jobs:
       VER: '8'
     docker:
       - image: rockylinux:8
+  rockylinux9:
+    <<: *test-rockylinux
+    environment:
+      VER: '9'
+    docker:
+      - image: rockylinux:9
   opensuse153:
     <<: *test-opensuse
     environment:
@@ -78,6 +92,7 @@ workflows:
       - jammy
       - centos7
       - centos8
+      - rockylinux9
       - opensuse153
   nightly:
     triggers:
@@ -93,4 +108,5 @@ workflows:
       - jammy
       - centos7
       - centos8
+      - rockylinux9
       - opensuse153

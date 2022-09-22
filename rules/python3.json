@@ -79,6 +79,20 @@
         "constraints": [
           {
             "os": "linux",
+            "distribution": "rockylinux"
+          },
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "versions": ["9"]
+          }
+        ]
+      },
+      {
+        "packages": ["python3"],
+        "constraints": [
+          {
+            "os": "linux",
             "distribution": "opensuse"
           },
           {

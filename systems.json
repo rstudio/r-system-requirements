@@ -16,8 +16,13 @@
     },
     {
         "os": "linux",
+        "distribution": "rockylinux",
+        "versions": [ "9" ]
+    },
+    {
+        "os": "linux",
         "distribution": "redhat",
-        "versions": [ "6", "7", "8" ]
+        "versions": [ "6", "7", "8", "9" ]
     },
     {
         "os": "linux",
