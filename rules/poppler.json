@@ -15,17 +15,22 @@
       ]
     },
     {
-      "packages": ["poppler-devel"],
+      "packages": ["poppler-cpp-devel"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "centos",
-          "versions": ["6", "7"]
+          "versions": ["7"]
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },
     {
-      "packages": ["poppler-devel"],
+      "packages": ["poppler-cpp-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled powertools" }
@@ -39,7 +44,7 @@
       ]
     },
     {
-      "packages": ["poppler-devel"],
+      "packages": ["poppler-cpp-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled crb" }
@@ -52,27 +57,20 @@
       ]
     },
     {
-      "packages": ["poppler"],
+      "packages": ["poppler-cpp-devel"],
+      "pre_install": [
+        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms" }
+      ],
       "constraints": [
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["6", "8"]
+          "versions": ["8"]
         }
       ]
     },
     {
-      "packages": ["poppler-devel"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "redhat",
-          "versions": ["7"]
-        }
-      ]
-    },
-    {
-      "packages": ["poppler-devel"],
+      "packages": ["poppler-cpp-devel"],
       "pre_install": [
         { "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms" }
       ],
@@ -85,7 +83,7 @@
       ]
     },
     {
-      "packages": ["libpoppler-cpp0"],
+      "packages": ["libpoppler-devel"],
       "constraints": [
         {
           "os": "linux",
