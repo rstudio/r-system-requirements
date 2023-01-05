@@ -1,7 +1,6 @@
 # System Requirements for R Packages
 
 [![CI Status](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml/badge.svg)](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml)
-[![CircleCI Build Status](https://circleci.com/gh/rstudio/r-system-requirements.svg?style=svg&circle-token=a281bb1cf9155796c3b112a77fce743cbdbff93d)](https://circleci.com/gh/rstudio/r-system-requirements)
 
 R packages can depend on one another, but they can also depend on software
 external to the R ecosystem. On Ubuntu 18.04, for example, in order to install
