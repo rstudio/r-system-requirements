@@ -1,0 +1,13 @@
+name: Daily tests
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docker-images:
+    uses: ./.github/workflows/ci.yml

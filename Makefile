@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS = bionic focal jammy centos7 centos8 rockylinux9 opensuse153 opensuse154
+VARIANTS ?= bionic focal jammy centos7 centos8 rockylinux9 opensuse153 opensuse154
 
 RULES ?= rules/*.json
 
@@ -11,7 +11,7 @@ build-$(variant):
 
 test-$(variant):
 	for rule in $(RULES); do \
-		docker run -it --rm -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh || exit 1; \
+		docker run --rm -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh || exit 1; \
 	done
 
 bash-$(variant):
@@ -31,3 +31,6 @@ test-all: $(TEST_IMAGES)
 
 update-sysreqs:
 	cd test && Rscript get-sysreqs.R > sysreqs.json
+
+print-variants:
+	@echo $(VARIANTS)
