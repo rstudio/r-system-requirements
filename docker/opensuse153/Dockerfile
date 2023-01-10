@@ -1,6 +1,8 @@
 FROM opensuse/leap:15.3
 
-RUN zypper --quiet --non-interactive update && \
+# Use mirrorcache to mitigate openSUSE mirror flakiness
+RUN sed -i 's|http://download.opensuse.org|https://mirrorcache.opensuse.org|g' /etc/zypp/repos.d/*.repo && \
+    zypper --quiet --non-interactive update && \
     zypper --non-interactive install \
     curl && \
     zypper clean --all
