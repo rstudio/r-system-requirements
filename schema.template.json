@@ -103,9 +103,6 @@
                   "$ref": "#/definitions/sle"
                 },
                 {
-                  "$ref": "#/definitions/debian"
-                },
-                {
                   "$ref": "#/definitions/windows"
                 }
               ]
