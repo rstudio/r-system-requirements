@@ -7,6 +7,10 @@
         {
           "os": "linux",
           "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
         }
       ]
     },

@@ -103,6 +103,9 @@
                   "$ref": "#/definitions/sle"
                 },
                 {
+                  "$ref": "#/definitions/debian"
+                },
+                {
                   "$ref": "#/definitions/windows"
                 }
               ]
@@ -125,8 +128,7 @@
     "versions": {
       "debian": {
         "enum": [
-          "8",
-          "9"
+          "11"
         ]
       },
       "ubuntu": {
