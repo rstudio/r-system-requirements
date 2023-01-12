@@ -93,7 +93,7 @@ The rules in this catalog support the following operating systems:
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.3, 15.4
 - SUSE Linux Enterprise 15 SP3, 15 SP4
-- Debian 11
+- Debian 10, 11, unstable
 - Windows (for R 4.0+ only)
 
 ---
@@ -282,7 +282,9 @@ Available tags:
 - `bionic` (Ubuntu 18.04)
 - `focal` (Ubuntu 20.04)
 - `jammy` (Ubuntu 22.04)
-- `debian11` (Debian 11)
+- `buster` (Debian 10)
+- `bullseye` (Debian 11)
+- `sid` (Debian unstable)
 - `centos7` (CentOS 7)
 - `centos8` (CentOS 8)
 - `rockylinux9` (Rocky Linux 9)

@@ -2,7 +2,7 @@
     {
         "os": "linux",
         "distribution": "debian",
-        "versions": [ "11" ]
+        "versions": [ "10", "11", "unstable" ]
     },
     {
         "os": "linux",
