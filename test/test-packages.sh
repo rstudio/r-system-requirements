@@ -42,15 +42,6 @@ declare -A versions=(
     [sle154]='15.4'
 )
 
-update_package_metadata () {
-    dist=$1
-    case $dist in
-        "ubuntu" | "debian")
-            apt update
-            ;;
-    esac
-}
-
 test_package_ubuntu() {
     pkg=$1
     found=$(apt-cache search --names-only "^${pkg}$")
@@ -125,8 +116,6 @@ test_packages() {
     dist=$2
     version=$3
     test_package="test_package_${dist}"
-
-    update_package_metadata "$dist"
 
     for rule in $rules; do
         # Find all dependencies for this distro
