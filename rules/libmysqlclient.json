@@ -11,6 +11,15 @@
       ]
     },
     {
+      "packages": ["libmariadb-dev-compat", "libmariadb-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
       "packages": ["mysql-devel"],
       "constraints": [
         {

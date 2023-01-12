@@ -125,8 +125,7 @@
     "versions": {
       "debian": {
         "enum": [
-          "8",
-          "9"
+          "11"
         ]
       },
       "ubuntu": {

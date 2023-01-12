@@ -8,6 +8,10 @@
           "os": "linux",
           "distribution": "ubuntu",
           "versions": ["20.04", "22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
         }
       ]
     },
@@ -18,10 +22,6 @@
           "os": "linux",
           "distribution": "ubuntu",
           "versions": ["18.04"]
-        },
-        {
-          "os": "linux",
-          "distribution": "debian"
         }
       ]
     },

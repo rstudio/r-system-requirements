@@ -7,7 +7,12 @@
         {
           "os": "linux",
           "distribution": "ubuntu"
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["mariadb-server"],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "debian"

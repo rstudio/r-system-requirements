@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS ?= bionic focal jammy centos7 centos8 rockylinux9 opensuse153 opensuse154
+VARIANTS ?= bionic focal jammy debian11 centos7 centos8 rockylinux9 opensuse153 opensuse154
 
 RULES ?= rules/*.json
 
@@ -7,11 +7,11 @@ all: build-all
 
 define GEN_BUILD_IMAGES
 build-$(variant):
-	docker build -t $(IMAGE):$(variant) docker/$(variant)/.
+	docker build --platform=linux/amd64 -t $(IMAGE):$(variant) docker/$(variant)/.
 
 test-$(variant):
 	for rule in $(RULES); do \
-		docker run --rm -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh || exit 1; \
+		docker run --rm --platform=linux/amd64 -v $(PWD):/work -e DIST=$(variant) -e RULES=/work/$$$${rule} $(IMAGE):$(variant) /work/test/test-packages.sh || exit 1; \
 	done
 
 bash-$(variant):
