@@ -10,7 +10,8 @@
           },
           {
             "os": "linux",
-            "distribution": "debian"
+            "distribution": "debian",
+            "versions": [ "10", "11" ]
           }
         ]
       },

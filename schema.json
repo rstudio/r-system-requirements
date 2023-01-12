@@ -125,7 +125,9 @@
     "versions": {
       "debian": {
         "enum": [
-          "11"
+          "10",
+          "11",
+          "unstable"
         ]
       },
       "ubuntu": {
