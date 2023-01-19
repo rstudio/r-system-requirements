@@ -16,6 +16,15 @@
     },
     {
       "packages": ["libbsd-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["libbsd-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

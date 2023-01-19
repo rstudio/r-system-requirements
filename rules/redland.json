@@ -21,6 +21,10 @@
           "os": "linux",
           "distribution": "centos",
           "versions": ["6", "7"]
+        },
+        {
+          "os": "linux",
+          "distribution": "fedora"
         }
       ]
     },

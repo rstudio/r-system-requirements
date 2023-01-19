@@ -16,6 +16,15 @@
       },
       {
         "packages": ["pandoc"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "fedora"
+          }
+        ]
+      },
+      {
+        "packages": ["pandoc"],
         "pre_install": [
           {
             "command": "yum install -y epel-release"

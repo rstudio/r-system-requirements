@@ -16,6 +16,15 @@
     },
     {
       "packages": ["hiredis-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["hiredis-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

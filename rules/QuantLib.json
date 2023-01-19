@@ -68,6 +68,17 @@
           "versions": ["6", "7"]
         }
       ]
+    },
+    {
+      "packages": [
+        "QuantLib-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
     }
   ]
 }

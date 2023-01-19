@@ -13,6 +13,16 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "packages": ["saga-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora",
+          "versions": [ "36", "37" ]
+        }
+      ]
     }
   ]
 }

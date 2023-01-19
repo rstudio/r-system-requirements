@@ -16,6 +16,15 @@
     },
     {
       "packages": ["tesseract-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["tesseract-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

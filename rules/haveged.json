@@ -16,6 +16,15 @@
       },
       {
         "packages": ["haveged-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "fedora"
+          }
+        ]
+      },
+      {
+        "packages": ["haveged-devel"],
         "pre_install": [
           {
             "command": "yum install -y epel-release"

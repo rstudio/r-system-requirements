@@ -37,6 +37,10 @@
         },
         {
           "os": "linux",
+          "distribution": "fedora"
+        },
+        {
+          "os": "linux",
           "distribution": "sle"
         },
         {

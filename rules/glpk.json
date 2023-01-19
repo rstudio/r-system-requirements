@@ -19,6 +19,17 @@
       ]
     },
     {
+      "packages": [
+        "glpk-devel"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
       "pre_install" : [
         {
           "command": "yum install -y epel-release"

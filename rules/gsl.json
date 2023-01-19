@@ -23,6 +23,10 @@
         },
         {
           "os": "linux",
+          "distribution": "fedora"
+        },
+        {
+          "os": "linux",
           "distribution": "redhat",
           "versions": ["7", "8"]
         }

@@ -21,6 +21,9 @@ declare -A os_identifiers=(
     [opensuse154]='opensuse'
     [sle153]='sle'
     [sle154]='sle'
+    [fedora36]='fedora'
+    [fedora37]='fedora'
+    [fedora38]='fedora'
 )
 
 declare -A versions=(
@@ -40,6 +43,9 @@ declare -A versions=(
     [opensuse154]='15.4'
     [sle153]='15.3'
     [sle154]='15.4'
+    [fedora36]='36'
+    [fedora37]='37'
+    [fedora38]='38'
 )
 
 test_package_ubuntu() {
@@ -87,6 +93,15 @@ test_package_opensuse() {
 test_package_sle() {
     # Same as openSUSE
     test_package_opensuse "$@"
+}
+
+test_package_fedora() {
+    pkg=$1
+    printf "$pkg | "
+    # We only use the local cache, because metadata queries are slow,
+    # especially for rawhide
+    found=$(yum -C list -q "$pkg")
+    echo $found
 }
 
 find_dependencies() {

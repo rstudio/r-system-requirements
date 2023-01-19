@@ -16,6 +16,15 @@
     },
     {
       "packages": ["libwebp-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["libwebp-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

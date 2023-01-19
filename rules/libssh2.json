@@ -19,6 +19,15 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["libssh2-devel"],
+      "constraints": [
+        {
+          "os": "linux",
           "distribution": "centos",
           "versions": ["6", "7"]
         }
