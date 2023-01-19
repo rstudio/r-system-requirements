@@ -166,6 +166,10 @@
         {
           "os": "linux",
           "distribution": "opensuse"
+        },
+        {
+          "os": "linux",
+          "distribution": "fedora"
         }
       ]
     },

@@ -16,6 +16,15 @@
     },
     {
       "packages": ["netcdf-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["netcdf-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

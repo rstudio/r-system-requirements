@@ -31,6 +31,15 @@
     },
     {
       "packages": ["proj-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["proj-devel"],
       "pre_install": [
         {
           "command": "dnf install -y epel-release"

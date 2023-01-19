@@ -94,6 +94,7 @@ The rules in this catalog support the following operating systems:
 - openSUSE 15.3, 15.4
 - SUSE Linux Enterprise 15 SP3, 15 SP4
 - Debian 10, 11, unstable
+- Fedora 36, 37, 38
 - Windows (for R 4.0+ only)
 
 ---
@@ -195,7 +196,7 @@ Other examples:
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | `os` | String | Operating system. Only `"linux"` is supported for now. |
-| `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"` |
+| `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"`, `"fedora"` |
 | `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["18.04"]` for Ubuntu. |
 
 #### Pre/post-install actions
@@ -230,7 +231,7 @@ A typical workflow for adding a new rule:
    # Ubuntu/Debian
    apt-cache search <package-name>
 
-   # CentOS/RHEL
+   # CentOS/RHEL/Fedora
    yum search <package-name>
 
    # openSUSE/SLE
@@ -290,6 +291,9 @@ Available tags:
 - `rockylinux9` (Rocky Linux 9)
 - `opensuse153` (openSUSE 15.3)
 - `opensuse154` (openSUSE 15.4)
+- `fedora36` (Fedora 36)
+- `fedora37` (Fedora 37)
+- `fedora38` (Fedora 38)
 
 To build the images:
 

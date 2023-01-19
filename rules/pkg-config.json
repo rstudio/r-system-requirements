@@ -45,6 +45,10 @@
           "os": "linux",
           "distribution": "redhat",
           "versions": ["8", "9"]
+        },
+        {
+          "os": "linux",
+          "distribution": "fedora"
         }
       ]
     },

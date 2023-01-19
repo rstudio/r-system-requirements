@@ -55,6 +55,15 @@
     },
     {
       "packages": ["protobuf-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["protobuf-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled crb" }

@@ -103,6 +103,9 @@
                   "$ref": "#/definitions/sle"
                 },
                 {
+                  "$ref": "#/definitions/fedora"
+                },
+                {
                   "$ref": "#/definitions/windows"
                 }
               ]

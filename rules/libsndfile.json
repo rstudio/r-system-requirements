@@ -19,6 +19,15 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["libsndfile-devel"],
+      "constraints": [
+        {
+          "os": "linux",
           "distribution": "centos",
           "versions": ["6", "7"]
         }

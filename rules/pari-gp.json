@@ -16,6 +16,15 @@
     },
     {
       "packages": ["pari-gp"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["pari-gp"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

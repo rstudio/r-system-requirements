@@ -26,6 +26,10 @@
           "os": "linux",
           "distribution": "redhat",
           "versions": ["7"]
+        },
+        {
+          "os": "linux",
+          "distribution": "fedora"
         }
       ]
     },

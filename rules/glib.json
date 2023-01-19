@@ -28,6 +28,10 @@
           {
             "os": "linux",
             "distribution": "redhat"
+          },
+          {
+            "os": "linux",
+            "distribution": "fedora"
           }
         ]
       },

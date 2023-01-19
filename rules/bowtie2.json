@@ -13,6 +13,15 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "packages": ["bowtie2"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
     }
   ]
 }

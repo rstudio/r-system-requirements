@@ -16,6 +16,15 @@
     },
     {
       "packages": ["qgis-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["qgis-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

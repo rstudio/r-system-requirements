@@ -16,6 +16,15 @@
     },
     {
       "packages": ["perl-Image-ExifTool"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["perl-Image-ExifTool"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

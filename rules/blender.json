@@ -19,6 +19,15 @@
         "constraints": [
           {
             "os": "linux",
+            "distribution": "fedora"
+          }
+        ]
+      },
+      {
+        "packages": ["blender"],
+        "constraints": [
+          {
+            "os": "linux",
             "distribution": "opensuse"
           },
           {

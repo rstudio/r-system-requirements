@@ -16,6 +16,15 @@
     },
     {
       "packages": ["hdf5-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["hdf5-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"

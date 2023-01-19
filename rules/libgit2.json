@@ -32,6 +32,15 @@
     },
     {
       "packages": ["libgit2-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-devel"],
       "pre_install": [
         {
           "command": "yum install -y epel-release"
