@@ -30,18 +30,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "fedora",
-          "versions": [ "36", "37" ]
-        }
-      ]
-    },
-    {
-      "packages": ["v8-10.2-devel"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "fedora",
-          "versions": [ "38" ]
+          "distribution": "fedora"
         }
       ]
     },
