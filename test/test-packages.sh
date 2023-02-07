@@ -100,7 +100,10 @@ test_package_fedora() {
     printf "$pkg | "
     # We only use the local cache, because metadata queries are slow,
     # especially for rawhide
-    found=$(yum -C list -q "$pkg")
+    found=$(yum -Cq repoquery --whatprovides "$pkg")
+    if [[ -z "$found" ]]; then
+	exit 1
+    fi
     echo $found
 }
 
