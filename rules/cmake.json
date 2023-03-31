@@ -19,7 +19,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["8"]
         },
         {
           "os": "linux",
@@ -27,11 +28,42 @@
         },
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
+          "versions": ["8", "9"]
         },
         {
           "os": "linux",
           "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "packages": ["cmake", "cmake3"],
+      "pre_install": [
+        {
+          "command": "yum install -y epel-release"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["7"]
+        }
+      ]
+    },
+    {
+      "packages": ["cmake", "cmake3"],
+      "pre_install": [
+        {
+          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["7"]
         }
       ]
     },
