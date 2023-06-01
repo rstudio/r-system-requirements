@@ -3,6 +3,7 @@ let fs = require('fs')
 // The template for each distribution. Typically, you should not need to modify this.
 const system_template = function(os, distribution) {
     let tmpl = {
+        "type": "object",
         "properties": {
             "os": { "const": os },
         },

@@ -14,8 +14,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ajv-cli": "^3.0.0",
-    "eslint": "^4.19.1",
+    "ajv-cli": "^5.0.0",
+    "eslint": "^8.41.0",
     "eslint-plugin-json": "^1.2.0"
   }
 }

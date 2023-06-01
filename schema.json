@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "version": "1.0.0",
   "properties": {
     "patterns": {
       "type": "array",
@@ -192,6 +191,7 @@
       }
     },
     "debian": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -212,6 +212,7 @@
       "additionalProperties": false
     },
     "ubuntu": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -232,6 +233,7 @@
       "additionalProperties": false
     },
     "centos": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -252,6 +254,7 @@
       "additionalProperties": false
     },
     "rockylinux": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -272,6 +275,7 @@
       "additionalProperties": false
     },
     "redhat": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -292,6 +296,7 @@
       "additionalProperties": false
     },
     "opensuse": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -312,6 +317,7 @@
       "additionalProperties": false
     },
     "sle": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -332,6 +338,7 @@
       "additionalProperties": false
     },
     "fedora": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "linux"
@@ -352,6 +359,7 @@
       "additionalProperties": false
     },
     "windows": {
+      "type": "object",
       "properties": {
         "os": {
           "const": "windows"
