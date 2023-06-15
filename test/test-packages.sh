@@ -107,6 +107,29 @@ test_package_fedora() {
     echo $found
 }
 
+test_satisfy_ubuntu() {
+    sat="$1"
+    ver="$2"
+    if [[ "$ver" == "18.04" ]]; then
+        return
+    fi
+    if ! apt-get satisfy -s "$sat" >/dev/null; then
+        echo "$sat | error: cannot satisfy"
+        exit 1
+    else
+        echo "$sat | satisfied"
+    fi
+}
+
+test_satisfy_debian() {
+    sat="$1"
+    ver="$2"
+    if [[ "$ver" == "10" ]]; then
+        return
+    fi
+    test_satisfy_ubuntu "$sat" "$ver"
+}
+
 find_dependencies() {
     rule=$1
     dist=$2
@@ -134,6 +157,7 @@ test_packages() {
     dist=$2
     version=$3
     test_package="test_package_${dist}"
+    test_satisfy="test_satisfy_${dist}"
 
     for rule in $rules; do
         # Find all dependencies for this distro
@@ -142,6 +166,7 @@ test_packages() {
             # Run any pre-install commands (e.g. adding a repo)
             pre_install_cmds=$(echo "$dep" | jq ".pre_install[]?")
             pkgs=$(echo "$dep" | jq -r ".packages[]")
+            sats=$(echo "$dep" | jq -r ".satisfy[]?")
             jq -c <<< "$pre_install_cmds" | while read cmd; do
                 run_extra_cmd "$cmd"
             done
@@ -149,6 +174,11 @@ test_packages() {
             for pkg in $pkgs; do
                 $test_package $pkg
             done
+            if [ ! -z "$sats" ]; then
+                echo "$sats" | while read sat; do
+                    $test_satisfy "$sat" $version
+                done
+            fi
         done
     done
 }
