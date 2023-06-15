@@ -60,7 +60,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "rockylinux",
+          "distribution": "centos",
           "versions": ["8"]
         },
         {

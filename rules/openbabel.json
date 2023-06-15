@@ -59,6 +59,10 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "centos"
+        },
+        {
+          "os": "linux",
           "distribution": "rockylinux"
         },
         {
