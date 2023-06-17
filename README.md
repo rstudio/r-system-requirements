@@ -93,7 +93,7 @@ The rules in this catalog support the following operating systems:
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.3, 15.4
 - SUSE Linux Enterprise 15 SP3, 15 SP4
-- Debian 10, 11, unstable
+- Debian 10, 11, 12, unstable
 - Fedora 36, 37, 38
 - Windows (for R 4.0+ only)
 
@@ -288,6 +288,7 @@ Available tags:
 - `jammy` (Ubuntu 22.04)
 - `buster` (Debian 10)
 - `bullseye` (Debian 11)
+- `bookworm` (Debian 12)
 - `sid` (Debian unstable)
 - `centos7` (CentOS 7)
 - `centos8` (Rocky Linux 8)
