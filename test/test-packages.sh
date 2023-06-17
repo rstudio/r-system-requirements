@@ -166,7 +166,7 @@ test_packages() {
             # Run any pre-install commands (e.g. adding a repo)
             pre_install_cmds=$(echo "$dep" | jq ".pre_install[]?")
             pkgs=$(echo "$dep" | jq -r ".packages[]")
-            sats=$(echo "$dep" | jq -r ".satisfy[]?")
+            sats=$(echo "$dep" | jq -r ".apt_satisfy[]?")
             jq -c <<< "$pre_install_cmds" | while read cmd; do
                 run_extra_cmd "$cmd"
             done
