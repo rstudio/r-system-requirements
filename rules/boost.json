@@ -1,0 +1,27 @@
+{
+    "patterns": ["\\Boost\\b"],
+    "dependencies": [
+      {
+        "packages": ["libboost-all-dev"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu"
+          },
+          {
+            "os": "linux",
+            "distribution": "debian"
+          }
+        ]
+      },
+      {
+        "packages": ["boost-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "fedora"
+          }
+        ]
+      }
+    ]
+  }
