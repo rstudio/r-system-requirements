@@ -20,6 +20,31 @@
           {
             "os": "linux",
             "distribution": "fedora"
+          },
+          {
+            "os": "linux",
+            "distribution": "centos"
+          },
+          {
+            "os": "linux",
+            "distribution": "rockylinux"
+          },
+          {
+            "os": "linux",
+            "distribution": "redhat"
+          }
+        ]
+      },
+      {
+        "packages": ["boost-gnu-hpc-devel"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "opensuse"
+          },
+          {
+            "os": "linux",
+            "distribution": "sle"
           }
         ]
       }
