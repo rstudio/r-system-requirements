@@ -47,6 +47,15 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": ["atk-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+            "distribution": "alpine"
+        }
+      ]
     }
   ]
 }

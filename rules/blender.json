@@ -36,6 +36,15 @@
             "versions": [ "12.3", "15.0", "15.2" ]
           }
         ]
+      },
+      {
+        "packages": ["blender"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "alpine"
+          }
+        ]
       }
     ]
   }
