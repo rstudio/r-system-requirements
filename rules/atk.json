@@ -53,7 +53,18 @@
       "constraints": [
         {
           "os": "linux",
-            "distribution": "alpine"
+          "distribution": "alpine",
+          "versions": [ "3.15", "3.16" ]
+        }
+      ]
+    },
+    {
+      "packages": ["atkmm-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine",
+          "versions": [ "3.17", "3.18", "edge" ]
         }
       ]
     }
