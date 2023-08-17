@@ -25,6 +25,11 @@ declare -A os_identifiers=(
     [fedora36]='fedora'
     [fedora37]='fedora'
     [fedora38]='fedora'
+    [alpine-3.15]='alpine'
+    [alpine-3.16]='alpine'
+    [alpine-3.17]='alpine'
+    [alpine-3.18]='alpine'
+    [alpine-edge]='alpine'
 )
 
 declare -A versions=(
@@ -48,6 +53,11 @@ declare -A versions=(
     [fedora36]='36'
     [fedora37]='37'
     [fedora38]='38'
+    [alpine-3.15]='3.15'
+    [alpine-3.16]='3.16'
+    [alpine-3.17]='3.17'
+    [alpine-3.18]='3.18'
+    [alpine-edge]='edge'
 )
 
 test_package_ubuntu() {
@@ -105,6 +115,16 @@ test_package_fedora() {
     found=$(yum -Cq repoquery --whatprovides "$pkg")
     if [[ -z "$found" ]]; then
 	exit 1
+    fi
+    echo $found
+}
+
+test_package_alpine() {
+    pkg=$1
+    printf "$pkg | "
+    found=$(apk info -d $pkg | sed -n 2p)
+    if [[ -z "$found" ]]; then
+        exit 1
     fi
     echo $found
 }

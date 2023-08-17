@@ -115,6 +115,15 @@
           "distribution": "sle"
         }
       ]
+    },
+    {
+      "packages": ["protobuf-c-compiler"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine"
+        }
+      ]
     }
   ]
 }

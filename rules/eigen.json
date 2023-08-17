@@ -104,6 +104,15 @@
           "versions": ["9"]
         }
       ]
+    },
+    {
+      "packages": ["eigen-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine"
+        }
+      ]
     }
   ]
 }

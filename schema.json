@@ -112,6 +112,9 @@
                   "$ref": "#/definitions/fedora"
                 },
                 {
+                  "$ref": "#/definitions/alpine"
+                },
+                {
                   "$ref": "#/definitions/windows"
                 }
               ]
@@ -192,6 +195,15 @@
           "36",
           "37",
           "38"
+        ]
+      },
+      "alpine": {
+        "enum": [
+          "3.15",
+          "3.16",
+          "3.17",
+          "3.18",
+          "edge"
         ]
       },
       "windows": {
@@ -358,6 +370,27 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/versions/fedora"
+          }
+        }
+      },
+      "required": [
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "alpine": {
+      "type": "object",
+      "properties": {
+        "os": {
+          "const": "linux"
+        },
+        "distribution": {
+          "const": "alpine"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/versions/alpine"
           }
         }
       },

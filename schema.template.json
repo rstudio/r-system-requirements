@@ -112,6 +112,9 @@
                   "$ref": "#/definitions/fedora"
                 },
                 {
+                  "$ref": "#/definitions/alpine"
+                },
+                {
                   "$ref": "#/definitions/windows"
                 }
               ]
