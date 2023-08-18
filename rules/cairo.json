@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libcairo2-dev"],
+      "runtime_packages": ["libcairo2"],
       "constraints": [
         {
           "os": "linux",

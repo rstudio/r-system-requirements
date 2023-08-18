@@ -3,6 +3,38 @@
     "dependencies": [
       {
         "packages": ["libssl-dev"],
+        "runtime_packages": ["libssl1.1"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu",
+            "versions": ["20.04"]
+          },
+          {
+            "os": "linux",
+            "distribution": "debian",
+            "versions": ["10", "11"]
+          }
+        ]
+      },
+      {
+        "packages": ["libssl-dev"],
+        "runtime_packages": ["libssl3"],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "ubuntu",
+            "versions": ["22.04"]
+          },
+          {
+            "os": "linux",
+            "distribution": "debian",
+            "versions": ["12", "unstable"]
+          }
+        ]
+      },
+      {
+        "packages": ["libssl-dev"],
         "constraints": [
           {
             "os": "linux",

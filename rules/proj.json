@@ -3,6 +3,61 @@
   "dependencies": [
     {
       "packages": ["libproj-dev"],
+      "runtime_packages": ["libproj15"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-dev"],
+      "runtime_packages": ["libproj22"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-dev"],
+      "runtime_packages": ["libproj13"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-dev"],
+      "runtime_packages": ["libproj19"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-dev"],
+      "runtime_packages": ["libproj25"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libproj-dev"],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libhiredis-dev"],
+      "runtime_packages": ["libhiredis0.14"],
       "constraints": [
         {
           "os": "linux",

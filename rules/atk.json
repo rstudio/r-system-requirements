@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libatk1.0-dev"],
+      "runtime_packages": ["libatk1.0-0"],
       "constraints": [
         {
           "os": "linux",

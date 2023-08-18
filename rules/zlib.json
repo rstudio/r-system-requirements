@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["zlib1g-dev"],
+        "runtime_packages": ["zlib1g"],
         "constraints": [
           {
             "os": "linux",

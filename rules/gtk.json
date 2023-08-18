@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libgtk2.0-dev"],
+      "runtime_packages": ["libgtk2.0-0"],
       "constraints": [
         {
           "os": "linux",

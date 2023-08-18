@@ -189,6 +189,7 @@ test_packages() {
             pre_install_cmds=$(echo "$dep" | jq ".pre_install[]?")
             pkgs=$(echo "$dep" | jq -r ".packages[]")
             sats=$(echo "$dep" | jq -r ".apt_satisfy[]?")
+            rpkgs=$(echo "$dep" | jq -r '.runtime_packages[]?')
             jq -c <<< "$pre_install_cmds" | while read cmd; do
                 run_extra_cmd "$cmd"
             done
@@ -199,6 +200,11 @@ test_packages() {
             if [ ! -z "$sats" ]; then
                 echo "$sats" | while read sat; do
                     $test_satisfy "$sat" $version
+                done
+            fi
+            if [ ! -z "$rpkgs" ]; then
+                echo "$rpkgs" | while read pkg; do
+                    $test_package "$pkg"
                 done
             fi
         done

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["coinor-libclp-dev"],
+      "runtime_packages": ["coinor-libclp1"],
       "constraints": [
         {
           "os": "linux",

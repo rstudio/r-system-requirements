@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["librsvg2-dev"],
+      "runtime_packages": ["gir1.2-rsvg-2.0", "librsvg2-2", "librsvg2-common"],
       "constraints": [
         {
           "os": "linux",

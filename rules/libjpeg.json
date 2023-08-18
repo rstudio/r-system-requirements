@@ -3,11 +3,18 @@
   "dependencies": [
     {
       "packages": ["libjpeg-dev"],
+      "runtime_packages": ["libjpeg-turbo8"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "ubuntu"
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["libjpeg-dev"],
+      "runtime_packages": ["libjpeg62-turbo"],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "debian"

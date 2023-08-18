@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libmysqlclient-dev"],
+      "runtime_packages": ["libmysqlclient21"],
       "constraints": [
         {
           "os": "linux",
@@ -12,6 +13,7 @@
     },
     {
       "packages": ["libmariadb-dev-compat", "libmariadb-dev"],
+      "runtime_packages": ["libmariadb3"],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libharfbuzz-dev"],
+      "runtime_packages": ["libharfbuzz0b"],
       "constraints": [
         {
           "os": "linux",

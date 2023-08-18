@@ -3,6 +3,14 @@
     "dependencies": [
       {
         "packages": ["libpango1.0-dev"],
+        "runtime_packages": [
+          "gir1.2-pango-1.0",
+          "libpango-1.0-0",
+          "libpangocairo-1.0-0",
+          "libpangoft2-1.0-0",
+          "libpangoxft-1.0-0",
+          "pango1.0-tools"
+        ],
         "constraints": [
           {
             "os": "linux",

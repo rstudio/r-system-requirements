@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["libboost-all-dev"],
+        "runtime_packages": [],
         "constraints": [
           {
             "os": "linux",
