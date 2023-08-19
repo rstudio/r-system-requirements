@@ -116,6 +116,7 @@
     },
     {
       "packages": ["gsl-dev"],
+      "runtime_packages": ["gsl"],
       "constraints": [
         {
           "os": "linux",

@@ -103,6 +103,7 @@
     },
     {
       "packages": ["jq-dev"],
+      "runtime_packages": ["jq"],
       "constraints": [
         {
           "os": "linux",

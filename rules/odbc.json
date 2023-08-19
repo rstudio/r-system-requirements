@@ -105,6 +105,7 @@
     },
     {
       "packages": ["unixodbc-dev"],
+      "runtime_packages": ["unixodbc"],
       "constraints": [
         {
           "os": "linux",

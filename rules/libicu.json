@@ -143,6 +143,7 @@
     },
     {
       "packages": ["icu-dev"],
+      "runtime_packages": ["icu", "icu-libs"],
       "constraints": [
         {
           "os": "linux",

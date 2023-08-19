@@ -51,6 +51,7 @@
     },
     {
       "packages": ["atk-dev"],
+      "runtime_packages": ["atk"],
       "constraints": [
         {
           "os": "linux",
@@ -61,6 +62,7 @@
     },
     {
       "packages": ["atkmm-dev"],
+      "runtime_packages": ["atkmm"],
       "constraints": [
         {
           "os": "linux",

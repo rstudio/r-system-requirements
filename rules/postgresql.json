@@ -95,6 +95,7 @@
     },
     {
       "packages": ["libpq-dev"],
+      "runtime_packages": ["libpq"],
       "constraints": [
         {
           "os": "linux",

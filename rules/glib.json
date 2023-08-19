@@ -51,6 +51,7 @@
       },
       {
         "packages": ["glib-dev"],
+        "runtime_packages": ["glib"],
         "constraints": [
           {
             "os": "linux",

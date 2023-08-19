@@ -82,6 +82,7 @@
       },
       {
         "packages": ["openssl-dev"],
+        "runtime_packages": ["openssl"],
         "constraints": [
           {
             "os": "linux",

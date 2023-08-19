@@ -134,6 +134,7 @@
     },
     {
       "packages": ["libwebp-dev"],
+      "runtime_packages": ["libwebp"],
       "constraints": [
         {
           "os": "linux",

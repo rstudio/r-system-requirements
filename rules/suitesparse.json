@@ -96,6 +96,7 @@
     },
     {
       "packages": ["suitesparse-dev"],
+      "runtime_packages": ["suitesparse"],
       "constraints": [
         {
           "os": "linux",

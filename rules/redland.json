@@ -94,6 +94,7 @@
     },
     {
       "packages": ["redland-dev"],
+      "runtime_packages": ["redland"],
       "constraints": [
         {
           "os": "linux",

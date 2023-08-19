@@ -52,6 +52,7 @@
     },
     {
       "packages": ["curl-dev"],
+      "runtime_packages": ["libcurl"],
       "constraints": [
         {
           "os": "linux",

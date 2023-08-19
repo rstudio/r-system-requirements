@@ -51,6 +51,7 @@
     },
     {
       "packages": ["librsvg-dev"],
+      "runtime_packages": ["librsvg"],
       "constraints": [
         {
           "os": "linux",

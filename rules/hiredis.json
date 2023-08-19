@@ -137,6 +137,7 @@
     },
     {
       "packages": ["hiredis-dev"],
+      "runtime_packages": ["hiredis"],
       "constraints": [
         {
           "os": "linux",

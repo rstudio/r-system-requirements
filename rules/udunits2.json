@@ -118,6 +118,7 @@
     },
     {
       "packages": ["udunits-dev"],
+      "runtime_packages": ["udunits"],
       "pre_install": [
         {
           "command": "apk add udunits-dev --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing"

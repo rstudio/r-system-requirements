@@ -169,6 +169,7 @@
     },
     {
       "packages": ["protobuf-dev"],
+      "runtime_packages": ["protobuf"],
       "constraints": [
         {
           "os": "linux",

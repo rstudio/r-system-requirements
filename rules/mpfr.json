@@ -51,6 +51,7 @@
     },
     {
       "packages": ["mpfr-dev"],
+      "runtime_packages": ["mpfr4"],
       "constraints": [
         {
           "os": "linux",

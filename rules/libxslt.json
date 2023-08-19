@@ -51,6 +51,7 @@
     },
     {
       "packages": ["libxslt-dev"],
+      "runtime_packages": ["libxslt"],
       "constraints": [
         {
           "os": "linux",

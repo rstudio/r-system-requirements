@@ -94,6 +94,7 @@
       },
       {
         "packages": ["gpgme-dev"],
+        "runtime_packages": ["gpgme", "gpgmepp"],
         "constraints": [
           {
             "os": "linux",

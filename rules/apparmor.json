@@ -30,6 +30,7 @@
     },
     {
       "packages": ["libapparmor-dev", "libapparmor"],
+      "runtime_packages": ["libapparmor"],
       "constraints": [
         {
           "os": "linux",

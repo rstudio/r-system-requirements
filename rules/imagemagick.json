@@ -108,7 +108,8 @@
         ]
       },
       {
-        "packages": ["imagemagick-dev", "imagemagick-c++"],
+        "packages": ["imagemagick-dev"],
+        "runtime_packages": ["imagemagick-libs", "imagemagick-c++"],
         "constraints": [
           {
             "os": "linux",

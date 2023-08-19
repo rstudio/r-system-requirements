@@ -51,6 +51,7 @@
       },
       {
         "packages": ["boost-dev"],
+        "runtime_packages": ["boost"],
         "constraints": [
           {
             "os": "linux",

@@ -51,6 +51,7 @@
     },
     {
       "packages": ["fftw-dev"],
+      "runtime_packages": ["fftw"],
       "constraints": [
         {
           "os": "linux",

@@ -84,6 +84,7 @@
     },
     {
       "packages": ["libssh2-dev"],
+      "runtime_packages": ["libssh2"],
       "constraints": [
         {
           "os": "linux",

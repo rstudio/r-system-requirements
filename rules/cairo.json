@@ -51,6 +51,7 @@
     },
     {
       "packages": ["cairo-dev"],
+      "runtime_packages": ["cairo"],
       "constraints": [
         {
           "os": "linux",

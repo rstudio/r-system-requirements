@@ -51,6 +51,7 @@
     },
     {
       "packages": ["db-dev"],
+      "runtime_packages": ["db"],
       "constraints": [
         {
           "os": "linux",

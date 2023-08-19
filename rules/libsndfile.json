@@ -99,6 +99,7 @@
     },
     {
       "packages": ["libsndfile-dev"],
+      "runtime_packages": ["libsndfile"],
       "constraints": [
         {
           "os": "linux",

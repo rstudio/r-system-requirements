@@ -51,6 +51,7 @@
     },
     {
       "packages": ["glu-dev"],
+      "runtime_packages": ["glu"],
       "constraints": [
         {
           "os": "linux",

@@ -125,6 +125,7 @@
     },
     {
       "packages": ["mariadb-dev"],
+      "runtime_packages": ["mariadb-embedded", "mariadb-connector-c"],
       "constraints": [
         {
           "os": "linux",

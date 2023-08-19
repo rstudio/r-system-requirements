@@ -191,6 +191,7 @@
     },
     {
       "packages": ["netcdf-dev"],
+      "runtime_packages": ["netcdf"],
       "constraints": [
         {
           "os": "linux",

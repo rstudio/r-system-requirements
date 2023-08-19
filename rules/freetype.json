@@ -51,6 +51,7 @@
     },
     {
       "packages": ["freetype-dev"],
+      "runtime_packages": ["freetype"],
       "constraints": [
         {
           "os": "linux",

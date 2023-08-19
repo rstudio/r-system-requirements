@@ -119,9 +119,8 @@
       ]
     },
     {
-      "packages": [
-        "glpk-dev"
-      ],
+      "packages": ["glpk-dev"],
+      "runtime_packages": ["glpk"],
       "constraints": [
         {
           "os": "linux",

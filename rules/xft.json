@@ -51,6 +51,7 @@
     },
     {
       "packages": ["libxft-dev"],
+      "runtime_packages": ["libxft"],
       "constraints": [
         {
           "os": "linux",

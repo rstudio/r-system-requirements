@@ -51,6 +51,7 @@
     },
     {
       "packages": ["gtk+2.0-dev"],
+      "runtime_packages": ["gtk+2.0"],
       "constraints": [
         {
           "os": "linux",

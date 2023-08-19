@@ -199,6 +199,10 @@
         "gdal-dev",
         "gdal-tools"
       ],
+      "runtime_packages": [
+        "gdal",
+        "gdal-tools"
+      ],
       "constraints": [
         {
           "os": "linux",

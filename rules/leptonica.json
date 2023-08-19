@@ -115,6 +115,7 @@
     },
     {
       "packages": ["leptonica-dev"],
+      "runtime_packages": ["leptonica"],
       "constraints": [
         {
           "os": "linux",

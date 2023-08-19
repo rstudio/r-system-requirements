@@ -220,6 +220,7 @@
     },
     {
       "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2"],
       "constraints": [
         {
           "os": "linux",

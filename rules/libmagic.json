@@ -104,6 +104,7 @@
     },
     {
       "packages": ["file-dev"],
+      "runtime_packages": ["libmagic"],
       "constraints": [
         {
           "os": "linux",

@@ -57,6 +57,7 @@
     },
     {
       "packages": ["jpeg-dev"],
+      "runtime_packages": ["libjpeg"],
       "constraints": [
         {
           "os": "linux",

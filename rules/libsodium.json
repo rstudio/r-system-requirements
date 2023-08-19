@@ -127,6 +127,7 @@
     },
     {
       "packages": ["libsodium-dev"],
+      "runtime_packages": ["libsodium"],
       "constraints": [
         {
           "os": "linux",

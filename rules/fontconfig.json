@@ -50,6 +50,7 @@
     },
     {
       "packages": ["fontconfig-dev"],
+      "runtime_packages": ["fontconfig"],
       "constraints": [
         {
           "os": "linux",

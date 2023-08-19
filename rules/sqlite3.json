@@ -51,6 +51,7 @@
     },
     {
       "packages": ["sqlite-dev"],
+      "runtime_packages": ["sqlite-libs"],
       "constraints": [
         {
           "os": "linux",

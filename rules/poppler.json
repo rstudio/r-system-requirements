@@ -102,6 +102,7 @@
     },
     {
       "packages": ["poppler-dev"],
+      "runtime_packages": ["poppler", "poppler-glib"],
       "constraints": [
         {
           "os": "linux",

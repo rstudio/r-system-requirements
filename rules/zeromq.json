@@ -139,6 +139,7 @@
     },
     {
       "packages": ["zeromq-dev"],
+      "runtime_packages": ["zeromq"],
       "constraints": [
         {
           "os": "linux",

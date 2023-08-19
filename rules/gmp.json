@@ -51,6 +51,7 @@
     },
     {
       "packages": ["gmp-dev"],
+      "runtime_packages": ["gmp", "libgmpxx"],
       "constraints": [
         {
           "os": "linux",

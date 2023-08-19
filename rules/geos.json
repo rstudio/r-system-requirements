@@ -137,6 +137,7 @@
     },
     {
       "packages": ["geos-dev"],
+      "runtime_packages": ["geos"],
       "constraints": [
         {
           "os": "linux",

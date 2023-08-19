@@ -108,6 +108,7 @@
     },
     {
       "packages": ["opencl-dev"],
+      "runtime_packages": ["opencl"],
       "constraints": [
         {
           "os": "linux",

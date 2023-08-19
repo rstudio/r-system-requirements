@@ -47,6 +47,7 @@
     },
     {
       "packages": ["cyrus-sasl-dev"],
+      "runtime_packages": ["cyrus-sasl", "libsasl"],
       "constraints": [
         {
           "os": "linux",

@@ -51,6 +51,7 @@
       },
       {
         "packages": ["zlib-dev"],
+        "runtime_packages": ["zlib"],
         "constraints": [
           {
             "os": "linux",

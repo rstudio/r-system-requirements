@@ -72,6 +72,7 @@
       },
       {
         "packages": ["pango-dev"],
+        "runtime_packages": ["pango"],
         "constraints": [
           {
             "os": "linux",

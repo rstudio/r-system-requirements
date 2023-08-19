@@ -109,6 +109,7 @@
     },
     {
       "packages": ["libarchive-dev"],
+      "runtime_packages": ["libarchive"],
       "constraints": [
         {
           "os": "linux",

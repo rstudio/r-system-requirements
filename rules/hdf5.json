@@ -170,6 +170,7 @@
     },
     {
       "packages": ["hdf5-dev"],
+      "runtime_packages": ["hdf5", "hdf5-fortran"],
       "constraints": [
         {
           "os": "linux",
