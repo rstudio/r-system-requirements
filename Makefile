@@ -1,5 +1,5 @@
 IMAGE ?= rstudio/r-system-requirements
-VARIANTS ?= bionic focal jammy buster bullseye bookworm sid centos7 centos8 rockylinux9 opensuse153 opensuse154 fedora36 fedora37 fedora38 alpine-3.15 alpine-3.16 alpine-3.17 alpine-3.18 alpine-edge
+VARIANTS ?= focal jammy buster bullseye bookworm sid centos7 centos8 rockylinux9 opensuse154 fedora36 fedora37 fedora38 alpine-3.15 alpine-3.16 alpine-3.17 alpine-3.18 alpine-edge
 
 RULES ?= rules/*.json
 
