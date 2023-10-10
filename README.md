@@ -87,12 +87,12 @@ Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 18.04, 20.04, 22.04
+- Ubuntu 20.04, 22.04
 - CentOS 7
 - Rocky Linux 8*, 9
 - Red Hat Enterprise Linux 7, 8, 9
-- openSUSE 15.3, 15.4
-- SUSE Linux Enterprise 15 SP3, 15 SP4
+- openSUSE 15.4, 15.5
+- SUSE Linux Enterprise 15 SP4, 15 SP5
 - Debian 10, 11, 12, unstable
 - Fedora 36, 37, 38
 - Windows (for R 4.0+ only)
@@ -283,7 +283,6 @@ make update-sysreqs
 packages on supported OSs.
 
 Available tags:
-- `bionic` (Ubuntu 18.04)
 - `focal` (Ubuntu 20.04)
 - `jammy` (Ubuntu 22.04)
 - `buster` (Debian 10)
@@ -293,8 +292,8 @@ Available tags:
 - `centos7` (CentOS 7)
 - `centos8` (Rocky Linux 8)
 - `rockylinux9` (Rocky Linux 9)
-- `opensuse153` (openSUSE 15.3)
 - `opensuse154` (openSUSE 15.4)
+- `opensuse155` (openSUSE 15.5)
 - `fedora36` (Fedora 36)
 - `fedora37` (Fedora 37)
 - `fedora38` (Fedora 38)
