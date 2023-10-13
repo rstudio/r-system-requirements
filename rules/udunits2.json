@@ -119,7 +119,7 @@
       "packages": ["udunits-dev"],
       "pre_install": [
         {
-          "command": "apk add udunits-dev --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing"
+          "command": "apk add udunits-dev --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community"
         }
       ],
       "constraints": [
