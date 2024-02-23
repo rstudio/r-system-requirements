@@ -94,7 +94,7 @@ The rules in this catalog support the following operating systems:
 - openSUSE 15.4, 15.5
 - SUSE Linux Enterprise 15 SP4, 15 SP5
 - Debian 10, 11, 12, unstable
-- Fedora 36, 37, 38
+- Fedora 36, 37, 38, 39
 - Windows (for R 4.0+ only)
 
 \* Rocky Linux 8 is specified as `centos8` for backward compatibility.
@@ -297,6 +297,7 @@ Available tags:
 - `fedora36` (Fedora 36)
 - `fedora37` (Fedora 37)
 - `fedora38` (Fedora 38)
+- `fedora39` (Fedora 39)
 
 To build the images:
 
