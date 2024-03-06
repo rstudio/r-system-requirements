@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libudunits2-dev"],
+      "runtime_packages": ["libudunits2-0"],
       "constraints": [
         {
           "os": "linux",
@@ -117,6 +118,7 @@
     },
     {
       "packages": ["udunits-dev"],
+      "runtime_packages": ["udunits"],
       "pre_install": [
         {
           "command": "apk add udunits-dev --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community"

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libdb-dev"],
+      "runtime_packages": ["libdb5.3"],
       "constraints": [
         {
           "os": "linux",
@@ -50,6 +51,7 @@
     },
     {
       "packages": ["db-dev"],
+      "runtime_packages": ["db"],
       "constraints": [
         {
           "os": "linux",

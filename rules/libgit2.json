@@ -18,6 +18,61 @@
     },
     {
       "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2-28"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2-1.1"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2-27"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2-1.1"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2-1.5"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgit2-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -165,6 +220,7 @@
     },
     {
       "packages": ["libgit2-dev"],
+      "runtime_packages": ["libgit2"],
       "constraints": [
         {
           "os": "linux",
