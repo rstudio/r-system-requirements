@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["ocl-icd-opencl-dev"],
+      "runtime_packages": ["ocl-icd-libopencl1"],
       "constraints": [
         {
           "os": "linux",

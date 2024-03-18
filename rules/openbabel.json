@@ -3,6 +3,44 @@
   "dependencies": [
     {
       "packages": ["libopenbabel-dev"],
+      "runtime_packages": ["libopenbabel6"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libopenbabel-dev"],
+      "runtime_packages": ["libopenbabel7"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11", "12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libopenbabel-dev"],
+      "runtime_packages": ["libopenbabel5"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libopenbabel-dev"],
       "constraints": [
         {
           "os": "linux",

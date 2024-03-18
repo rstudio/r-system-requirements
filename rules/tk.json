@@ -4,9 +4,8 @@
   ],
   "dependencies": [
     {
-      "packages": [
-        "tk-dev"
-      ],
+      "packages": ["tk-dev"],
+      "runtime_packages": ["tk"],
       "constraints": [
         {
           "os": "linux",

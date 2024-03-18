@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libmpfr-dev"],
+      "runtime_packages": ["libmpfr6"],
       "constraints": [
         {
           "os": "linux",
