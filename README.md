@@ -87,7 +87,7 @@ Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 20.04, 22.04
+- Ubuntu 20.04, 22.04, 24.04
 - CentOS 7
 - Rocky Linux 8*, 9
 - Red Hat Enterprise Linux 7, 8, 9
@@ -285,6 +285,7 @@ packages on supported OSs.
 Available tags:
 - `focal` (Ubuntu 20.04)
 - `jammy` (Ubuntu 22.04)
+- `noble` (Ubuntu 24.04)
 - `buster` (Debian 10)
 - `bullseye` (Debian 11)
 - `bookworm` (Debian 12)
