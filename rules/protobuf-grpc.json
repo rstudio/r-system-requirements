@@ -69,7 +69,18 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "alpine"
+          "distribution": "alpine",
+          "versions": ["3.17", "3.18", "3.19", "edge"]
+        }
+      ]
+    },
+    {
+      "packages": ["grpc-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine",
+          "versions": ["3.16"]
         }
       ]
     }
