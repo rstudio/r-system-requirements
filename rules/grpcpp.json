@@ -10,7 +10,7 @@
         },
         {
           "os": "linux",
-          "destribution": "debian"
+          "distribution": "debian"
         }
       ]
     },
@@ -34,7 +34,7 @@
         {
           "os": "linux",
           "distribution": "rockylinux",
-          "version": ["9"]
+          "versions": ["9"]
         }
       ]
     },
