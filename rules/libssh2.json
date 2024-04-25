@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libssh2-1-dev"],
+      "runtime_packages": ["libssh2-1"],
       "constraints": [
         {
           "os": "linux",
@@ -83,6 +84,7 @@
     },
     {
       "packages": ["libssh2-dev"],
+      "runtime_packages": ["libssh2"],
       "constraints": [
         {
           "os": "linux",

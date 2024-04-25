@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libapparmor-dev"],
+      "runtime_packages": ["libapparmor1"],
       "constraints": [
         {
           "os": "linux",
@@ -29,6 +30,7 @@
     },
     {
       "packages": ["libapparmor-dev", "libapparmor"],
+      "runtime_packages": ["libapparmor"],
       "constraints": [
         {
           "os": "linux",

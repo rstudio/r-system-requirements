@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libsodium-dev"],
+      "runtime_packages": ["libsodium23"],
       "constraints": [
         {
           "os": "linux",
@@ -126,6 +127,7 @@
     },
     {
       "packages": ["libsodium-dev"],
+      "runtime_packages": ["libsodium"],
       "constraints": [
         {
           "os": "linux",

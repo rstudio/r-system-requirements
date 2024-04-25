@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libbsd-dev"],
+      "runtime_packages": ["libbsd0"],
       "constraints": [
         {
           "os": "linux",
@@ -126,6 +127,7 @@
     },
     {
       "packages": ["libbsd-dev"],
+      "runtime_packages": ["libbsd"],
       "constraints": [
         {
           "os": "linux",

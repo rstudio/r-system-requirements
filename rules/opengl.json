@@ -49,7 +49,8 @@
       ]
     },
     {
-      "packages": ["mesa-dev"],
+      "packages": ["mesa-dev", "glu-dev"],
+      "runtime_packages": ["mesa-gl", "glu"],
       "constraints": [
         {
           "os": "linux",

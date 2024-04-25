@@ -27,6 +27,9 @@
         "libgdal-dev",
         "gdal-bin"
       ],
+      "runtime_packages": [
+        "gdal-bin"
+      ],
       "constraints": [
         {
           "os": "linux",
@@ -194,6 +197,10 @@
     {
       "packages": [
         "gdal-dev",
+        "gdal-tools"
+      ],
+      "runtime_packages": [
+        "gdal",
         "gdal-tools"
       ],
       "constraints": [
