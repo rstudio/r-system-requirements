@@ -1,4 +1,4 @@
-FROM fedora:37
+FROM fedora:40
 
 RUN dnf upgrade -y -q && \
     dnf install -y glibc-langpack-en

@@ -6,7 +6,7 @@ R packages can depend on one another, but they can also depend on software
 external to the R ecosystem. On Ubuntu 18.04, for example, in order to install
 the `curl` R package, you must have previously run `apt-get install libcurl`. R
 packages often note these dependencies inside their DESCRIPTION files, but this
-information is free-form text that varies by package. 
+information is free-form text that varies by package.
 
 This repository contains a catalog of "rules" that can be used to systematically
 identify these dependencies and generate commands to install them.
@@ -14,7 +14,7 @@ identify these dependencies and generate commands to install them.
 You may be expecting to see a list like:
 
 | Package | SystemRequirements Field | Dependency |
-| ------  | ----------- | ----- | 
+| ------  | ----------- | ----- |
 | rgdal   | "for building from source: GDAL >= ..." | libgdal-dev |
 
 
@@ -27,15 +27,15 @@ Instead, this repository contains a set of rules that map a
 `SystemRequirements` field, e.g. `rgdal`'s "for building from source: GDAL >=
 1.11.4 and <= 2.5.0, library from ..." to a platform specific install command:
 `apt-get install libgdal-dev gdal-bin libproj-dev`.
- 
 
-## Usage 
+
+## Usage
 
 The primary purpose of this catalog is to support [RStudio Package
 Manager](https://rstudio.com/products/package-manager) which knows how to
 translate these rules into install steps for specific packages or
 repositiories. However, the community is free to use and contribute to these
-rules subject to the MIT license. 
+rules subject to the MIT license.
 
 RStudio Package Manager is professionally supported, but RStudio does not offer
 support for these rules. Please file questions in [RStudio
@@ -63,10 +63,10 @@ The results are summarized below:
 
 *Percentage of CRAN Packages that Install Successfully*
 
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 | 
+| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 |
 | --- | ---   | -------- | --------- | -------- | -------------- | -------------- |
 | No Rules| 78% | 78.1% | 77.8% | | 77.7% | 78.2% |
-| With Rules | 93.5% | 95.8% | 93.7% | | 88.5% | 89.7% | 
+| With Rules | 93.5% | 95.8% | 93.7% | | 88.5% | 89.7% |
 
 
 *Percentage Weighted by Downloads*
@@ -76,10 +76,10 @@ download. This metric indicates how good the rules are for the majority of
 packages R users are likely to install, discounting the long tail of packages
 that have system requirements but are not frequently used.
 
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 | 
+| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 |
 | --- | ---   | --------  | --------  | -------- | -------------- | -------------- |
-| No Rules| 90.1% | 90.1% | 90.1% | | 90% | 90.2% | 
-| With Rules | 98.5% | 99.2% | 98.6% | | 96.1% | 96.3% | 
+| No Rules| 90.1% | 90.1% | 90.1% | | 90% | 90.2% |
+| With Rules | 98.5% | 99.2% | 98.6% | | 96.1% | 96.3% |
 
 Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
 
@@ -94,7 +94,7 @@ The rules in this catalog support the following operating systems:
 - openSUSE 15.5
 - SUSE Linux Enterprise 15 SP5
 - Debian 10, 11, 12, unstable
-- Fedora 36, 37, 38, 39
+- Fedora 38, 39, 40
 - Windows (for R 4.0+ only)
 
 \* Rocky Linux 8 is specified as `centos8` for backward compatibility.
@@ -329,5 +329,5 @@ modify this file directly, since it is automatically generated. Instead, modify
 `schema.template.json` and then run `npm run generate-schema`. The
 `generate-schema` target is automatically run when running `npm test`.
 
-If you need to modify the distros and/or versions supported in the schema definitions, 
+If you need to modify the distros and/or versions supported in the schema definitions,
 modify [`systems.json`](systems.json).

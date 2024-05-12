@@ -37,7 +37,7 @@
     {
         "os": "linux",
         "distribution": "fedora",
-        "versions": [ "36", "37", "38", "39" ]
+        "versions": [ "36", "37", "38", "39", "40" ]
     },
     {
         "os": "linux",
