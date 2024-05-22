@@ -2,7 +2,7 @@
   "patterns": ["\\bprotobuf-compiler\\b"],
   "dependencies": [
     {
-      "packages": ["protobuf-compiler"],
+      "packages": ["protobuf-compiler", "libprotoc-dev"],
       "constraints": [
         {
           "os": "linux",
