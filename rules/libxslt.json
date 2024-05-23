@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libxslt-dev"],
+      "runtime_packages": ["libxslt1.1"],
       "constraints": [
         {
           "os": "linux",

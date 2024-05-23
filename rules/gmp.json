@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libgmp3-dev"],
+      "runtime_packages": ["libgmp10", "libgmpxx4ldbl"],
       "constraints": [
         {
           "os": "linux",

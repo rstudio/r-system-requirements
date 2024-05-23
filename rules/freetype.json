@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libfreetype6-dev"],
+      "runtime_packages": ["libfreetype6"],
       "constraints": [
         {
           "os": "linux",

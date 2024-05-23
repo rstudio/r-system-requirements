@@ -18,6 +18,7 @@
     },
     {
       "packages": ["libgeos-dev"],
+      "runtime_packages": ["libgeos-c1v5"],
       "constraints": [
         {
           "os": "linux",

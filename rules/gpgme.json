@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["libgpgme11-dev"],
+        "runtime_packages": ["libgpgme11"],
         "constraints": [
           {
             "os": "linux",

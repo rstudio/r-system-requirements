@@ -3,6 +3,49 @@
   "dependencies": [
     {
       "packages": ["libprotobuf-dev"],
+      "runtime_packages": ["libprotobuf17", "libprotobuf-lite17"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libprotobuf-dev"],
+      "runtime_packages": ["libprotobuf23", "libprotobuf-lite23"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libprotobuf-dev"],
+      "runtime_packages": ["libprotobuf32", "libprotobuf-lite32"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libprotobuf-dev"],
       "constraints": [
         {
           "os": "linux",

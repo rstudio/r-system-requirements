@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libxft-dev"],
+      "runtime_packages": ["libxft2"],
       "constraints": [
         {
           "os": "linux",
