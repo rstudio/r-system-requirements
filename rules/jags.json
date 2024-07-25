@@ -17,8 +17,7 @@
     {
       "packages": ["jags"],
       "pre_install": [
-        { "command": "dnf -y install wget"},
-        { "command": "dnf -y install cmake"},
+        { "command": "dnf -y install wget gcc gcc-c++ gfortran"},
         { "command": "wget -O jags.tar.gz https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz/download"},
         { "command": "tar -xf jags.tar.gz"},
         { "command": "cd JAGS-4.3.2 && ./configure --libdir=/usr/local/lib64"},
