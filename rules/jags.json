@@ -20,10 +20,9 @@
         { "command": "dnf -y install wget"},
         { "command": "wget -O jags.tar.gz https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz/download"},
         { "command": "tar -xf jags.tar.gz"},
-        { "command": "cd JAGS-4.3.2"},
-        { "command": "./configure --libdir=/usr/local/lib64"},
-        { "command": "make"},
-        { "command": "sudo make install"}
+        { "command": "cd JAGS-4.3.2 && ./configure --libdir=/usr/local/lib64"},
+        { "command": "cd JAGS-4.3.2 && make"},
+        { "command": "cd JAGS-4.3.2 && sudo make install"}
       ],
       "constraints": [
         {
