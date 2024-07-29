@@ -114,7 +114,7 @@
     {
       "pre_install": [
         {
-          "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms"
+          "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms"
         }
       ],
       "packages": ["libgit2-devel"],
