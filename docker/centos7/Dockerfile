@@ -1,5 +1,8 @@
 FROM centos:7
 
+# Use vault.centos.org since CentOS 7 is EOL and the official mirrors are no longer available
+RUN sed -i -e 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/*
+
 RUN yum update -y -q
 
 # Install jq
