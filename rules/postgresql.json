@@ -25,12 +25,12 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["6", "7", "8"]
+          "versions": ["6", "7"]
         }
       ]
     },
     {
-      "packages": ["postgresql-server-devel"],
+      "packages": ["libpq-devel"],
       "constraints": [
         {
           "os": "linux",
@@ -39,33 +39,16 @@
         },
         {
           "os": "linux",
-          "distribution": "fedora"
-        }
-      ]
-    },
-    {
-      "packages": ["postgresql-server-devel"],
-      "pre_install": [
-        { "command": "dnf install -y dnf-plugins-core" },
-        { "command": "dnf config-manager --set-enabled crb" }
-      ],
-      "constraints": [
+          "distribution": "redhat",
+          "versions": ["8", "9"]
+        },
         {
           "os": "linux",
           "distribution": "rockylinux"
-        }
-      ]
-    },
-    {
-      "packages": ["postgresql-server-devel"],
-      "pre_install": [
-        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms" }
-      ],
-      "constraints": [
+        },
         {
           "os": "linux",
-          "distribution": "redhat",
-          "versions": ["9"]
+          "distribution": "fedora"
         }
       ]
     },
