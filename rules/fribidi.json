@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libfribidi-dev"],
+      "runtime_packages": ["libfribidi0"],
       "constraints": [
         {
           "os": "linux",

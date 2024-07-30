@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libglu1-mesa-dev"],
+      "runtime_packages": ["libglu1-mesa"],
       "constraints": [
         {
           "os": "linux",

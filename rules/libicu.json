@@ -3,6 +3,61 @@
   "dependencies": [
     {
       "packages": ["libicu-dev"],
+      "runtime_packages": ["libicu66"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libicu-dev"],
+      "runtime_packages": ["libicu70"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libicu-dev"],
+      "runtime_packages": ["libicu63"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libicu-dev"],
+      "runtime_packages": ["libicu67"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libicu-dev"],
+      "runtime_packages": ["libicu72"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libicu-dev"],
       "constraints": [
         {
           "os": "linux",

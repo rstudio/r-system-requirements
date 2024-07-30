@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libsasl2-dev"],
+      "runtime_packages": ["libsasl2-2"],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,49 @@
   "dependencies": [
     {
       "packages": ["libnode-dev"],
+      "runtime_packages": ["libnode64"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnode-dev"],
+      "runtime_packages": ["libnode72"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnode-dev"],
+      "runtime_packages": ["libnode108"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnode-dev"],
       "constraints": [
         {
           "os": "linux",

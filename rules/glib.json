@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["libglib2.0-dev"],
+        "runtime_packages": ["libglib2.0-bin"],
         "constraints": [
           {
             "os": "linux",

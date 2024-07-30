@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libsqlite3-dev"],
+      "runtime_packages": ["libsqlite3-0"],
       "constraints": [
         {
           "os": "linux",
