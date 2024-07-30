@@ -117,6 +117,7 @@
     },
     {
       "packages": ["opencv-dev"],
+      "runtime_packages": ["opencv"],
       "constraints": [
         {
           "os": "linux",

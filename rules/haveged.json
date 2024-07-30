@@ -130,6 +130,7 @@
       },
       {
         "packages": ["haveged-dev"],
+        "runtime_packages": ["haveged"],
         "constraints": [
           {
             "os": "linux",

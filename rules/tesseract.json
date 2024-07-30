@@ -3,6 +3,33 @@
   "dependencies": [
     {
       "packages": ["libtesseract-dev", "tesseract-ocr-eng"],
+      "runtime_packages": ["libtesseract4", "tesseract-ocr-eng"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10", "11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libtesseract-dev", "tesseract-ocr-eng"],
+      "runtime_packages": ["libtesseract5", "tesseract-ocr-eng"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libtesseract-dev", "tesseract-ocr-eng"],
       "constraints": [
         {
           "os": "linux",
@@ -117,6 +144,7 @@
     },
     {
       "packages": ["tesseract-ocr-dev"],
+      "runtime_packages": ["tesseract-ocr"],
       "constraints": [
         {
           "os": "linux",

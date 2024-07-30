@@ -107,7 +107,7 @@
           {
             "os": "linux",
             "distribution": "alpine",
-            "versions": ["3.18"]
+            "versions": ["3.18", "edge"]
           }
         ]
       }
