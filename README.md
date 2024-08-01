@@ -91,8 +91,8 @@ The rules in this catalog support the following operating systems:
 - CentOS 7
 - Rocky Linux 8*, 9
 - Red Hat Enterprise Linux 7, 8, 9
-- openSUSE 15.5
-- SUSE Linux Enterprise 15 SP5
+- openSUSE 15.5, 15.6
+- SUSE Linux Enterprise 15 SP5, 15 SP6
 - Debian 10, 11, 12, unstable
 - Fedora 38, 39, 40
 - Windows (for R 4.0+ only)

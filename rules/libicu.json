@@ -76,6 +76,21 @@
       ]
     },
     {
+      "packages": ["libicu73_2-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse",
+          "versions": ["15.6"]
+        },
+        {
+          "os": "linux",
+          "distribution": "sle",
+          "versions": ["15.6"]
+        }
+      ]
+    },
+    {
       "packages": [
         "mingw-w64-x86_64-icu",
         "mingw-w64-i686-icu"
