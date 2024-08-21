@@ -35,7 +35,7 @@
       "packages": ["openbabel-devel"],
       "pre_install": [
         {
-          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+          "command": "yum install -y epel-release"
         }
       ],
       "constraints": [
@@ -43,7 +43,17 @@
           "os": "linux",
           "distribution": "centos",
           "versions": ["7"]
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["openbabel-devel"],
+      "pre_install": [
+        {
+          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+        }
+      ],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "redhat",
