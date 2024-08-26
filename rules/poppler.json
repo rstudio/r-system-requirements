@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libpoppler-cpp-dev"],
+      "runtime_packages": ["libpoppler-cpp0v5"],
       "constraints": [
         {
           "os": "linux",

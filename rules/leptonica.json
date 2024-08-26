@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libleptonica-dev"],
+      "runtime_packages": ["liblept5"],
       "constraints": [
         {
           "os": "linux",

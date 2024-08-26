@@ -4,9 +4,8 @@
   ],
   "dependencies": [
     {
-      "packages": [
-        "libglpk-dev"
-      ],
+      "packages": ["libglpk-dev"],
+      "runtime_packages": ["libglpk40"],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["imagemagick", "libmagick++-dev", "gsfonts"],
+        "runtime_packages": ["imagemagick", "gsfonts"],
         "constraints": [
           {
             "os": "linux",

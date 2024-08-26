@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libpng-dev"],
+      "runtime_packages": ["libpng16-16"],
       "constraints": [
         {
           "os": "linux",

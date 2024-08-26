@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["librdf0-dev"],
+      "runtime_packages": ["librdf0"],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libxml2-dev"],
+      "runtime_packages": ["libxml2"],
       "constraints": [
         {
           "os": "linux",

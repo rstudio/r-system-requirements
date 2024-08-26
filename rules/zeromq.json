@@ -2,7 +2,8 @@
   "patterns": ["\\bzeromq\\b"],
   "dependencies": [
     {
-      "packages": ["libzmq3-dev"],
+      "packages": ["libzmq5-dev"],
+      "runtime_packages": ["libzmq5"],
       "constraints": [
         {
           "os": "linux",

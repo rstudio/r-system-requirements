@@ -3,6 +3,45 @@
   "dependencies": [
     {
       "packages": ["libhdf5-dev"],
+      "runtime_packages": ["libhdf5-103", "libhdf5-cpp-103"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libhdf5-dev"],
+      "runtime_packages": [
+        "libhdf5-103-1",
+        "libhdf5-fortran-102",
+        "libhdf5-hl-100",
+        "libhdf5-hl-fortran-100",
+        "libhdf5-cpp-103-1",
+        "libhdf5-hl-cpp-100"
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11", "12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libhdf5-dev"],
       "constraints": [
         {
           "os": "linux",

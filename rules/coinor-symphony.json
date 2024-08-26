@@ -3,6 +3,7 @@
     "dependencies": [
       {
         "packages": ["coinor-symphony", "coinor-libsymphony-dev"],
+        "runtime_packages": ["coinor-symphony"],
         "constraints": [
           {
             "os": "linux",

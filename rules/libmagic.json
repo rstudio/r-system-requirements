@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libmagic-dev"],
+      "runtime_packages": ["libmagic1"],
       "constraints": [
         {
           "os": "linux",

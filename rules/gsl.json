@@ -3,6 +3,49 @@
   "dependencies": [
     {
       "packages": ["libgsl0-dev"],
+      "runtime_packages": ["libgsl23"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgsl0-dev"],
+      "runtime_packages": ["libgsl25"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgsl0-dev"],
+      "runtime_packages": ["libgsl27"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libgsl0-dev"],
       "constraints": [
         {
           "os": "linux",

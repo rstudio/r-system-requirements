@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libfftw3-dev"],
+      "runtime_packages": ["libfftw3-bin"],
       "constraints": [
         {
           "os": "linux",
