@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libpq-dev"],
+      "runtime_packages": ["libpq5"],
       "constraints": [
         {
           "os": "linux",
@@ -72,6 +73,7 @@
     },
     {
       "packages": ["libpq-dev"],
+      "runtime_packages": ["libpq"],
       "constraints": [
         {
           "os": "linux",

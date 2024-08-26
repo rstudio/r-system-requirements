@@ -3,6 +3,38 @@
   "dependencies": [
     {
       "packages": ["unixodbc-dev"],
+      "runtime_packages": ["libodbc1", "odbcinst1debian2"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10", "11"]
+        }
+      ]
+    },
+    {
+      "packages": ["unixodbc-dev"],
+      "runtime_packages": ["libodbc2", "libodbccr2", "libodbcinst2"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["unixodbc-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -73,6 +105,7 @@
     },
     {
       "packages": ["unixodbc-dev"],
+      "runtime_packages": ["unixodbc"],
       "constraints": [
         {
           "os": "linux",

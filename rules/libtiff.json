@@ -3,6 +3,33 @@
   "dependencies": [
     {
       "packages": ["libtiff-dev"],
+      "runtime_packages": ["libtiff5", "libtiffxx5"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04", "22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions":["10", "11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libtiff-dev"],
+      "runtime_packages": ["libtiff6", "libtiffxx6"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libtiff-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -50,6 +77,7 @@
     },
     {
       "packages": ["tiff-dev"],
+      "runtime_packages": ["libtiffxx"],
       "constraints": [
         {
           "os": "linux",

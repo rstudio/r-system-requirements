@@ -3,6 +3,61 @@
   "dependencies": [
     {
       "packages": ["libnetcdf-dev"],
+      "runtime_packages": ["libnetcdf15"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnetcdf-dev"],
+      "runtime_packages": ["libnetcdf19"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["22.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnetcdf-dev"],
+      "runtime_packages": ["libnetcdf13"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnetcdf-dev"],
+      "runtime_packages": ["libnetcdf18"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnetcdf-dev"],
+      "runtime_packages": ["libnetcdf19"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12", "unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libnetcdf-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -136,6 +191,7 @@
     },
     {
       "packages": ["netcdf-dev"],
+      "runtime_packages": ["netcdf"],
       "constraints": [
         {
           "os": "linux",

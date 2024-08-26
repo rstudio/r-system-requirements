@@ -3,6 +3,55 @@
   "dependencies": [
     {
       "packages": ["libavfilter-dev"],
+      "runtime_packages": ["libavfilter6"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["18.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libavfilter-dev"],
+      "runtime_packages": ["libavfilter7"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04", "22.04"]
+        },
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["10", "11"]
+        }
+      ]
+    },
+    {
+      "packages": ["libavfilter-dev"],
+      "runtime_packages": ["libavfilter8"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["12"]
+        }
+      ]
+    },
+    {
+      "packages": ["libavfilter-dev"],
+      "runtime_packages": ["libavfilter9"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "debian",
+          "versions": ["unstable"]
+        }
+      ]
+    },
+    {
+      "packages": ["libavfilter-dev"],
       "constraints": [
         {
           "os": "linux",
@@ -125,6 +174,7 @@
     },
     {
       "packages": ["ffmpeg-dev"],
+      "runtime_packages": ["ffmpeg-libs"],
       "constraints": [
         {
           "os": "linux",

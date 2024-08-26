@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libeigen3-dev"],
+      "runtime_packages": [],
       "constraints": [
         {
           "os": "linux",
@@ -117,6 +118,7 @@
     },
     {
       "packages": ["eigen-dev"],
+      "runtime_packages": [],
       "constraints": [
         {
           "os": "linux",

@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libsndfile1-dev"],
+      "runtime_packages": ["libsndfile1"],
       "constraints": [
         {
           "os": "linux",
@@ -98,6 +99,7 @@
     },
     {
       "packages": ["libsndfile-dev"],
+      "runtime_packages": ["libsndfile"],
       "constraints": [
         {
           "os": "linux",

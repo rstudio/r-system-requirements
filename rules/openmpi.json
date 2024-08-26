@@ -67,6 +67,7 @@
     },
     {
       "packages": ["openmpi-dev"],
+      "runtime_packages": ["openmpi"],
       "constraints": [
         {
           "os": "linux",

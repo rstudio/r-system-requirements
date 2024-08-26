@@ -4,9 +4,8 @@
   ],
   "dependencies": [
     {
-      "packages": [
-        "libfontconfig1-dev"
-      ],
+      "packages": ["libfontconfig1-dev"],
+        "runtime_packages": ["libfontconfig1"],
       "constraints": [
         {
           "os": "linux",
@@ -51,6 +50,7 @@
     },
     {
       "packages": ["fontconfig-dev"],
+      "runtime_packages": ["fontconfig"],
       "constraints": [
         {
           "os": "linux",

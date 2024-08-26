@@ -3,15 +3,29 @@
   "dependencies": [
     {
       "packages": ["libmysqlclient-dev"],
+      "runtime_packages": ["libmysqlclient20"],
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu"
+          "distribution": "ubuntu",
+          "versions": ["18.04"]
+        }
+      ]
+    },
+    {
+      "packages": ["libmysqlclient-dev"],
+      "runtime_packages": ["libmysqlclient21"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["20.04", "22.04"]
         }
       ]
     },
     {
       "packages": ["libmariadb-dev-compat", "libmariadb-dev"],
+      "runtime_packages": ["libmariadb3"],
       "constraints": [
         {
           "os": "linux",
@@ -111,6 +125,7 @@
     },
     {
       "packages": ["mariadb-dev"],
+      "runtime_packages": ["mariadb-embedded", "mariadb-connector-c"],
       "constraints": [
         {
           "os": "linux",

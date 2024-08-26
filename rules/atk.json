@@ -3,6 +3,7 @@
   "dependencies": [
     {
       "packages": ["libatk1.0-dev"],
+      "runtime_packages": ["libatk1.0-0"],
       "constraints": [
         {
           "os": "linux",
@@ -67,6 +68,7 @@
     },
     {
       "packages": ["atk-dev"],
+      "runtime_packages": ["atk"],
       "constraints": [
         {
           "os": "linux",
@@ -77,6 +79,7 @@
     },
     {
       "packages": ["atkmm-dev"],
+      "runtime_packages": ["atkmm"],
       "constraints": [
         {
           "os": "linux",

@@ -7,6 +7,9 @@
       "packages": [
         "libquantlib0-dev"
       ],
+      "runtime_packages": [
+        "libquantlib0v5"
+      ],
       "constraints": [
         {
           "os": "linux",
