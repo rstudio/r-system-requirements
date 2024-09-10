@@ -25,10 +25,10 @@ declare -A os_identifiers=(
     [fedora38]='fedora'
     [fedora39]='fedora'
     [fedora40]='fedora'
-    [alpine-3.16]='alpine'
     [alpine-3.17]='alpine'
     [alpine-3.18]='alpine'
     [alpine-3.19]='alpine'
+    [alpine-3.20]='alpine'
     [alpine-edge]='alpine'
 )
 
@@ -53,10 +53,10 @@ declare -A versions=(
     [fedora38]='38'
     [fedora39]='39'
     [fedora40]='40'
-    [alpine-3.16]='3.16'
     [alpine-3.17]='3.17'
     [alpine-3.18]='3.18'
     [alpine-3.19]='3.19'
+    [alpine-3.20]='3.20'
     [alpine-edge]='edge'
 )
 
