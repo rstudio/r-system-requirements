@@ -32,7 +32,7 @@
         {
           "os": "linux",
           "distribution": "redhat",
-          "version": ["8", "9"]
+          "versions": ["8", "9"]
         }
       ]
     },
