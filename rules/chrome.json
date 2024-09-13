@@ -11,7 +11,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu"
+          "distribution": "ubuntu",
           "versions": ["focal", "jammy"]
         },
         {
@@ -30,10 +30,6 @@
         {
           "os": "linux",
           "distribution": "fedora"
-        },
-        {
-          "os": "linux",
-          "distribution": "centos"
         },
         {
           "os": "linux",
@@ -61,11 +57,6 @@
           "distribution": "centos",
           "versions": ["7", "8"]
         },
-        {
-          "os": "linux",
-          "distribution": "redhat",
-          "versions": ["7", "8"]
-        }
       ]
     }
   ]
