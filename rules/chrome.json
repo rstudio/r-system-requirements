@@ -17,7 +17,9 @@
         {
           "os": "linux",
           "distribution": "debian"
-        },
+        }
+      ]
+    },
     {
       "pre_install": [],
       "packages": ["chromium"],
