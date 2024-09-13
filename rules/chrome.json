@@ -77,6 +77,11 @@
         {
           "os": "linux",
             "distribution": "alpine"
+        },
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["24.04"]
         }
       ]
     },
