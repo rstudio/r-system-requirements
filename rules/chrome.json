@@ -5,9 +5,9 @@
   ],
   "dependencies": [
     {
-      "pre_install": "",
+      "pre_install": [],
       "packages": ["chromium"],
-      "post_install": "",
+      "post_install": [],
       "constraints": [
         {
           "os": "linux",
