@@ -29,6 +29,7 @@
           "os": "linux",
           "distribution": "rockylinux"
         }
+      ]
     },
     {
       "pre_install": [
@@ -43,6 +44,7 @@
           "distribution": "redhat",
           "versions": ["8"]
         }
+      ]
     },
     {
       "pre_install": [
@@ -57,6 +59,7 @@
           "distribution": "redhat",
           "versions": ["9"]
         }
+      ]
     },
     {
       "pre_install": [],
