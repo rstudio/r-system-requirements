@@ -2,7 +2,7 @@
     "patterns": ["\\bimagemagick\\b", "\\bimage magick\\b"],
     "dependencies": [
       {
-        "packages": ["imagemagick-dev", "libmagick++-dev", "gsfonts"],
+        "packages": ["libmagick++-dev", "gsfonts"],
         "constraints": [
           {
             "os": "linux",
