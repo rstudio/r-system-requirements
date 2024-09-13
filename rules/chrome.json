@@ -13,10 +13,26 @@
           "os": "linux",
           "distribution": "ubuntu",
           "versions": ["20.04", "22.04"]
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "dnf install -y epel-release"
+        }
+      ],
+      "packages": ["chromium"],
+      "post_install": [],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
         },
         {
           "os": "linux",
-          "distribution": "debian"
+          "distribution": "redhat",
+          "version": ["8", "9"]
         }
       ]
     },
@@ -27,15 +43,11 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "debian"
         },
         {
           "os": "linux",
           "distribution": "fedora"
-        },
-        {
-          "os": "linux",
-          "distribution": "rockylinux"
         },
         {
           "os": "linux",
