@@ -56,7 +56,7 @@
           "os": "linux",
           "distribution": "centos",
           "versions": ["7", "8"]
-        },
+        }
       ]
     }
   ]
