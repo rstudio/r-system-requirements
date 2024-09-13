@@ -40,7 +40,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
           "versions": ["8"]
         }
     },
@@ -54,7 +54,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "redhat"
+          "distribution": "redhat",
           "versions": ["9"]
         }
     },
