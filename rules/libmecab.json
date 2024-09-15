@@ -19,7 +19,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "centos"
+          "distribution": "centos",
+          "versions": ["8"]
         },
         {
           "os": "linux",
@@ -32,6 +33,55 @@
         {
           "os": "linux",
           "distribution": "fedora"
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms"
+        },
+        {
+          "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+        }
+      ],
+      "packages": ["mecab-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        {
+          "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms"
+        },
+        {
+          "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+        }
+      ],
+      "packages": ["mecab-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["9"]
+        }
+      ]
+    },
+    {
+      "packages": ["mecab-devel"],
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled crb" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
         }
       ]
     }
