@@ -5,7 +5,7 @@
 R packages can depend on one another, but they can also depend on software
 external to the R ecosystem. On Ubuntu 18.04, for example, in order to install
 the `curl` R package, you must have previously run `apt-get install libcurl`. R
-packages often note these dependencies inside their DESCRIPTION files, but this
+packages often note these dependencies inside their `DESCRIPTION` files, but this
 information is free-form text that varies by package.
 
 This repository contains a catalog of "rules" that can be used to systematically
@@ -41,10 +41,6 @@ RStudio Package Manager is professionally supported, but RStudio does not offer
 support for these rules. Please file questions in [RStudio
 Community](https://community.rstudio.com) or open an issue in this repository.
 
-A similar project is maintained by [R-Hub](https://github.com/r-hub/sysreqsdb).
-The two catalogs have different data formats, test coverage, and target
-different operating systems.
-
 ## Rule Coverage
 
 The rules presented in this repository are extensively tested with the following process:
@@ -54,8 +50,8 @@ The rules presented in this repository are extensively tested with the following
 for the package into the Docker container.
 3. The package is installed.
 
-If the package install is successful, there is a high chance the existing rules
-are sufficient. If the install fails, there is an indication that a rule is
+If the package installation is successful, there is a high chance the existing rules
+are sufficient. If the installation fails, there is an indication that a rule is
 missing. This process is repeated for all CRAN packages across 6 Linux
 distributions: Ubuntu 16/18, CentOS 7/8, openSUSE 42/15.
 
@@ -89,7 +85,7 @@ The rules in this catalog support the following operating systems:
 
 - Ubuntu 20.04, 22.04, 24.04
 - CentOS 7
-- Rocky Linux 8*, 9
+- Rocky Linux 8[^1], 9
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.5, 15.6
 - SUSE Linux Enterprise 15 SP5, 15 SP6
@@ -97,7 +93,7 @@ The rules in this catalog support the following operating systems:
 - Fedora 38, 39, 40
 - Windows (for R 4.0+ only)
 
-\* Rocky Linux 8 is specified as `centos8` for backward compatibility.
+[^1]: Rocky Linux 8 is specified as `centos8` for backward compatibility.
 CentOS 8 reached end of support on December 31, 2021.
 
 ---
@@ -110,7 +106,7 @@ repository and submit a pull request.
 
 ### Overview
 
-Each system requirement rule is described by a JSON file in the [`rules`](rules)
+Each system requirement rule is described by a JSON file in the [`rules/`](rules)
 directory. The file is named <code><i>rule-name</i>.json</code>, where
 *`rule-name`* is typically the name of the system dependency.
 
@@ -141,10 +137,10 @@ library at [`rules/libprotobuf.json`](rules/libprotobuf.json).
 ```
 
 Other examples:
-- Simple rule: [git.json](rules/git.json)
-- OS version constraints (package names vary by OS version): [libmysqlclient.json](rules/libmysqlclient.json)
-- Pre-install steps (adding the EPEL repo on CentOS/RHEL): [gdal.json](rules/gdal.json)
-- Post-install steps (reconfiguring R for Java): [java.json](rules/java.json)
+- Simple rule: [`git.json`](rules/git.json)
+- OS version constraints (package names vary by OS version): [`libmysqlclient.json`](rules/libmysqlclient.json)
+- Pre-install steps (adding the EPEL repo on CentOS/RHEL): [`gdal.json`](rules/gdal.json)
+- Post-install steps (reconfiguring R for Java): [`java.json`](rules/java.json)
 
 ### JSON Fields
 
@@ -214,7 +210,7 @@ Pre-install and post-install actions can be specified as either a `command` or
 
 ### Adding a rule
 
-A typical workflow for adding a new rule:
+A typical workflow for adding a new rule consists of:
 
 1. Come up with regular expressions to match all R packages with the system
    dependency. See [`sysreqs.json`](test/sysreqs.json) for a sample list of
@@ -331,3 +327,8 @@ modify this file directly, since it is automatically generated. Instead, modify
 
 If you need to modify the distros and/or versions supported in the schema definitions,
 modify [`systems.json`](systems.json).
+
+## Acknowledgements
+
+An earlier similar [project](https://github.com/r-hub/sysreqsdb) maintained by R-Hub has been
+deprecated in 2024 in favor of this catalog.
