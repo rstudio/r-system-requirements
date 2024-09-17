@@ -38,10 +38,6 @@
         {
           "os": "linux",
           "distribution": "rockylinux"
-        },
-        {
-          "os": "linux",
-          "distribution": "fedora"
         }
       ]
     },
