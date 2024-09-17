@@ -15,20 +15,29 @@
       ]
     },
     {
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled powertools" }
+      ],
       "packages": ["mecab-devel"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "centos",
           "versions": ["8"]
-        },
+        }
+      ]
+    },
+    {
+      "packages": ["mecab-devel"],
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled crb" }
+      ],
+      "constraints": [
         {
           "os": "linux",
           "distribution": "rockylinux"
-        },
-        {
-          "os": "linux",
-          "distribution": "redhat"
         },
         {
           "os": "linux",
