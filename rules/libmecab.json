@@ -1,5 +1,5 @@
 {
-  "patterns": ["\\blibmecab\\b", "\\bmecab\\b"],
+  "patterns": ["\\libmecab\\b", "\\mecab\\b"],
   "dependencies": [
     {
       "packages": ["libmecab-dev"],
