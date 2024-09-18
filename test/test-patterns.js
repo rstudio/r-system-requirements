@@ -27,6 +27,10 @@ const sysreqs = JSON.parse(fs.readFileSync(SYSREQS_FILE))
 
 rules.forEach(rule => {
   rule.patterns.forEach(pattern => {
+    // Test for syntax errors, like invalid escape sequences, using Unicode-aware mode.
+    // RegExp otherwise does not perform some of these syntax checks.
+    new RegExp(pattern, 'u')
+
     const regexp = new RegExp(pattern, 'i')
     const matched = sysreqs.filter(s => s.SystemRequirements.match(regexp))
     console.log('pattern:', JSON.stringify(pattern))
