@@ -35,8 +35,8 @@ which translates these rules into install commands for specific packages or
 repositiories.
 
 You can find the install commands for a package by viewing the package page in
-[Posit Public Package Manager](https://p3m.dev/), or using the [`pak`](https://pak.r-lib.org/reference/index.html#system-requirements)
-package in R.
+[Posit Public Package Manager](https://p3m.dev/), or using the [`pak`](https://pak.r-lib.org/reference/sysreqs.html)
+package in R. `pak` will also automatically install the system requirements when installing a package.
 
 While Posit Package Manager is a professional product, this catalog is available as a community resource
 under the MIT license. Please open an issue in this repository for any bugs or requests,
