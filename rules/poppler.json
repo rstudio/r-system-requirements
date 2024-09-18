@@ -1,5 +1,5 @@
 {
-  "patterns": ["\\bPoppler C\\+\\+\\\b"],
+  "patterns": ["\\bPoppler C\\+\\+\\b"],
   "dependencies": [
     {
       "packages": ["libpoppler-cpp-dev"],
