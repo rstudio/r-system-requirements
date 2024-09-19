@@ -3,9 +3,9 @@
 [![CI Status](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml/badge.svg)](https://github.com/rstudio/r-system-requirements/actions/workflows/ci.yml)
 
 R packages can depend on one another, but they can also depend on software
-external to the R ecosystem. On Ubuntu 18.04, for example, in order to install
-the `curl` R package, you must have previously run `apt-get install libcurl`. R
-packages often note these dependencies inside their `DESCRIPTION` files, but this
+external to the R ecosystem. On Ubuntu 24.04, for example, in order to install
+the `curl` R package, you must have previously run `apt install libcurl4-openssl-dev`. R
+packages often note these dependencies in the `SystemRequirements` field within their `DESCRIPTION` files, but this
 information is free-form text that varies by package.
 
 This repository contains a catalog of "rules" that can be used to systematically
@@ -13,9 +13,9 @@ identify these dependencies and generate commands to install them.
 
 You may be expecting to see a list like:
 
-| Package | SystemRequirements Field | Dependency |
+| Package | `SystemRequirements` | Dependency |
 | ------  | ----------- | ----- |
-| rgdal   | "for building from source: GDAL >= ..." | libgdal-dev |
+| `curl`   | `libcurl: libcurl-devel (rpm) or libcurl4-openssl-dev (deb).` | `libcurl4-openssl-dev` |
 
 
 Storing this information as a table in this format is not efficient. Many R
@@ -24,60 +24,23 @@ sparse. Moreover, R packages are added at an exponential rate, so maintaining
 this data would be nearly impossible.
 
 Instead, this repository contains a set of rules that map a
-`SystemRequirements` field, e.g. `rgdal`'s "for building from source: GDAL >=
-1.11.4 and <= 2.5.0, library from ..." to a platform specific install command:
-`apt-get install libgdal-dev gdal-bin libproj-dev`.
+`SystemRequirements` field to a platform specific install command such as
+`apt install libcurl4-openssl-dev`.
 
 
 ## Usage
 
-The primary purpose of this catalog is to support [RStudio Package
-Manager](https://rstudio.com/products/package-manager) which knows how to
-translate these rules into install steps for specific packages or
-repositiories. However, the community is free to use and contribute to these
-rules subject to the MIT license.
+The primary purpose of this catalog is to support [Posit Package Manager](https://posit.co/products/enterprise/package-manager/),
+which translates these rules into install commands for specific packages or
+repositiories.
 
-RStudio Package Manager is professionally supported, but RStudio does not offer
-support for these rules. Please file questions in [RStudio
-Community](https://community.rstudio.com) or open an issue in this repository.
+You can find the install commands for a package by viewing the package page in
+[Posit Public Package Manager](https://p3m.dev/), or using the [`pak`](https://pak.r-lib.org/reference/sysreqs.html)
+package in R. `pak` will also automatically install the system requirements when installing a package.
 
-## Rule Coverage
-
-The rules presented in this repository are extensively tested with the following process:
-
-1. A Docker container is started with a minimal [base R image](https://github.com/rstudio/r-docker).
-2. A target R package is identified. The catalog of rules is applied to install any known requirements
-for the package into the Docker container.
-3. The package is installed.
-
-If the package installation is successful, there is a high chance the existing rules
-are sufficient. If the installation fails, there is an indication that a rule is
-missing. This process is repeated for all CRAN packages across 6 Linux
-distributions: Ubuntu 16/18, CentOS 7/8, openSUSE 42/15.
-
-The results are summarized below:
-
-*Percentage of CRAN Packages that Install Successfully*
-
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 |
-| --- | ---   | -------- | --------- | -------- | -------------- | -------------- |
-| No Rules| 78% | 78.1% | 77.8% | | 77.7% | 78.2% |
-| With Rules | 93.5% | 95.8% | 93.7% | | 88.5% | 89.7% |
-
-
-*Percentage Weighted by Downloads*
-
-This table contains similar results as the table above, but adjusted by
-download. This metric indicates how good the rules are for the majority of
-packages R users are likely to install, discounting the long tail of packages
-that have system requirements but are not frequently used.
-
-| | Ubuntu 16 | Ubuntu 18 |  CentOS 7 | CentOS 8 |  openSUSE 42.3 |  openSUSE 15.0 |
-| --- | ---   | --------  | --------  | -------- | -------------- | -------------- |
-| No Rules| 90.1% | 90.1% | 90.1% | | 90% | 90.2% |
-| With Rules | 98.5% | 99.2% | 98.6% | | 96.1% | 96.3% |
-
-Both tests run with R 3.5.3 for all CRAN packages as of April 4, 2019.
+While Posit Package Manager is a professional product, this catalog is available as a community resource
+under the MIT license. Please open an issue in this repository for any bugs or requests,
+or see the [For Developers](#for-developers) section for how to contribute to this repository.
 
 ## Operating Systems
 
@@ -196,7 +159,7 @@ Other examples:
 | ----- | ---- | ----------- |
 | `os` | String | Operating system. Only `"linux"` is supported for now. |
 | `distribution` | String | Linux distribution. One of `"ubuntu"`, `"debian"`, `"centos"`, `"redhat"`, `"opensuse"`, `"sle"`, `"fedora"` |
-| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["18.04"]` for Ubuntu. |
+| `versions` | Array | Optional set of OS versions. If unspecified, the rule applies to all supported versions. See [`systems.json`](systems.json) for supported values by OS. Example: `["24.04"]` for Ubuntu. |
 
 #### Pre/post-install actions
 
@@ -205,7 +168,7 @@ Pre-install and post-install actions can be specified as either a `command` or
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| `command` | String | A shell command. Example: `"yum install -y epel-release"` |
+| `command` | String | A shell command. Example: `"dnf install -y epel-release"` |
 | `script` | String | A shell script found in the [`scripts`](scripts) directory. Example: `"centos_epel.sh"` |
 
 ### Adding a rule
