@@ -37,6 +37,20 @@
       "packages": ["poppler-glib-devel"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
+        { "command": "dnf config-manager --set-enabled powertools" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "centos",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["poppler-glib-devel"],
+      "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled crb" }
       ],
       "constraints": [
