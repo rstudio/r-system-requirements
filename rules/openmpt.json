@@ -48,7 +48,7 @@
       ]
     },
     {
-      "packages": ["libopenmpt-dev", "portaudio19-dev"],
+      "packages": ["libopenmpt-dev", "portaudio-dev"],
       "constraints": [
         {
           "os": "linux",
