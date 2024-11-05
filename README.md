@@ -53,7 +53,7 @@ The rules in this catalog support the following operating systems:
 - openSUSE 15.5, 15.6
 - SUSE Linux Enterprise 15 SP5, 15 SP6
 - Debian 10, 11, 12, unstable
-- Fedora 38, 39, 40
+- Fedora 39, 40, 41
 - Windows (for R 4.0+ only)
 
 [^1]: Rocky Linux 8 is specified as `centos8` for backward compatibility.
