@@ -62,6 +62,19 @@
     {
       "packages": ["jq-devel"],
       "pre_install": [
+        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "packages": ["jq-devel"],
+      "pre_install": [
         { "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms" }
       ],
       "constraints": [
