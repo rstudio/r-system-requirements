@@ -49,7 +49,8 @@
         "constraints": [
           {
             "os": "linux",
-            "distribution": "rockylinux"
+            "distribution": "rockylinux",
+            "versions": ["9"]
           },
           {
             "os": "linux",
