@@ -17,7 +17,7 @@
     {
         "os": "linux",
         "distribution": "rockylinux",
-        "versions": [ "9" ]
+        "versions": [ "8", "9" ]
     },
     {
         "os": "linux",
