@@ -85,11 +85,12 @@
       ]
     },
     {
+      "packages": ["libgit2_1.7-devel"],
       "pre_install": [
-        { "command": "dnf install -y dnf-plugins-core" },
-        { "command": "dnf config-manager --set-enabled powertools" }
+        {
+          "command": "dnf install -y epel-release"
+        }
       ],
-      "packages": ["libgit2-devel"],
       "constraints": [
         {
           "os": "linux",
@@ -112,12 +113,12 @@
       ]
     },
     {
+      "packages": ["libgit2_1.7-devel"],
       "pre_install": [
         {
-          "command": "subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms"
+          "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
         }
       ],
-      "packages": ["libgit2-devel"],
       "constraints": [
         {
           "os": "linux",
