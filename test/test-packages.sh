@@ -195,6 +195,11 @@ test_packages() {
                     $test_satisfy "$sat" $version
                 done
             fi
+            # Run any post-install commands
+            post_install_cmds=$(echo "$dep" | jq ".post_install[]?")
+            jq -c <<< "$post_install_cmds" | while read cmd; do
+                run_extra_cmd "$cmd"
+            done
         done
     done
 }

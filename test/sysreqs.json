@@ -1,8 +1,19 @@
+
 [
   {
     "Package": "ABC.RAP",
     "Version": "0.9.0",
     "SystemRequirements": "GNU make"
+  },
+  {
+    "Package": "abn",
+    "Version": "3.1.1",
+    "SystemRequirements": "Gnu Scientific Library version >= 1.12"
+  },
+  {
+    "Package": "accessr",
+    "Version": "1.0.1",
+    "SystemRequirements": "OfficeToPDF - https://github.com/cognidox/OfficeToPDF, pandoc (>= 1.14) - https://pandoc.org"
   },
   {
     "Package": "acro",
@@ -15,18 +26,28 @@
     "SystemRequirements": "C++11"
   },
   {
+    "Package": "adass",
+    "Version": "1.0.1",
+    "SystemRequirements": "GNU make"
+  },
+  {
     "Package": "adbcpostgresql",
-    "Version": "0.11.0",
+    "Version": "0.13.0",
     "SystemRequirements": "libpq"
   },
   {
     "Package": "adbcsqlite",
-    "Version": "0.10.0",
+    "Version": "0.13.0",
     "SystemRequirements": "SQLite3"
   },
   {
+    "Package": "adelie",
+    "Version": "1.0.1",
+    "SystemRequirements": "C++17"
+  },
+  {
     "Package": "adimpro",
-    "Version": "0.9.6",
+    "Version": "0.9.7",
     "SystemRequirements": "Image Magick (for reading non PPM format), dcraw (for reading RAW images)."
   },
   {
@@ -53,6 +74,11 @@
     "Package": "AhoCorasickTrie",
     "Version": "0.1.2",
     "SystemRequirements": "C++11"
+  },
+  {
+    "Package": "alcyon",
+    "Version": "0.3.0",
+    "SystemRequirements": "C++17"
   },
   {
     "Package": "alfr",
@@ -91,7 +117,7 @@
   },
   {
     "Package": "anticlust",
-    "Version": "0.8.1",
+    "Version": "0.8.5",
     "SystemRequirements": "The exact (anti)clustering algorithms require that either the GNU linear programming kit (GLPK library) is installed (<http://www.gnu.org/software/glpk/>) or the SYMPHONY open source MILP solver (<https://github.com/coin-or/SYMPHONY>). Rendering the vignette requires pandoc (<https://pandoc.org/>)."
   },
   {
@@ -101,13 +127,13 @@
   },
   {
     "Package": "apache.sedona",
-    "Version": "1.5.1",
+    "Version": "1.6.0",
     "SystemRequirements": "'Apache Spark' 3.x"
   },
   {
     "Package": "apcf",
-    "Version": "0.3.0",
-    "SystemRequirements": "C++11, GEOS (>= 3.4.0)"
+    "Version": "0.3.1",
+    "SystemRequirements": "GEOS (>= 3.4.0)"
   },
   {
     "Package": "aphid",
@@ -120,13 +146,33 @@
     "SystemRequirements": "C++17, gmp, mpfr"
   },
   {
+    "Package": "arcgis",
+    "Version": "0.1.1",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc"
+  },
+  {
+    "Package": "arcgisgeocode",
+    "Version": "0.2.0",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc"
+  },
+  {
+    "Package": "arcgisplaces",
+    "Version": "0.1.0",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc, OpenSSL"
+  },
+  {
+    "Package": "arcgisutils",
+    "Version": "0.3.0",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc"
+  },
+  {
     "Package": "archive",
-    "Version": "1.1.7",
+    "Version": "1.1.8",
     "SystemRequirements": "libarchive: libarchive-dev (deb), libarchive-devel (rpm), libarchive (homebrew), libarchive_dev (csw)"
   },
   {
     "Package": "arcpbf",
-    "Version": "0.1.0",
+    "Version": "0.1.3",
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
@@ -156,12 +202,12 @@
   },
   {
     "Package": "arrow",
-    "Version": "15.0.1",
+    "Version": "16.1.0",
     "SystemRequirements": "C++17; for AWS S3 support on Linux, libcurl and openssl (optional); cmake >= 3.16 (build-time only, and only for full source build)"
   },
   {
     "Package": "arulesCBA",
-    "Version": "1.2.5",
+    "Version": "1.2.7",
     "SystemRequirements": "Java (>= 8)"
   },
   {
@@ -176,7 +222,7 @@
   },
   {
     "Package": "asremlPlus",
-    "Version": "4.4.32",
+    "Version": "4.4.35",
     "SystemRequirements": "asreml"
   },
   {
@@ -185,14 +231,14 @@
     "SystemRequirements": "C++11, GNU make"
   },
   {
-    "Package": "autocart",
-    "Version": "1.4.5",
-    "SystemRequirements": "GNU make"
-  },
-  {
     "Package": "autoharp",
     "Version": "0.0.10",
     "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org"
+  },
+  {
+    "Package": "autonewsmd",
+    "Version": "0.0.8",
+    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
   },
   {
     "Package": "av",
@@ -206,13 +252,18 @@
   },
   {
     "Package": "b64",
-    "Version": "0.1.0",
+    "Version": "0.1.1",
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
     "Package": "babelwhale",
     "Version": "1.2.0",
     "SystemRequirements": "Docker and/or Singularity (>=3.0)"
+  },
+  {
+    "Package": "babette",
+    "Version": "2.3.4",
+    "SystemRequirements": "BEAST2 (https://www.beast2.org/)"
   },
   {
     "Package": "bacistool",
@@ -241,13 +292,13 @@
   },
   {
     "Package": "bamdit",
-    "Version": "3.4.0",
+    "Version": "3.4.1",
     "SystemRequirements": "JAGS (>= 4.3.0) (see http://mcmc-jags.sourceforge.net)"
   },
   {
     "Package": "bamm",
-    "Version": "0.4.3",
-    "SystemRequirements": "C++11, GDAL (>= 2.2.3): gdal-bin (deb), libgdal-dev (deb) or gdal-devel (rmp), GEOS (>= 3.4.0), PROJ (>= 4.9.3): libproj-dev (deb), sqlite3, ImageMagick++: imagemagick (deb), libmagic-dev (deb), libmagick++-dev (deb) or ImageMagick-c++-devel (rpm) ImageMagick (http://imagemagick.org) or GraphicsMagick (http://www.graphicsmagick.org) or LyX (http://www.lyx.org) for saveGIF(); (PDF)LaTeX for saveLatex(); SWF Tools (http://swftools.org) for saveSWF(); FFmpeg (http://ffmpeg.org) or avconv (https://libav.org/avconv.html) for saveVideo()"
+    "Version": "0.5.0",
+    "SystemRequirements": "GDAL (>= 2.2.3): gdal-bin (deb), libgdal-dev (deb) or gdal-devel (rmp), GEOS (>= 3.4.0), PROJ (>= 4.9.3): libproj-dev (deb), sqlite3, ImageMagick++: imagemagick (deb), libmagic-dev (deb), libmagick++-dev (deb) or ImageMagick-c++-devel (rpm) ImageMagick (http://imagemagick.org) or GraphicsMagick (http://www.graphicsmagick.org) or LyX (http://www.lyx.org) for saveGIF(); (PDF)LaTeX for saveLatex(); SWF Tools (http://swftools.org) for saveSWF(); FFmpeg (http://ffmpeg.org) or avconv (https://libav.org/avconv.html) for saveVideo()"
   },
   {
     "Package": "banditpam",
@@ -271,7 +322,7 @@
   },
   {
     "Package": "batchmix",
-    "Version": "2.1.0",
+    "Version": "2.2.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -301,7 +352,7 @@
   },
   {
     "Package": "BayesFM",
-    "Version": "0.1.5",
+    "Version": "0.1.7",
     "SystemRequirements": "gfortran (>= 4.6.3)"
   },
   {
@@ -356,7 +407,7 @@
   },
   {
     "Package": "BayesSUR",
-    "Version": "2.1-6",
+    "Version": "2.2-1",
     "SystemRequirements": "C++17"
   },
   {
@@ -380,6 +431,11 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "BayLum",
+    "Version": "0.3.2",
+    "SystemRequirements": "JAGS >= 4.3.2 (https://mcmc-jags.sourceforge.io/)"
+  },
+  {
     "Package": "bbmix",
     "Version": "1.0.0",
     "SystemRequirements": "GNU make"
@@ -401,7 +457,7 @@
   },
   {
     "Package": "bcputility",
-    "Version": "0.4.0",
+    "Version": "0.4.3",
     "SystemRequirements": "bcp Utility"
   },
   {
@@ -421,7 +477,7 @@
   },
   {
     "Package": "beastier",
-    "Version": "2.5",
+    "Version": "2.5.1",
     "SystemRequirements": "BEAST2 (https://www.beast2.org/)"
   },
   {
@@ -446,7 +502,7 @@
   },
   {
     "Package": "bellreg",
-    "Version": "0.0.2",
+    "Version": "0.0.2.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -486,7 +542,7 @@
   },
   {
     "Package": "BGVAR",
-    "Version": "2.5.5",
+    "Version": "2.5.7",
     "SystemRequirements": "GNU make"
   },
   {
@@ -501,7 +557,7 @@
   },
   {
     "Package": "biblio",
-    "Version": "0.0.8",
+    "Version": "0.0.10",
     "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org"
   },
   {
@@ -545,6 +601,11 @@
     "SystemRequirements": "C++11, fftw3, GNU make"
   },
   {
+    "Package": "BioCro",
+    "Version": "3.1.3",
+    "SystemRequirements": "C++11, GNU make"
+  },
+  {
     "Package": "bioimagetools",
     "Version": "1.1.8",
     "SystemRequirements": "tiff fftw libcurl openssl"
@@ -560,6 +621,11 @@
     "SystemRequirements": "windows"
   },
   {
+    "Package": "birdie",
+    "Version": "0.6.1",
+    "SystemRequirements": "GNU make, C++17"
+  },
+  {
     "Package": "bisque",
     "Version": "1.0.2",
     "SystemRequirements": "A system with a recent-enough C++11 compiler (such as g++-4.8 or later)."
@@ -570,13 +636,18 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "bittermelon",
+    "Version": "2.0.2",
+    "SystemRequirements": "'monobit' for reading/writing additional bitmap font formats."
+  },
+  {
     "Package": "BivRec",
     "Version": "1.2.1",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "blandr",
-    "Version": "0.5.1",
+    "Version": "0.6.0",
     "SystemRequirements": "pandoc (>=1.12.3)"
   },
   {
@@ -591,7 +662,7 @@
   },
   {
     "Package": "blavaan",
-    "Version": "0.5-3",
+    "Version": "0.5-5",
     "SystemRequirements": "GNU make"
   },
   {
@@ -631,7 +702,7 @@
   },
   {
     "Package": "bnlearn",
-    "Version": "4.9.3",
+    "Version": "4.9.4",
     "SystemRequirements": "USE_C17"
   },
   {
@@ -641,7 +712,7 @@
   },
   {
     "Package": "bookdown",
-    "Version": "0.38",
+    "Version": "0.40",
     "SystemRequirements": "Pandoc (>= 1.17.2)"
   },
   {
@@ -651,7 +722,7 @@
   },
   {
     "Package": "bootUR",
-    "Version": "1.0.3",
+    "Version": "1.0.4",
     "SystemRequirements": "GNU make"
   },
   {
@@ -671,8 +742,8 @@
   },
   {
     "Package": "BPrinStratTTE",
-    "Version": "0.0.2",
-    "SystemRequirements": "GNU make, C++17"
+    "Version": "0.0.7",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "BrailleR",
@@ -730,8 +801,13 @@
     "SystemRequirements": "Platform LSF, bsub"
   },
   {
+    "Package": "bsynth",
+    "Version": "1.0",
+    "SystemRequirements": "GNU make"
+  },
+  {
     "Package": "BTSPAS",
-    "Version": "2024.4.1",
+    "Version": "2024.5.9",
     "SystemRequirements": "JAGS"
   },
   {
@@ -760,11 +836,6 @@
     "SystemRequirements": "Python (>= 3.6.0)"
   },
   {
-    "Package": "CARlasso",
-    "Version": "0.1.2",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "CARME",
     "Version": "0.1.1",
     "SystemRequirements": "GNU make"
@@ -791,12 +862,12 @@
   },
   {
     "Package": "causact",
-    "Version": "0.5.4",
+    "Version": "0.5.5",
     "SystemRequirements": "Python and numpyro are needed for Bayesian inference computations; python (>= 3.8) with header files and shared library; numpyro (= v0.12.1; https://https://num.pyro.ai/en/latest/index.html); arviz (= v0.15.1; https://https://python.arviz.org/en/stable/)"
   },
   {
     "Package": "CausalQueries",
-    "Version": "1.1.0",
+    "Version": "1.1.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -830,14 +901,19 @@
     "SystemRequirements": "Google Chrome or other Chromium-based browser. chromium: chromium (rpm) or chromium-browser (deb)"
   },
   {
+    "Package": "CirceR",
+    "Version": "1.3.3",
+    "SystemRequirements": "Java (>= 8)"
+  },
+  {
     "Package": "cit",
-    "Version": "2.3.1",
+    "Version": "2.3.2",
     "SystemRequirements": "gsl (with development libraries libgsl-dev)"
   },
   {
     "Package": "clarabel",
-    "Version": "0.5.1",
-    "SystemRequirements": "Cargo (rustc package manager) and GNU make"
+    "Version": "0.9.0",
+    "SystemRequirements": "Cargo (Rust package manager), rustc and GNU Make"
   },
   {
     "Package": "cld3",
@@ -846,7 +922,7 @@
   },
   {
     "Package": "cleanNLP",
-    "Version": "3.0.7",
+    "Version": "3.1.0",
     "SystemRequirements": "Python (>= 3.7.0)"
   },
   {
@@ -856,12 +932,12 @@
   },
   {
     "Package": "clinDataReview",
-    "Version": "1.5.0",
+    "Version": "1.6.1",
     "SystemRequirements": "pandoc (to create a clinical data review report)"
   },
   {
     "Package": "clinUtils",
-    "Version": "0.1.4",
+    "Version": "0.2.0",
     "SystemRequirements": "pandoc (for export clin DT to a file - inclusion of list of interactive plots/objects with knitr)"
   },
   {
@@ -881,7 +957,7 @@
   },
   {
     "Package": "clubpro",
-    "Version": "0.6.0",
+    "Version": "0.6.2",
     "SystemRequirements": "C++17"
   },
   {
@@ -891,13 +967,18 @@
   },
   {
     "Package": "ClusterR",
-    "Version": "1.3.2",
+    "Version": "1.3.3",
     "SystemRequirements": "libarmadillo: apt-get install -y libarmadillo-dev (deb), libblas: apt-get install -y libblas-dev (deb), liblapack: apt-get install -y liblapack-dev (deb), libarpack++2: apt-get install -y libarpack++2-dev (deb), gfortran: apt-get install -y gfortran (deb), libgmp3: apt-get install -y libgmp3-dev (deb), libfftw3: apt-get install -y libfftw3-dev (deb), libtiff5: apt-get install -y libtiff5-dev (deb)"
   },
   {
     "Package": "cmaRs",
     "Version": "0.1.3",
     "SystemRequirements": "MOSEK (http://www.mosek.com) and MOSEK License for use of Rmosek"
+  },
+  {
+    "Package": "cmstatrExt",
+    "Version": "0.4.0",
+    "SystemRequirements": "C++17"
   },
   {
     "Package": "cncaGUI",
@@ -941,13 +1022,18 @@
   },
   {
     "Package": "Colossus",
-    "Version": "1.1.0",
+    "Version": "1.1.1",
     "SystemRequirements": "make"
   },
   {
     "Package": "colourvalues",
     "Version": "0.3.9",
     "SystemRequirements": "C++17"
+  },
+  {
+    "Package": "COMBO",
+    "Version": "1.1.0",
+    "SystemRequirements": "JAGS (http://mcmc-jags.sourceforge.net)"
   },
   {
     "Package": "CommonJavaJars",
@@ -991,8 +1077,8 @@
   },
   {
     "Package": "conquestr",
-    "Version": "1.3.0",
-    "SystemRequirements": "ACER ConQuest (>=5.34.3)"
+    "Version": "1.3.4",
+    "SystemRequirements": "ACER ConQuest (>=5.40.0)"
   },
   {
     "Package": "conStruct",
@@ -1061,7 +1147,7 @@
   },
   {
     "Package": "crandep",
-    "Version": "0.3.7",
+    "Version": "0.3.9",
     "SystemRequirements": "pandoc (>= 1.12.3) - http://pandoc.org"
   },
   {
@@ -1086,12 +1172,12 @@
   },
   {
     "Package": "ctsem",
-    "Version": "3.9.1",
+    "Version": "3.10.0",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "cubature",
-    "Version": "2.1.0",
+    "Version": "2.1.1",
     "SystemRequirements": "GNU make and USE_C17"
   },
   {
@@ -1113,6 +1199,11 @@
     "Package": "cusum",
     "Version": "0.4.1",
     "SystemRequirements": "C++11"
+  },
+  {
+    "Package": "CWT",
+    "Version": "0.2.1",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "cycleRtools",
@@ -1146,7 +1237,7 @@
   },
   {
     "Package": "DatabionicSwarm",
-    "Version": "1.2.1",
+    "Version": "2.0.0",
     "SystemRequirements": "GNU make, pandoc (>=1.12.3, needed for vignettes)"
   },
   {
@@ -1158,6 +1249,11 @@
     "Package": "dataMaid",
     "Version": "1.4.1",
     "SystemRequirements": "pandoc (>= 2.0; https://pandoc.org), git, whoami"
+  },
+  {
+    "Package": "DataPackageR",
+    "Version": "0.16.0",
+    "SystemRequirements": "pandoc - https://pandoc.org"
   },
   {
     "Package": "dataReporter",
@@ -1226,8 +1322,8 @@
   },
   {
     "Package": "Delaporte",
-    "Version": "8.4.0",
-    "SystemRequirements": "A version of Fortran supporting the LOG_GAMMA Intrinsic"
+    "Version": "8.4.1",
+    "SystemRequirements": "A version of Fortran supporting the LOG_GAMMA Intrinsic and the ieee_arithmetic module."
   },
   {
     "Package": "densEstBayes",
@@ -1286,7 +1382,7 @@
   },
   {
     "Package": "dialrjars",
-    "Version": "8.13.25",
+    "Version": "8.13.36",
     "SystemRequirements": "java (>= 1.6)"
   },
   {
@@ -1350,8 +1446,8 @@
     "SystemRequirements": "libpq >= 9.0: libpq-dev (deb) or postgresql-devel (rpm)"
   },
   {
-    "Package": "dnapath",
-    "Version": "0.7.4",
+    "Package": "dlmtree",
+    "Version": "1.0.0",
     "SystemRequirements": "C++11"
   },
   {
@@ -1376,7 +1472,7 @@
   },
   {
     "Package": "dodgr",
-    "Version": "0.2.21",
+    "Version": "0.4.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -1385,9 +1481,9 @@
     "SystemRequirements": "domino (~>1.7.1)"
   },
   {
-    "Package": "dosearch",
-    "Version": "1.0.8",
-    "SystemRequirements": "C++11"
+    "Package": "DQAstats",
+    "Version": "0.3.5",
+    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
   },
   {
     "Package": "drf",
@@ -1411,7 +1507,7 @@
   },
   {
     "Package": "dtwclust",
-    "Version": "5.5.12",
+    "Version": "6.0.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -1446,7 +1542,7 @@
   },
   {
     "Package": "earthtide",
-    "Version": "0.1.2",
+    "Version": "0.1.5",
     "SystemRequirements": "C++17"
   },
   {
@@ -1456,12 +1552,12 @@
   },
   {
     "Package": "EBASE",
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "SystemRequirements": "JAGS 4.x.y (https://mcmc-jags.sourceforge.net)"
   },
   {
     "Package": "ebvcube",
-    "Version": "0.1.7",
+    "Version": "0.2.3",
     "SystemRequirements": "GDAL binaries"
   },
   {
@@ -1510,6 +1606,11 @@
     "SystemRequirements": "The package required the jq command line library. Please check https://stedolan.github.io/jq/download/ for download instructions."
   },
   {
+    "Package": "EigenR",
+    "Version": "1.3.0",
+    "SystemRequirements": "C++ 17"
+  },
+  {
     "Package": "elections.dtree",
     "Version": "2.0.0",
     "SystemRequirements": "C++17"
@@ -1541,7 +1642,7 @@
   },
   {
     "Package": "emayili",
-    "Version": "0.7.18",
+    "Version": "0.9.1",
     "SystemRequirements": "The function render() requires Pandoc (http://pandoc.org). To use PGP/GnuPG encryption requires gpg."
   },
   {
@@ -1556,7 +1657,7 @@
   },
   {
     "Package": "EpiNow2",
-    "Version": "1.4.0",
+    "Version": "1.5.2",
     "SystemRequirements": "GNU make C++17"
   },
   {
@@ -1600,13 +1701,18 @@
     "SystemRequirements": "EViews (>= 8)"
   },
   {
+    "Package": "EWOC.Comb",
+    "Version": "1.0",
+    "SystemRequirements": "JAGS (>= 4.0.0). For installation instructions, see http://mcmc-jags.sourceforge.net/"
+  },
+  {
     "Package": "exactextractr",
     "Version": "0.10.0",
     "SystemRequirements": "GEOS (>= 3.5.0)"
   },
   {
     "Package": "exams",
-    "Version": "2.4-0",
+    "Version": "2.4-1",
     "SystemRequirements": "pandoc (>= 2.0)"
   },
   {
@@ -1626,13 +1732,8 @@
   },
   {
     "Package": "exiftoolr",
-    "Version": "0.2.4",
+    "Version": "0.2.6",
     "SystemRequirements": "Perl"
-  },
-  {
-    "Package": "expertsurv",
-    "Version": "1.3.0",
-    "SystemRequirements": "GNU make, C++17"
   },
   {
     "Package": "extraDistr",
@@ -1675,11 +1776,6 @@
     "SystemRequirements": "C++11"
   },
   {
-    "Package": "farver",
-    "Version": "2.1.1",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "fasano.franceschini.test",
     "Version": "2.2.2",
     "SystemRequirements": "GNU make"
@@ -1716,7 +1812,7 @@
   },
   {
     "Package": "fastTopics",
-    "Version": "0.6-163",
+    "Version": "0.6-192",
     "SystemRequirements": "GNU make"
   },
   {
@@ -1741,13 +1837,8 @@
   },
   {
     "Package": "fdaPDE",
-    "Version": "1.1-17",
+    "Version": "1.1-19",
     "SystemRequirements": "GNU make"
-  },
-  {
-    "Package": "fddm",
-    "Version": "0.5-2",
-    "SystemRequirements": "C++11"
   },
   {
     "Package": "feather",
@@ -1786,7 +1877,7 @@
   },
   {
     "Package": "findInFiles",
-    "Version": "0.4.0",
+    "Version": "0.5.0",
     "SystemRequirements": "grep"
   },
   {
@@ -1830,11 +1921,6 @@
     "SystemRequirements": "pandoc (>= 2.4) - http://pandoc.org"
   },
   {
-    "Package": "FLSSS",
-    "Version": "9.1.3",
-    "SystemRequirements": "GNU make"
-  },
-  {
     "Package": "Fluidigm",
     "Version": "0.2",
     "SystemRequirements": "perl (>= 5.10.0), plink (>=1.07)"
@@ -1846,12 +1932,12 @@
   },
   {
     "Package": "FMAT",
-    "Version": "2024.3",
+    "Version": "2024.6",
     "SystemRequirements": "Python (>= 3.9.0)"
   },
   {
     "Package": "fmesher",
-    "Version": "0.1.5",
+    "Version": "0.1.7",
     "SystemRequirements": "C++17"
   },
   {
@@ -1871,13 +1957,18 @@
   },
   {
     "Package": "forsearch",
-    "Version": "6.0.0",
+    "Version": "6.2.0",
     "SystemRequirements": "gmp (>= 4.1)"
   },
   {
     "Package": "fracture",
     "Version": "0.2.1",
     "SystemRequirements": "C++11"
+  },
+  {
+    "Package": "freesurfer",
+    "Version": "1.6.10",
+    "SystemRequirements": "FSL, Freesurfer (https://surfer.nmr.mgh.harvard.edu/)"
   },
   {
     "Package": "frequency",
@@ -1891,7 +1982,7 @@
   },
   {
     "Package": "fs",
-    "Version": "1.6.3",
+    "Version": "1.6.4",
     "SystemRequirements": "GNU make"
   },
   {
@@ -1906,7 +1997,7 @@
   },
   {
     "Package": "fslr",
-    "Version": "2.25.2",
+    "Version": "2.25.3",
     "SystemRequirements": "FSL"
   },
   {
@@ -1921,18 +2012,13 @@
   },
   {
     "Package": "ftExtra",
-    "Version": "0.6.3",
+    "Version": "0.6.4",
     "SystemRequirements": "pandoc (>= 2.0.6) - http://pandoc.org"
   },
   {
     "Package": "fuzzywuzzyR",
     "Version": "1.0.5",
     "SystemRequirements": "Python (>= 2.4), difflib, fuzzywuzzy ( >=0.15.0 ), python-Levenshtein ( >=0.12.0 ). Detailed installation instructions for each operating system can be found in the README file."
-  },
-  {
-    "Package": "fwildclusterboot",
-    "Version": "0.13.0",
-    "SystemRequirements": "Version Requirements to run the wild bootstrap through Julia - Julia (>= 1.8), WildBootTests.jl (>=0.9). Julia is downloadable via the official Julia website (https://julialang.org/downloads/), WildBootTests.jl via Julia's package manager (https://docs.julialang.org/en/v1/stdlib/Pkg/) or its github repository (https://github.com/droodman/WildBootTests.jl)"
   },
   {
     "Package": "fwsim",
@@ -1951,17 +2037,17 @@
   },
   {
     "Package": "gamstransfer",
-    "Version": "3.0.2",
+    "Version": "3.0.3",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "ganDataModel",
-    "Version": "1.1.6",
+    "Version": "1.1.7",
     "SystemRequirements": "TensorFlow (https://www.tensorflow.org)"
   },
   {
     "Package": "ganGenerativeData",
-    "Version": "1.5.7",
+    "Version": "2.0.2",
     "SystemRequirements": "TensorFlow (https://www.tensorflow.org)"
   },
   {
@@ -1985,19 +2071,14 @@
     "SystemRequirements": "Windows, Linux, OS X"
   },
   {
-    "Package": "gdalBindings",
-    "Version": "0.1.17",
-    "SystemRequirements": "GDAL"
-  },
-  {
     "Package": "gdalcubes",
     "Version": "0.7.0",
     "SystemRequirements": "GDAL (>= 2.0.1), PROJ (>= 4.8.0), netcdf, sqlite3"
   },
   {
     "Package": "gdalraster",
-    "Version": "1.10.0",
-    "SystemRequirements": "GDAL (>= 2.4.0, built against GEOS), PROJ, libxml2"
+    "Version": "1.11.1",
+    "SystemRequirements": "GDAL (>= 3.1.0, built against GEOS), PROJ, libxml2"
   },
   {
     "Package": "gdtools",
@@ -2061,7 +2142,7 @@
   },
   {
     "Package": "geostan",
-    "Version": "0.5.4",
+    "Version": "0.6.2",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2071,7 +2152,7 @@
   },
   {
     "Package": "gert",
-    "Version": "2.0.1",
+    "Version": "2.1.0",
     "SystemRequirements": "libgit2 (>= 1.0): libgit2-devel (rpm) or libgit2-dev (deb)"
   },
   {
@@ -2121,7 +2202,7 @@
   },
   {
     "Package": "ggiraph",
-    "Version": "0.8.9",
+    "Version": "0.8.10",
     "SystemRequirements": "libpng"
   },
   {
@@ -2141,12 +2222,12 @@
   },
   {
     "Package": "giacR",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "SystemRequirements": "Chromium-based browser (Google Chrome, Brave, ...)"
   },
   {
     "Package": "gibasa",
-    "Version": "1.1.0",
+    "Version": "1.1.1",
     "SystemRequirements": "GNU make, MeCab"
   },
   {
@@ -2191,12 +2272,12 @@
   },
   {
     "Package": "glmmrBase",
-    "Version": "0.8.1",
+    "Version": "0.9.2",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "glmmrOptim",
-    "Version": "0.3.4",
+    "Version": "0.3.5",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2221,7 +2302,7 @@
   },
   {
     "Package": "gm",
-    "Version": "1.0.2",
+    "Version": "2.0.0",
     "SystemRequirements": "MuseScore - https://musescore.org/"
   },
   {
@@ -2256,18 +2337,23 @@
   },
   {
     "Package": "GPBayes",
-    "Version": "0.1.0-5.1",
+    "Version": "0.1.0-6",
     "SystemRequirements": "GNU Scientific Library version >= 2.5"
   },
   {
     "Package": "gpboost",
-    "Version": "1.4.0",
+    "Version": "1.5.1.1",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "gpg",
     "Version": "1.2.9",
     "SystemRequirements": "GPGME: libgpgme-dev (deb), gpgme-devel (rpm) gpgme (brew). On Linux 'haveged' is recommended for generating entropy when using the GPG key generator."
+  },
+  {
+    "Package": "gpuR",
+    "Version": "2.0.6",
+    "SystemRequirements": "C++11 (supporting at least std=c++0x), OpenCL shared library (provided by an SDK such as AMD/NVIDIA) and OpenCL headers including the C++ header file (provided by Khronos if not by SDK)"
   },
   {
     "Package": "gravmagsubs",
@@ -2346,13 +2432,18 @@
   },
   {
     "Package": "gslnls",
-    "Version": "1.2.0",
+    "Version": "1.3.2",
     "SystemRequirements": "GSL (>= 2.2)"
   },
   {
     "Package": "gsynth",
     "Version": "1.2.1",
     "SystemRequirements": "A C++11 compiler."
+  },
+  {
+    "Package": "GUD",
+    "Version": "1.0.2",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "guildai",
@@ -2391,7 +2482,7 @@
   },
   {
     "Package": "happign",
-    "Version": "0.2.2",
+    "Version": "0.3.0",
     "SystemRequirements": "C++11, GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3"
   },
   {
@@ -2401,7 +2492,7 @@
   },
   {
     "Package": "hbamr",
-    "Version": "2.3.0",
+    "Version": "2.3.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2416,7 +2507,7 @@
   },
   {
     "Package": "hdf5r",
-    "Version": "1.3.10",
+    "Version": "1.3.11",
     "SystemRequirements": "HDF5 (>= 1.8.13)"
   },
   {
@@ -2426,7 +2517,7 @@
   },
   {
     "Package": "heck",
-    "Version": "0.1.0",
+    "Version": "0.1.1",
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
@@ -2456,7 +2547,7 @@
   },
   {
     "Package": "hgwrr",
-    "Version": "0.3-0",
+    "Version": "0.4-0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2500,11 +2591,6 @@
     "SystemRequirements": "GNU make"
   },
   {
-    "Package": "HRM",
-    "Version": "1.2.1",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "hSDM",
     "Version": "1.4.4",
     "SystemRequirements": "GNU GSL"
@@ -2521,7 +2607,7 @@
   },
   {
     "Package": "httpgd",
-    "Version": "2.0.1",
+    "Version": "2.0.2",
     "SystemRequirements": "C++17"
   },
   {
@@ -2540,13 +2626,8 @@
     "SystemRequirements": "GNU make"
   },
   {
-    "Package": "HypergeoMat",
-    "Version": "4.0.2",
-    "SystemRequirements": "C++17"
-  },
-  {
     "Package": "iai",
-    "Version": "1.10.0",
+    "Version": "1.10.1",
     "SystemRequirements": "Julia (>= 1.0) and Interpretable AI System Image (>= 1.0.0)"
   },
   {
@@ -2626,8 +2707,8 @@
   },
   {
     "Package": "imager",
-    "Version": "0.45.8",
-    "SystemRequirements": "fftw3,libtiff,X11"
+    "Version": "1.0.2",
+    "SystemRequirements": "fftw3, libtiff, X11"
   },
   {
     "Package": "implyr",
@@ -2640,11 +2721,6 @@
     "SystemRequirements": "C++11"
   },
   {
-    "Package": "iMRMC",
-    "Version": "1.2.5",
-    "SystemRequirements": "Java(>=8)"
-  },
-  {
     "Package": "inca",
     "Version": "0.0.4",
     "SystemRequirements": "C++11"
@@ -2655,9 +2731,19 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "informativeSCI",
+    "Version": "1.0.3",
+    "SystemRequirements": "Java (>= 5.0)"
+  },
+  {
+    "Package": "inldata",
+    "Version": "1.2.3",
+    "SystemRequirements": "libcurl4-openssl-dev pandoc libarchive-dev libv8-dev (deb)"
+  },
+  {
     "Package": "inlpubs",
-    "Version": "1.1.1",
-    "SystemRequirements": "Text mining using n-grams requires Amazon Corretto (https://aws.amazon.com/corretto/)."
+    "Version": "1.1.3",
+    "SystemRequirements": "Complete functionality necessitates Amazon Corretto (win), and default-jre, pandoc, libxml2-dev, libpoppler-cpp-dev, libmagick++-dev, optipng, libtesseract-dev, libleptonica-dev, tesseract-ocr-eng (deb)"
   },
   {
     "Package": "inpdfr",
@@ -2681,7 +2767,7 @@
   },
   {
     "Package": "inTextSummaryTable",
-    "Version": "3.3.2",
+    "Version": "3.3.3",
     "SystemRequirements": "pandoc (to export an interactive summary table to a file)"
   },
   {
@@ -2736,7 +2822,7 @@
   },
   {
     "Package": "isotracer",
-    "Version": "1.1.5",
+    "Version": "1.1.6",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2746,8 +2832,8 @@
   },
   {
     "Package": "jack",
-    "Version": "5.3.0",
-    "SystemRequirements": "C++ 17, gmp"
+    "Version": "6.0.0",
+    "SystemRequirements": "C++17, gmp, mpfr"
   },
   {
     "Package": "jackalope",
@@ -2756,7 +2842,7 @@
   },
   {
     "Package": "jagstargets",
-    "Version": "1.1.0",
+    "Version": "1.2.0",
     "SystemRequirements": "JAGS 4.x.y (https://mcmc-jags.sourceforge.net)"
   },
   {
@@ -2766,7 +2852,7 @@
   },
   {
     "Package": "jarbes",
-    "Version": "2.0.0",
+    "Version": "2.2.1",
     "SystemRequirements": "JAGS (>= 4.3.0) (see http://mcmc-jags.sourceforge.net)"
   },
   {
@@ -2785,8 +2871,13 @@
     "SystemRequirements": "Java (>= 8)"
   },
   {
+    "Package": "jlme",
+    "Version": "0.1.0",
+    "SystemRequirements": "Julia (>= 1.8)"
+  },
+  {
     "Package": "jlmerclusterperm",
-    "Version": "1.1.3",
+    "Version": "1.1.4",
     "SystemRequirements": "Julia (>= 1.8)"
   },
   {
@@ -2806,8 +2897,8 @@
   },
   {
     "Package": "jmvconnect",
-    "Version": "2.3.13",
-    "SystemRequirements": "jamovi (>= 1.2.8), C++11"
+    "Version": "2.5.7",
+    "SystemRequirements": "jamovi (>= 1.2.8)"
   },
   {
     "Package": "JointAI",
@@ -2861,12 +2952,12 @@
   },
   {
     "Package": "kantorovich",
-    "Version": "3.1.0",
+    "Version": "3.2.0",
     "SystemRequirements": "GMP (https://gmplib.org/)"
   },
   {
     "Package": "kerastuneR",
-    "Version": "0.1.0.6",
+    "Version": "0.1.0.7",
     "SystemRequirements": "TensorFlow >= 2.0 (https://www.tensorflow.org/)"
   },
   {
@@ -2876,7 +2967,7 @@
   },
   {
     "Package": "keyATM",
-    "Version": "0.5.1",
+    "Version": "0.5.2",
     "SystemRequirements": "C++17"
   },
   {
@@ -2896,7 +2987,7 @@
   },
   {
     "Package": "knitr",
-    "Version": "1.46",
+    "Version": "1.48",
     "SystemRequirements": "Package vignettes based on R Markdown v2 or reStructuredText require Pandoc (http://pandoc.org). The function rst2pdf() requires rst2pdf (https://github.com/rst2pdf/rst2pdf)."
   },
   {
@@ -2906,7 +2997,7 @@
   },
   {
     "Package": "KSgeneral",
-    "Version": "1.1.3",
+    "Version": "2.0.0",
     "SystemRequirements": "fftw3 (>=3.3.4)"
   },
   {
@@ -2916,7 +3007,7 @@
   },
   {
     "Package": "lamW",
-    "Version": "2.2.3",
+    "Version": "2.2.4",
     "SystemRequirements": "GNU make"
   },
   {
@@ -2971,7 +3062,7 @@
   },
   {
     "Package": "ldt",
-    "Version": "0.5.2",
+    "Version": "0.5.3",
     "SystemRequirements": "C++17"
   },
   {
@@ -2986,7 +3077,7 @@
   },
   {
     "Package": "ledger",
-    "Version": "2.0.9",
+    "Version": "2.0.11",
     "SystemRequirements": "ledger (>= 3.1), hledger (>= 1.2), beancount (>= 2.0)"
   },
   {
@@ -3016,7 +3107,7 @@
   },
   {
     "Package": "libstable4u",
-    "Version": "1.0.3",
+    "Version": "1.0.4",
     "SystemRequirements": "GNU GSL"
   },
   {
@@ -3026,7 +3117,7 @@
   },
   {
     "Package": "lightgbm",
-    "Version": "4.3.0",
+    "Version": "4.4.0",
     "SystemRequirements": "C++17"
   },
   {
@@ -3036,12 +3127,12 @@
   },
   {
     "Package": "lincom",
-    "Version": "1.1",
+    "Version": "1.2",
     "SystemRequirements": "MOSEK (>= 6), MOSEK License (>= 6)"
   },
   {
     "Package": "link2GI",
-    "Version": "0.5-3",
+    "Version": "0.6-1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3081,7 +3172,7 @@
   },
   {
     "Package": "locfit",
-    "Version": "1.5-9.9",
+    "Version": "1.5-9.10",
     "SystemRequirements": "USE_C17"
   },
   {
@@ -3096,7 +3187,7 @@
   },
   {
     "Package": "loo",
-    "Version": "2.7.0",
+    "Version": "2.8.0",
     "SystemRequirements": "pandoc (>= 1.12.3), pandoc-citeproc"
   },
   {
@@ -3111,7 +3202,7 @@
   },
   {
     "Package": "luajr",
-    "Version": "0.1.6",
+    "Version": "0.1.8",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3136,7 +3227,7 @@
   },
   {
     "Package": "magick",
-    "Version": "2.8.3",
+    "Version": "2.8.4",
     "SystemRequirements": "ImageMagick++: ImageMagick-c++-devel (rpm) or libmagick++-dev (deb)"
   },
   {
@@ -3181,18 +3272,13 @@
   },
   {
     "Package": "mapme.biodiversity",
-    "Version": "0.5.0",
-    "SystemRequirements": "GDAL (>= 3.0.0), PROJ (>= 4.8.0)"
+    "Version": "0.8.0",
+    "SystemRequirements": "GDAL (>= 3.7.0), PROJ (>= 4.8.0)"
   },
   {
     "Package": "mappoly",
     "Version": "0.4.1",
     "SystemRequirements": "GNU make"
-  },
-  {
-    "Package": "mapscanner",
-    "Version": "0.0.6",
-    "SystemRequirements": "C++11"
   },
   {
     "Package": "mapview",
@@ -3201,7 +3287,7 @@
   },
   {
     "Package": "maq",
-    "Version": "0.3.1",
+    "Version": "0.4.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3235,6 +3321,11 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "mauricer",
+    "Version": "2.5.4",
+    "SystemRequirements": "BEAST2 (https://www.beast2.org/)"
+  },
+  {
     "Package": "MaxentVariableSelection",
     "Version": "1.0-3",
     "SystemRequirements": "maxent.jar file"
@@ -3246,7 +3337,7 @@
   },
   {
     "Package": "MBNMAdose",
-    "Version": "0.4.2",
+    "Version": "0.4.3",
     "SystemRequirements": "JAGS (>= 4.3.0) (https://mcmc-jags.sourceforge.net/)"
   },
   {
@@ -3286,7 +3377,7 @@
   },
   {
     "Package": "memoiR",
-    "Version": "1.2-7",
+    "Version": "1.2-9",
     "SystemRequirements": "pandoc"
   },
   {
@@ -3298,6 +3389,11 @@
     "Package": "metagear",
     "Version": "0.7",
     "SystemRequirements": "Tcl/Tk toolkit (X11 Quarts for Mac)"
+  },
+  {
+    "Package": "metajam",
+    "Version": "0.3.0",
+    "SystemRequirements": "Mac OSX: redland (>= 1.0.14) ; Linux: librdf0 (>= 1.0.14), librdf0-dev (>= 1.0.14)"
   },
   {
     "Package": "metapost",
@@ -3326,7 +3422,7 @@
   },
   {
     "Package": "MFSIS",
-    "Version": "0.2.0",
+    "Version": "0.2.1",
     "SystemRequirements": "Python (>= 3.8.0)"
   },
   {
@@ -3376,12 +3472,17 @@
   },
   {
     "Package": "minqa",
-    "Version": "1.2.6",
+    "Version": "1.2.7",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "MIRES",
     "Version": "0.1.0",
+    "SystemRequirements": "GNU make"
+  },
+  {
+    "Package": "MixAll",
+    "Version": "1.5.16",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3400,14 +3501,34 @@
     "SystemRequirements": "TensorFlow (https://www.tensorflow.org), Keras (https://keras.io), TensorFlow Probability (https://www.tensorflow.org/probability)"
   },
   {
+    "Package": "mlexperiments",
+    "Version": "0.0.4",
+    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
+  },
+  {
+    "Package": "mllrnrs",
+    "Version": "0.0.4",
+    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
+  },
+  {
     "Package": "mlpack",
-    "Version": "4.3.0.1",
-    "SystemRequirements": "A C++14 compiler. Version 5 or later of GCC will be fine."
+    "Version": "4.4.0",
+    "SystemRequirements": "A C++17 compiler. Version 8 or later of GCC will be fine."
   },
   {
     "Package": "mlr",
-    "Version": "2.19.1",
+    "Version": "2.19.2",
     "SystemRequirements": "gdal (optional), geos (optional), proj (optional), udunits (optional), gsl (optional), gmp (optional), glu (optional), jags (optional), mpfr (optional), openmpi (optional)"
+  },
+  {
+    "Package": "mlsurvlrnrs",
+    "Version": "0.0.4",
+    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
+  },
+  {
+    "Package": "mlts",
+    "Version": "1.0.0",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "mmcif",
@@ -3436,18 +3557,13 @@
   },
   {
     "Package": "mongolite",
-    "Version": "2.7.3",
+    "Version": "2.8.0",
     "SystemRequirements": "OpenSSL, Cyrus SASL (aka libsasl2)"
   },
   {
     "Package": "monoreg",
     "Version": "2.1",
     "SystemRequirements": "GNU GSL"
-  },
-  {
-    "Package": "morse",
-    "Version": "3.3.2",
-    "SystemRequirements": "JAGS (>= 4.0.0) (see https://mcmc-jags.sourceforge.io)"
   },
   {
     "Package": "motifr",
@@ -3485,13 +3601,13 @@
     "SystemRequirements": "A valid account MUST be registered with Microsoft's Cognitive Services website <https://www.microsoft.com/cognitive-services/> in order to obtain a (free) API key. Without an API key, this package will not work properly."
   },
   {
-    "Package": "MUACz",
-    "Version": "2.1.0",
-    "SystemRequirements": "GNU make"
+    "Package": "MSTest",
+    "Version": "0.1.2",
+    "SystemRequirements": "C++17"
   },
   {
-    "Package": "Multiaovbay",
-    "Version": "0.1.0",
+    "Package": "MUACz",
+    "Version": "2.1.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3506,7 +3622,7 @@
   },
   {
     "Package": "multinma",
-    "Version": "0.6.1",
+    "Version": "0.7.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3540,11 +3656,6 @@
     "SystemRequirements": "Java (>= 6.0)"
   },
   {
-    "Package": "mwcsr",
-    "Version": "0.1.8",
-    "SystemRequirements": "Java (>=8)"
-  },
-  {
     "Package": "myTAI",
     "Version": "0.9.3",
     "SystemRequirements": "C++11"
@@ -3556,8 +3667,8 @@
   },
   {
     "Package": "nanonext",
-    "Version": "0.13.5.2",
-    "SystemRequirements": "'libnng' >= 1.5 and 'libmbedtls' >= 2.5, or 'cmake' to compile NNG and/or Mbed TLS included in package sources"
+    "Version": "1.1.1",
+    "SystemRequirements": "'libnng' >= 1.6 and 'libmbedtls' >= 2.5, or 'cmake' and 'xz' to compile NNG and/or Mbed TLS included in package sources"
   },
   {
     "Package": "narray",
@@ -3631,8 +3742,8 @@
   },
   {
     "Package": "neuralGAM",
-    "Version": "1.1.0",
-    "SystemRequirements": "python (>= 3.8), keras, tensorflow"
+    "Version": "1.1.1",
+    "SystemRequirements": "python (>= 3.10), keras, tensorflow"
   },
   {
     "Package": "neuronorm",
@@ -3646,7 +3757,7 @@
   },
   {
     "Package": "NGCHM",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "SystemRequirements": "Java (>= 11) Git"
   },
   {
@@ -3656,7 +3767,7 @@
   },
   {
     "Package": "nimble",
-    "Version": "1.1.0",
+    "Version": "1.2.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3666,7 +3777,7 @@
   },
   {
     "Package": "nloptr",
-    "Version": "2.0.3",
+    "Version": "2.1.1",
     "SystemRequirements": "cmake (>= 3.2.0) which is used only on Linux or macOS systems when no system build of nlopt (>= 2.7.0) can be found."
   },
   {
@@ -3681,7 +3792,7 @@
   },
   {
     "Package": "NNS",
-    "Version": "10.7",
+    "Version": "10.8.2",
     "SystemRequirements": "GNU make"
   },
   {
@@ -3731,7 +3842,7 @@
   },
   {
     "Package": "odbc",
-    "Version": "1.4.2",
+    "Version": "1.5.0",
     "SystemRequirements": "GNU make, An ODBC3 driver manager and drivers."
   },
   {
@@ -3741,7 +3852,7 @@
   },
   {
     "Package": "officedown",
-    "Version": "0.3.1",
+    "Version": "0.3.3",
     "SystemRequirements": "pandoc (>= 2.0) - http://pandoc.org"
   },
   {
@@ -3776,7 +3887,7 @@
   },
   {
     "Package": "opencpu",
-    "Version": "2.2.11",
+    "Version": "2.2.12",
     "SystemRequirements": "pandoc, apparmor (optional)"
   },
   {
@@ -3811,7 +3922,7 @@
   },
   {
     "Package": "openssl",
-    "Version": "2.1.1",
+    "Version": "2.2.0",
     "SystemRequirements": "OpenSSL >= 1.0.2"
   },
   {
@@ -3828,11 +3939,6 @@
     "Package": "optimalThreshold",
     "Version": "1.0",
     "SystemRequirements": "JAGS 4.x.y"
-  },
-  {
-    "Package": "orbweaver",
-    "Version": "0.0.3",
-    "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
     "Package": "Orcs",
@@ -3856,18 +3962,13 @@
   },
   {
     "Package": "osqp",
-    "Version": "0.6.3.2",
+    "Version": "0.6.3.3",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "osrmr",
     "Version": "0.1.36",
     "SystemRequirements": "To use the Localhost of OSRM, you need to build OSRM <https://github.com/Project-OSRM/osrm-backend/wiki/Building-OSRM> locally"
-  },
-  {
-    "Package": "otsad",
-    "Version": "0.2.0",
-    "SystemRequirements": "Python (>= 3.0.1); bencode-python3 (1.0.2)"
   },
   {
     "Package": "outbreaker2",
@@ -3898,11 +3999,6 @@
     "Package": "pandocfilters",
     "Version": "0.1-6",
     "SystemRequirements": "pandoc (> 1.12)"
-  },
-  {
-    "Package": "PanelMatch",
-    "Version": "2.0.1",
-    "SystemRequirements": "C++11"
   },
   {
     "Package": "papaja",
@@ -3940,6 +4036,11 @@
     "SystemRequirements": "C++11"
   },
   {
+    "Package": "parTimeROC",
+    "Version": "0.1.0",
+    "SystemRequirements": "GNU make"
+  },
+  {
     "Package": "parzer",
     "Version": "0.4.1",
     "SystemRequirements": "C++11"
@@ -3951,17 +4052,17 @@
   },
   {
     "Package": "pathfindR",
-    "Version": "2.3.1",
+    "Version": "2.4.1",
     "SystemRequirements": "Java (>= 8.0)"
   },
   {
     "Package": "pathling",
-    "Version": "6.4.2",
-    "SystemRequirements": "Spark: 3.4.x"
+    "Version": "7.0.0",
+    "SystemRequirements": "Spark: 3.5.x"
   },
   {
     "Package": "patientProfilesVis",
-    "Version": "2.0.7",
+    "Version": "2.0.9",
     "SystemRequirements": "latex, cairo (for report creation)"
   },
   {
@@ -3971,7 +4072,7 @@
   },
   {
     "Package": "paws.common",
-    "Version": "0.7.2",
+    "Version": "0.7.4",
     "SystemRequirements": "pandoc (>= 1.12.3) - http://pandoc.org"
   },
   {
@@ -4026,7 +4127,7 @@
   },
   {
     "Package": "PDE",
-    "Version": "1.4.8",
+    "Version": "1.4.10",
     "SystemRequirements": "XPDF (4.02)(https://github.com/erikstricker/PDE/tree/master/inst/examples/bin)"
   },
   {
@@ -4045,18 +4146,13 @@
     "SystemRequirements": "GNU make, C++11"
   },
   {
-    "Package": "pedmod",
-    "Version": "0.2.4",
-    "SystemRequirements": "C++17"
-  },
-  {
     "Package": "pedometrics",
     "Version": "0.12.1",
     "SystemRequirements": "pandoc"
   },
   {
     "Package": "pedprobr",
-    "Version": "0.9.3",
+    "Version": "0.9.4",
     "SystemRequirements": "MERLIN (https://csg.sph.umich.edu/abecasis/merlin/) for calculations involving multiple linked markers."
   },
   {
@@ -4066,8 +4162,8 @@
   },
   {
     "Package": "PenCoxFrail",
-    "Version": "1.0.1",
-    "SystemRequirements": "C++11"
+    "Version": "2.0.0",
+    "SystemRequirements": "C++"
   },
   {
     "Package": "PEPBVS",
@@ -4081,8 +4177,8 @@
   },
   {
     "Package": "pharmr",
-    "Version": "0.96.0",
-    "SystemRequirements": "Python (>= 3.9.0)"
+    "Version": "1.0.1",
+    "SystemRequirements": "Python (>= 3.10.0)"
   },
   {
     "Package": "phase1PRMD",
@@ -4090,9 +4186,14 @@
     "SystemRequirements": "JAGS (http://mcmc-jags.sourceforge.net)"
   },
   {
-    "Package": "PhViD",
-    "Version": "1.0.8",
-    "SystemRequirements": "Tcl/Tk package TkTable."
+    "Package": "phonfieldwork",
+    "Version": "0.0.15",
+    "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org"
+  },
+  {
+    "Package": "phylopairs",
+    "Version": "0.1.0",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "piton",
@@ -4101,12 +4202,12 @@
   },
   {
     "Package": "pivmet",
-    "Version": "0.5.0",
+    "Version": "0.6.0",
     "SystemRequirements": "pandoc (>= 1.12.3), pandoc-citeproc"
   },
   {
     "Package": "pkgdown",
-    "Version": "2.0.8",
+    "Version": "2.1.0",
     "SystemRequirements": "pandoc"
   },
   {
@@ -4116,7 +4217,7 @@
   },
   {
     "Package": "PKI",
-    "Version": "0.1-12",
+    "Version": "0.1-14",
     "SystemRequirements": "OpenSSL library and headers (openssl-dev or similar)"
   },
   {
@@ -4171,12 +4272,12 @@
   },
   {
     "Package": "pomdp",
-    "Version": "1.2.1",
+    "Version": "1.2.3",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "pomp",
-    "Version": "5.7",
+    "Version": "5.10",
     "SystemRequirements": "For Windows users, Rtools (see https://cran.r-project.org/bin/windows/Rtools/)."
   },
   {
@@ -4206,7 +4307,7 @@
   },
   {
     "Package": "precommit",
-    "Version": "0.4.2",
+    "Version": "0.4.3",
     "SystemRequirements": "git"
   },
   {
@@ -4246,7 +4347,7 @@
   },
   {
     "Package": "processmapR",
-    "Version": "0.5.3",
+    "Version": "0.5.4",
     "SystemRequirements": "C++"
   },
   {
@@ -4256,7 +4357,7 @@
   },
   {
     "Package": "PROJ",
-    "Version": "0.4.5",
+    "Version": "0.5.0",
     "SystemRequirements": "PROJ (>= 6.3.1)"
   },
   {
@@ -4266,7 +4367,7 @@
   },
   {
     "Package": "ProjectionBasedClustering",
-    "Version": "1.2.1",
+    "Version": "1.2.2",
     "SystemRequirements": "C++17"
   },
   {
@@ -4296,12 +4397,12 @@
   },
   {
     "Package": "protr",
-    "Version": "1.7-0",
+    "Version": "1.7-2",
     "SystemRequirements": "ncbi-blast+ (see <https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html>)"
   },
   {
     "Package": "prqlr",
-    "Version": "0.8.0",
+    "Version": "0.8.1",
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
@@ -4311,13 +4412,8 @@
   },
   {
     "Package": "psborrow2",
-    "Version": "0.0.3.3",
+    "Version": "0.0.3.4",
     "SystemRequirements": "cmdstan"
-  },
-  {
-    "Package": "pseudorank",
-    "Version": "1.0.1",
-    "SystemRequirements": "C++11"
   },
   {
     "Package": "psqn",
@@ -4371,7 +4467,7 @@
   },
   {
     "Package": "qgisprocess",
-    "Version": "0.3.0",
+    "Version": "0.4.0",
     "SystemRequirements": "'QGIS' latest or long-term release currently supported according to the 'QGIS' release schedule (<https://www.qgis.org/en/site/getinvolved/development/roadmap.html>). Older 'QGIS' releases are not officially supported, but may work since 'QGIS' 3.16."
   },
   {
@@ -4386,8 +4482,8 @@
   },
   {
     "Package": "qspray",
-    "Version": "2.1.1",
-    "SystemRequirements": "C++ 17, gmp, mpfr"
+    "Version": "3.0.0",
+    "SystemRequirements": "C++17, gmp"
   },
   {
     "Package": "quantdr",
@@ -4401,8 +4497,8 @@
   },
   {
     "Package": "quarto",
-    "Version": "1.4",
-    "SystemRequirements": "Quarto command line tools (https://github.com/quarto-dev/quarto-cli)."
+    "Version": "1.4.4",
+    "SystemRequirements": "Quarto command line tool (<https://github.com/quarto-dev/quarto-cli>)."
   },
   {
     "Package": "questionr",
@@ -4411,13 +4507,8 @@
   },
   {
     "Package": "QuickJSR",
-    "Version": "1.1.3",
+    "Version": "1.3.1",
     "SystemRequirements": "GNU make"
-  },
-  {
-    "Package": "QWDAP",
-    "Version": "1.1.17",
-    "SystemRequirements": "C++11"
   },
   {
     "Package": "r.blip",
@@ -4431,7 +4522,7 @@
   },
   {
     "Package": "R2jags",
-    "Version": "0.7-1.1",
+    "Version": "0.8-5",
     "SystemRequirements": "JAGS (http://mcmc-jags.sourceforge.net)"
   },
   {
@@ -4476,7 +4567,7 @@
   },
   {
     "Package": "ragg",
-    "Version": "1.3.0",
+    "Version": "1.3.2",
     "SystemRequirements": "freetype2, libpng, libtiff, libjpeg"
   },
   {
@@ -4501,8 +4592,8 @@
   },
   {
     "Package": "RAQSAPI",
-    "Version": "2.0.3",
-    "SystemRequirements": "package manual requires pandoc (>= 1.14) http://pandoc.org"
+    "Version": "2.0.5",
+    "SystemRequirements": "package manual and Vignettes require pandoc (>= 1.14) http://pandoc.org)"
   },
   {
     "Package": "rasciidoc",
@@ -4520,13 +4611,23 @@
     "SystemRequirements": "C++ 17, gmp"
   },
   {
+    "Package": "ratioOfQsprays",
+    "Version": "1.0.0",
+    "SystemRequirements": "C++17, gmp, mpfr"
+  },
+  {
+    "Package": "ravetools",
+    "Version": "0.1.7",
+    "SystemRequirements": "fftw3 (libfftw3-dev (deb), or fftw-devel (rpm)), pkg-config"
+  },
+  {
     "Package": "rayrender",
     "Version": "0.32.2",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "rayvertex",
-    "Version": "0.10.4",
+    "Version": "0.11.4",
     "SystemRequirements": "C++17"
   },
   {
@@ -4691,7 +4792,7 @@
   },
   {
     "Package": "RcppParallel",
-    "Version": "5.1.7",
+    "Version": "5.1.8",
     "SystemRequirements": "GNU make, Intel TBB, Windows: cmd.exe and cscript.exe, Solaris: g++ is required"
   },
   {
@@ -4701,7 +4802,7 @@
   },
   {
     "Package": "RcppSimdJson",
-    "Version": "0.1.11",
+    "Version": "0.1.12",
     "SystemRequirements": "A C++17 compiler is required"
   },
   {
@@ -4711,7 +4812,7 @@
   },
   {
     "Package": "RCurl",
-    "Version": "1.98-1.14",
+    "Version": "1.98-1.16",
     "SystemRequirements": "GNU make, libcurl"
   },
   {
@@ -4721,7 +4822,7 @@
   },
   {
     "Package": "RCzechia",
-    "Version": "1.12.0",
+    "Version": "1.12.2",
     "SystemRequirements": "GDAL (>= 2.2.3), GEOS (>= 3.6.2), PROJ (>= 4.9.3)"
   },
   {
@@ -4761,7 +4862,7 @@
   },
   {
     "Package": "REBayes",
-    "Version": "2.54",
+    "Version": "2.56",
     "SystemRequirements": "MOSEK (http://www.mosek.com) and MOSEK license."
   },
   {
@@ -4831,12 +4932,17 @@
   },
   {
     "Package": "reprex",
+    "Version": "2.1.1",
+    "SystemRequirements": "pandoc (>= 2.0) - https://pandoc.org/"
+  },
+  {
+    "Package": "reproducible",
     "Version": "2.1.0",
-    "SystemRequirements": "pandoc (>= 2.0) - http://pandoc.org"
+    "SystemRequirements": "'unrar' (Linux/macOS) or '7-Zip' (Windows) to work with '.rar' files."
   },
   {
     "Package": "reproj",
-    "Version": "0.4.3",
+    "Version": "0.7.0",
     "SystemRequirements": "PROJ (>= 4.4.6)"
   },
   {
@@ -4846,7 +4952,7 @@
   },
   {
     "Package": "reservr",
-    "Version": "0.0.2",
+    "Version": "0.0.3",
     "SystemRequirements": "GNU make"
   },
   {
@@ -4855,13 +4961,8 @@
     "SystemRequirements": "Java (>= 11.0.12)"
   },
   {
-    "Package": "RestRserve",
-    "Version": "1.2.1",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "reticulate",
-    "Version": "1.35.0",
+    "Version": "1.38.0",
     "SystemRequirements": "Python (>= 2.7.0)"
   },
   {
@@ -4891,7 +4992,7 @@
   },
   {
     "Package": "rflsgen",
-    "Version": "1.2.1",
+    "Version": "1.2.2",
     "SystemRequirements": "Java (>= 8)"
   },
   {
@@ -4931,7 +5032,7 @@
   },
   {
     "Package": "rgrass",
-    "Version": "0.4-2",
+    "Version": "0.4-3",
     "SystemRequirements": "GRASS (>= 7)"
   },
   {
@@ -4986,12 +5087,12 @@
   },
   {
     "Package": "rjdqa",
-    "Version": "0.1.4",
+    "Version": "0.1.5",
     "SystemRequirements": "Java (>= 8)"
   },
   {
     "Package": "RJSDMX",
-    "Version": "3.1-0",
+    "Version": "3.3-0",
     "SystemRequirements": "Java (>= 8)"
   },
   {
@@ -5016,7 +5117,7 @@
   },
   {
     "Package": "Rlgt",
-    "Version": "0.2-1",
+    "Version": "0.2-2",
     "SystemRequirements": "GNU make"
   },
   {
@@ -5036,7 +5137,7 @@
   },
   {
     "Package": "RMariaDB",
-    "Version": "1.3.1",
+    "Version": "1.3.2",
     "SystemRequirements": "libmariadb-client-lgpl-dev or libmariadb-dev or libmysqlclient-dev, with libssl-dev (deb), mariadb-connector-c-devel or mariadb-devel (rpm), mariadb-connector-c or mysql-connector-c (brew)"
   },
   {
@@ -5046,7 +5147,7 @@
   },
   {
     "Package": "rmarkdown",
-    "Version": "2.26",
+    "Version": "2.27",
     "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org"
   },
   {
@@ -5116,12 +5217,12 @@
   },
   {
     "Package": "rmsb",
-    "Version": "1.1-0",
+    "Version": "1.1-1",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "rmumps",
-    "Version": "5.2.1-29",
+    "Version": "5.2.1-30",
     "SystemRequirements": "GNU Make"
   },
   {
@@ -5151,7 +5252,7 @@
   },
   {
     "Package": "rnndescent",
-    "Version": "0.1.4",
+    "Version": "0.1.6",
     "SystemRequirements": "C++17"
   },
   {
@@ -5176,8 +5277,8 @@
   },
   {
     "Package": "rodeo",
-    "Version": "0.7.8",
-    "SystemRequirements": "The tools to run 'R CMD SHLIB' on 'Fortran' code. The used 'Fortran' compiler must support pointer initialization which is a feature of the 2008 standard. The compiler from Oracle Developer Studio 12.6 on Solaris 10 currently does not meet this requirement."
+    "Version": "0.8.2",
+    "SystemRequirements": "The tools to run 'R CMD SHLIB' on 'Fortran' code. The used 'Fortran' compiler must support pointer initialization which is a feature of the 2008 standard."
   },
   {
     "Package": "rofanova",
@@ -5201,7 +5302,7 @@
   },
   {
     "Package": "rolog",
-    "Version": "0.9.16",
+    "Version": "0.9.18",
     "SystemRequirements": "GNU Make, swi-prolog"
   },
   {
@@ -5251,7 +5352,7 @@
   },
   {
     "Package": "RPostgres",
-    "Version": "1.4.6",
+    "Version": "1.4.7",
     "SystemRequirements": "libpq >= 9.0: libpq-dev (deb) or postgresql-devel (rpm)"
   },
   {
@@ -5276,7 +5377,7 @@
   },
   {
     "Package": "RQuantLib",
-    "Version": "0.4.21",
+    "Version": "0.4.23",
     "SystemRequirements": "QuantLib library (>= 1.14) from https://quantlib.org, Boost library from https://www.boost.org"
   },
   {
@@ -5301,7 +5402,7 @@
   },
   {
     "Package": "rsgeo",
-    "Version": "0.1.6",
+    "Version": "0.1.7",
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
@@ -5316,7 +5417,7 @@
   },
   {
     "Package": "Rsmlx",
-    "Version": "2023.1.5",
+    "Version": "2024.1.0",
     "SystemRequirements": "'Monolix' (<https://monolix.lixoft.com>)"
   },
   {
@@ -5341,7 +5442,7 @@
   },
   {
     "Package": "RsSimulx",
-    "Version": "2023.1",
+    "Version": "2024.1",
     "SystemRequirements": "'Simulx' (<http://simulx.lixoft.com/>)"
   },
   {
@@ -5381,7 +5482,7 @@
   },
   {
     "Package": "rswipl",
-    "Version": "9.3.3.1",
+    "Version": "9.3.7.2",
     "SystemRequirements": "GNU make, CMake (>= 3.10), pandoc, libarchive, libregex, libexpat, liblzma, libzstd, liblz4, libz2, libz, libbcrypt"
   },
   {
@@ -5421,7 +5522,7 @@
   },
   {
     "Package": "rtkore",
-    "Version": "1.6.10",
+    "Version": "1.6.12",
     "SystemRequirements": "GNU make"
   },
   {
@@ -5441,7 +5542,12 @@
   },
   {
     "Package": "rts2",
-    "Version": "0.7.4",
+    "Version": "0.7.5",
+    "SystemRequirements": "GNU make"
+  },
+  {
+    "Package": "Rtwobitlib",
+    "Version": "0.3.6",
     "SystemRequirements": "GNU make"
   },
   {
@@ -5463,6 +5569,11 @@
     "Package": "rviewgraph",
     "Version": "1.4.2",
     "SystemRequirements": "Java (>= 8)"
+  },
+  {
+    "Package": "rvisidata",
+    "Version": "1.0.0",
+    "SystemRequirements": "visidata (>= 1.0)"
   },
   {
     "Package": "RWeka",
@@ -5496,12 +5607,12 @@
   },
   {
     "Package": "rzmq",
-    "Version": "0.9.12",
+    "Version": "0.9.13",
     "SystemRequirements": "ZeroMQ >= 3.0.0: libzmq3-dev (deb) or zeromq-devel (rpm)"
   },
   {
     "Package": "s2",
-    "Version": "1.1.6",
+    "Version": "1.1.7",
     "SystemRequirements": "OpenSSL >= 1.0.1"
   },
   {
@@ -5510,9 +5621,9 @@
     "SystemRequirements": "cdo"
   },
   {
-    "Package": "s2dverification",
-    "Version": "2.10.3",
-    "SystemRequirements": "cdo"
+    "Package": "sacRebleu",
+    "Version": "0.1.3",
+    "SystemRequirements": "Rust tool chain w/ cargo, libclang/llvm-config"
   },
   {
     "Package": "saeHB",
@@ -5556,7 +5667,7 @@
   },
   {
     "Package": "sarsop",
-    "Version": "0.6.14",
+    "Version": "0.6.15",
     "SystemRequirements": "mallinfo, hence Linux, MacOS or Windows"
   },
   {
@@ -5626,7 +5737,7 @@
   },
   {
     "Package": "sdmTMB",
-    "Version": "0.5.0",
+    "Version": "0.6.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -5636,12 +5747,12 @@
   },
   {
     "Package": "secr",
-    "Version": "4.6.6",
+    "Version": "4.6.9",
     "SystemRequirements": "GNU make"
   },
   {
     "Package": "secsse",
-    "Version": "3.0.2",
+    "Version": "3.1.0",
     "SystemRequirements": "C++17"
   },
   {
@@ -5686,8 +5797,13 @@
   },
   {
     "Package": "seqtrie",
-    "Version": "0.2.6",
+    "Version": "0.2.8",
     "SystemRequirements": "GNU make"
+  },
+  {
+    "Package": "sequoia",
+    "Version": "2.11.2",
+    "SystemRequirements": "Fortran95"
   },
   {
     "Package": "sf",
@@ -5706,7 +5822,7 @@
   },
   {
     "Package": "sharx",
-    "Version": "1.0-5",
+    "Version": "1.0-6",
     "SystemRequirements": "jags (>= 1.0.3)"
   },
   {
@@ -5726,12 +5842,12 @@
   },
   {
     "Package": "shinyloadtest",
-    "Version": "1.1.0",
+    "Version": "1.2.0",
     "SystemRequirements": "pandoc (>= 2.2) - http://pandoc.org"
   },
   {
     "Package": "shinytest",
-    "Version": "1.5.4",
+    "Version": "1.6.1",
     "SystemRequirements": "PhantomJS (http://phantomjs.org/)"
   },
   {
@@ -5760,13 +5876,8 @@
     "SystemRequirements": "RStudio"
   },
   {
-    "Package": "SimilaR",
-    "Version": "1.0.8",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "SimInf",
-    "Version": "9.6.0",
+    "Version": "9.8.1",
     "SystemRequirements": "GNU Scientific Library (GSL)"
   },
   {
@@ -5830,6 +5941,11 @@
     "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
+    "Package": "smile",
+    "Version": "1.0.5",
+    "SystemRequirements": "GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0)"
+  },
+  {
     "Package": "SMITIDvisu",
     "Version": "0.0.9",
     "SystemRequirements": "C++11"
@@ -5861,12 +5977,12 @@
   },
   {
     "Package": "spacefillr",
-    "Version": "0.3.2",
+    "Version": "0.3.3",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "spaMM",
-    "Version": "4.4.16",
+    "Version": "4.5.0",
     "SystemRequirements": "GNU Scientific Library (GSL)"
   },
   {
@@ -5876,8 +5992,8 @@
   },
   {
     "Package": "sparklyr",
-    "Version": "1.8.5",
-    "SystemRequirements": "Spark: 1.6.x, 2.x, or 3.x"
+    "Version": "1.8.6",
+    "SystemRequirements": "Spark: 2.x, or 3.x"
   },
   {
     "Package": "sparklyr.flint",
@@ -5931,7 +6047,7 @@
   },
   {
     "Package": "SpatialDDLS",
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "SystemRequirements": "Python (>= 2.7.0), TensorFlow (https://www.tensorflow.org/)"
   },
   {
@@ -5956,13 +6072,18 @@
   },
   {
     "Package": "spatPomp",
-    "Version": "0.34.2",
+    "Version": "0.35.0",
     "SystemRequirements": "For Windows users, Rtools (see https://cran.r-project.org/bin/windows/Rtools/)."
   },
   {
     "Package": "spatsoc",
     "Version": "0.2.2",
     "SystemRequirements": "GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3"
+  },
+  {
+    "Package": "spbal",
+    "Version": "1.0.0",
+    "SystemRequirements": "C++17"
   },
   {
     "Package": "spcosa",
@@ -5990,6 +6111,11 @@
     "SystemRequirements": "C++ 17, gmp, mpfr"
   },
   {
+    "Package": "spNetwork",
+    "Version": "0.4.4.3",
+    "SystemRequirements": "C++17"
+  },
+  {
     "Package": "spongecake",
     "Version": "0.1.2",
     "SystemRequirements": "FFmpeg (http://ffmpeg.org)"
@@ -6006,7 +6132,7 @@
   },
   {
     "Package": "SqlRender",
-    "Version": "1.17.0",
+    "Version": "1.18.0",
     "SystemRequirements": "Java (>= 8)"
   },
   {
@@ -6025,8 +6151,13 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "sstvars",
+    "Version": "1.0.1",
+    "SystemRequirements": "BLAS, LAPACK"
+  },
+  {
     "Package": "StanHeaders",
-    "Version": "2.32.6",
+    "Version": "2.32.10",
     "SystemRequirements": "GNU make, pandoc"
   },
   {
@@ -6056,12 +6187,12 @@
   },
   {
     "Package": "statgenGxE",
-    "Version": "1.0.7",
+    "Version": "1.0.8",
     "SystemRequirements": "pdflatex"
   },
   {
     "Package": "statgenSTA",
-    "Version": "1.0.12",
+    "Version": "1.0.13",
     "SystemRequirements": "pdflatex"
   },
   {
@@ -6096,7 +6227,7 @@
   },
   {
     "Package": "stplanr",
-    "Version": "1.1.2",
+    "Version": "1.2.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6106,7 +6237,7 @@
   },
   {
     "Package": "strawr",
-    "Version": "0.0.91",
+    "Version": "0.0.92",
     "SystemRequirements": "libcurl: libcurl-devel (rpm) or libcurl4-openssl-dev (deb)"
   },
   {
@@ -6116,12 +6247,12 @@
   },
   {
     "Package": "streamMOA",
-    "Version": "1.3-0",
+    "Version": "1.3-1",
     "SystemRequirements": "Java (>= 8)"
   },
   {
     "Package": "stressor",
-    "Version": "0.1.0",
+    "Version": "0.2.0",
     "SystemRequirements": "python(>=3.8.10)"
   },
   {
@@ -6131,8 +6262,8 @@
   },
   {
     "Package": "string2path",
-    "Version": "0.1.6",
-    "SystemRequirements": "Cargo (rustc package manager)"
+    "Version": "0.1.7",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc"
   },
   {
     "Package": "stringfish",
@@ -6141,7 +6272,7 @@
   },
   {
     "Package": "stringi",
-    "Version": "1.8.3",
+    "Version": "1.8.4",
     "SystemRequirements": "ICU4C (>= 61, optional)"
   },
   {
@@ -6155,9 +6286,9 @@
     "SystemRequirements": "Python (>= 2.7.0)"
   },
   {
-    "Package": "supc",
-    "Version": "0.2.6.2",
-    "SystemRequirements": "C++11"
+    "Package": "sundialr",
+    "Version": "0.1.4.2",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "SuperGauss",
@@ -6166,7 +6297,7 @@
   },
   {
     "Package": "surveil",
-    "Version": "0.2.2",
+    "Version": "0.3.0",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6225,13 +6356,18 @@
     "SystemRequirements": "gmp (>= 4.2.3)"
   },
   {
+    "Package": "symbolicQspray",
+    "Version": "1.0.0",
+    "SystemRequirements": "C++17, gmp, mpfr"
+  },
+  {
     "Package": "symengine",
     "Version": "0.2.6",
     "SystemRequirements": "GNU make, cmake, gmp, mpfr"
   },
   {
     "Package": "symSEM",
-    "Version": "0.2",
+    "Version": "0.4",
     "SystemRequirements": "Python (>= 3.6.0)"
   },
   {
@@ -6241,18 +6377,23 @@
   },
   {
     "Package": "systemfonts",
-    "Version": "1.0.6",
+    "Version": "1.1.0",
     "SystemRequirements": "fontconfig, freetype2"
   },
   {
     "Package": "tables",
-    "Version": "0.9.17",
+    "Version": "0.9.28",
     "SystemRequirements": "pandoc (>= 1.12.3) for vignettes"
   },
   {
     "Package": "tabr",
-    "Version": "0.4.9",
+    "Version": "0.5.0",
     "SystemRequirements": "LilyPond v2.22.1-2+ (needed for rendering sheet music or writing MIDI files)"
+  },
+  {
+    "Package": "tabulapdf",
+    "Version": "1.0.5-3",
+    "SystemRequirements": "Java (>= 7.0): openjdk-11-jdk (deb), java-11-openjdk.x86_64 (rpm), openjdk@11 (brew)"
   },
   {
     "Package": "tabulate",
@@ -6281,7 +6422,7 @@
   },
   {
     "Package": "TCIU",
-    "Version": "1.2.5",
+    "Version": "1.2.6",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6316,12 +6457,12 @@
   },
   {
     "Package": "tensorflow",
-    "Version": "2.15.0",
+    "Version": "2.16.0",
     "SystemRequirements": "TensorFlow (https://www.tensorflow.org/)"
   },
   {
     "Package": "terra",
-    "Version": "1.7-71",
+    "Version": "1.7-78",
     "SystemRequirements": "C++17, GDAL (>= 2.2.3), GEOS (>= 3.4.0), PROJ (>= 4.9.3), sqlite3"
   },
   {
@@ -6346,12 +6487,12 @@
   },
   {
     "Package": "texreg",
-    "Version": "1.39.3",
+    "Version": "1.39.4",
     "SystemRequirements": "pandoc (>= 1.12.3) suggested for using wordreg function; LaTeX packages tikz, booktabs, dcolumn, rotating, thumbpdf, longtable, paralist for the vignette"
   },
   {
     "Package": "text",
-    "Version": "1.2.0",
+    "Version": "1.2.1",
     "SystemRequirements": "Python (>= 3.6.0)"
   },
   {
@@ -6366,7 +6507,7 @@
   },
   {
     "Package": "textshaping",
-    "Version": "0.3.7",
+    "Version": "0.4.0",
     "SystemRequirements": "freetype2, harfbuzz, fribidi"
   },
   {
@@ -6386,7 +6527,7 @@
   },
   {
     "Package": "tfdatasets",
-    "Version": "2.9.0",
+    "Version": "2.17.0",
     "SystemRequirements": "TensorFlow >= 1.4 (https://www.tensorflow.org/)"
   },
   {
@@ -6396,7 +6537,7 @@
   },
   {
     "Package": "tfevents",
-    "Version": "0.0.2",
+    "Version": "0.0.4",
     "SystemRequirements": "libprotobuf, protobuf-compiler"
   },
   {
@@ -6421,7 +6562,7 @@
   },
   {
     "Package": "tglkmeans",
-    "Version": "0.5.4",
+    "Version": "0.5.5",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6431,7 +6572,7 @@
   },
   {
     "Package": "thurstonianIRT",
-    "Version": "0.12.4",
+    "Version": "0.12.5",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6461,8 +6602,8 @@
   },
   {
     "Package": "tiledb",
-    "Version": "0.25.0",
-    "SystemRequirements": "A C++17 compiler is required, and for macOS compilation version 11.0 or later is required. Optionally cmake (only when TileDB source build selected), curl (only when TileDB source build selected)), and git (only when TileDB source build selected); on x86_64 and M1 platforms pre-built TileDB Embedded libraries are available at GitHub and are used if no TileDB installation is detected, and no other option to build or download was specified by the user."
+    "Version": "0.28.0",
+    "SystemRequirements": "A C++17 compiler is required; on macOS compilation version 11.0 or later is required. Optionally cmake (only when TileDB source build selected), curl (only when TileDB source build selected)), and git (only when TileDB source build selected); on x86_64 and M1 platforms pre-built TileDB Embedded libraries are available at GitHub and are used if no TileDB installation is detected, and no other option to build or download was specified by the user."
   },
   {
     "Package": "tiler",
@@ -6475,13 +6616,18 @@
     "SystemRequirements": "A system with zoneinfo data (e.g. /usr/share/zoneinfo) as well as a recent-enough C++11 compiler (such as g++-4.8 or later). On Windows the zoneinfo included with R is used."
   },
   {
+    "Package": "timeless",
+    "Version": "0.2.3",
+    "SystemRequirements": "Cargo (Rust's package manager), rustc"
+  },
+  {
     "Package": "tipitaka",
     "Version": "0.1.2",
     "SystemRequirements": "C++14"
   },
   {
     "Package": "tipsae",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6506,7 +6652,7 @@
   },
   {
     "Package": "tok",
-    "Version": "0.1.1",
+    "Version": "0.1.3",
     "SystemRequirements": "Rust tool chain w/ cargo, libclang/llvm-config"
   },
   {
@@ -6531,7 +6677,7 @@
   },
   {
     "Package": "torch",
-    "Version": "0.12.0",
+    "Version": "0.13.0",
     "SystemRequirements": "LibTorch (https://pytorch.org/); Only x86_64 platforms are currently supported except for ARM system running macOS."
   },
   {
@@ -6541,7 +6687,7 @@
   },
   {
     "Package": "trackdem",
-    "Version": "0.6",
+    "Version": "0.7.2",
     "SystemRequirements": "Python (>=2.7), Libav, ExifTool"
   },
   {
@@ -6561,12 +6707,12 @@
   },
   {
     "Package": "TreeSearch",
-    "Version": "1.5.0",
+    "Version": "1.5.1",
     "SystemRequirements": "C++17"
   },
   {
     "Package": "TreeTools",
-    "Version": "1.10.0",
+    "Version": "1.11.1",
     "SystemRequirements": "C++17"
   },
   {
@@ -6586,7 +6732,7 @@
   },
   {
     "Package": "triptych",
-    "Version": "0.1.2",
+    "Version": "0.1.3",
     "SystemRequirements": "C++20"
   },
   {
@@ -6615,8 +6761,13 @@
     "SystemRequirements": "GNU make"
   },
   {
+    "Package": "tth",
+    "Version": "4.16-0",
+    "SystemRequirements": "USE_C17"
+  },
+  {
     "Package": "uavRmp",
-    "Version": "0.6.2",
+    "Version": "0.7",
     "SystemRequirements": "GNU make"
   },
   {
@@ -6641,7 +6792,7 @@
   },
   {
     "Package": "unigd",
-    "Version": "0.1.1",
+    "Version": "0.1.2",
     "SystemRequirements": "libpng, cairo, freetype2, fontconfig"
   },
   {
@@ -6656,7 +6807,7 @@
   },
   {
     "Package": "unix",
-    "Version": "1.5.7",
+    "Version": "1.5.8",
     "SystemRequirements": "POSIX.1-2001, AppArmor (optional)"
   },
   {
@@ -6690,18 +6841,13 @@
     "SystemRequirements": "V8 engine version 6+ is needed for ES6 and WASM support. On Linux you can build against libv8-dev (Debian) or v8-devel (Fedora). We also provide static libv8 binaries for most platforms, see the README for details."
   },
   {
-    "Package": "VAJointSurv",
-    "Version": "0.1.0",
-    "SystemRequirements": "C++17"
-  },
-  {
     "Package": "valection",
     "Version": "1.0.0",
     "SystemRequirements": "valection (>= 1.0.0)"
   },
   {
     "Package": "vapour",
-    "Version": "0.9.5",
+    "Version": "0.10.0",
     "SystemRequirements": "libgdal-dev, GDAL (>= 2.2.3), PROJ (>= 4.8.0)"
   },
   {
@@ -6721,7 +6867,7 @@
   },
   {
     "Package": "vcfppR",
-    "Version": "0.4.5",
+    "Version": "0.4.6",
     "SystemRequirements": "libcurl: libcurl-devel (rpm) or libcurl4-openssl-dev (deb), GNU make."
   },
   {
@@ -6740,6 +6886,11 @@
     "SystemRequirements": "Java 1.5 or higher"
   },
   {
+    "Package": "VertexWiseR",
+    "Version": "1.0.0",
+    "SystemRequirements": "Miniconda3 (>= 23.10.0); BrainStat (reticulate installation, >=0.4.2)"
+  },
+  {
     "Package": "VicmapR",
     "Version": "0.2.3",
     "SystemRequirements": "GDAL (>= 3.0.0), GEOS (>= 3.4.0), PROJ (>= 7.0.0)"
@@ -6756,7 +6907,7 @@
   },
   {
     "Package": "vitae",
-    "Version": "0.5.4",
+    "Version": "0.6.0",
     "SystemRequirements": "pandoc (>= 2.7) - http://pandoc.org"
   },
   {
@@ -6771,7 +6922,7 @@
   },
   {
     "Package": "vol2birdR",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "SystemRequirements": "GNU make, GSL, HDF5, PROJ"
   },
   {
@@ -6781,7 +6932,7 @@
   },
   {
     "Package": "warbleR",
-    "Version": "1.1.30",
+    "Version": "1.1.31",
     "SystemRequirements": "fftw3, GNU make, sox, Ghostscript, libsndfile, GDAL"
   },
   {
@@ -6806,8 +6957,8 @@
   },
   {
     "Package": "websocket",
-    "Version": "1.4.1",
-    "SystemRequirements": "C++11, GNU make, OpenSSL >= 1.0.2"
+    "Version": "1.4.2",
+    "SystemRequirements": "GNU make, OpenSSL >= 1.0.2"
   },
   {
     "Package": "WeibullR",
@@ -6826,8 +6977,13 @@
   },
   {
     "Package": "whitebox",
-    "Version": "2.3.4",
+    "Version": "2.4.0",
     "SystemRequirements": "WhiteboxTools (https://github.com/jblindsay/whitebox-tools/releases/latest)"
+  },
+  {
+    "Package": "winputall",
+    "Version": "1.0.1",
+    "SystemRequirements": "GNU make"
   },
   {
     "Package": "worcs",
@@ -6836,7 +6992,7 @@
   },
   {
     "Package": "wordnet",
-    "Version": "0.1-16",
+    "Version": "0.1-17",
     "SystemRequirements": "Java (>= 5.0); WordNet database files (direct download: <https://wordnetcode.princeton.edu/3.0/WNdb-3.0.tar.gz>; Debian and Fedora package: wordnet)"
   },
   {
@@ -6851,7 +7007,7 @@
   },
   {
     "Package": "WriteXLS",
-    "Version": "6.5.0",
+    "Version": "6.7.0",
     "SystemRequirements": "Perl"
   },
   {
@@ -6866,7 +7022,7 @@
   },
   {
     "Package": "x13binary",
-    "Version": "1.1.60",
+    "Version": "1.1.61",
     "SystemRequirements": "Fortran sources included in `tools/x13as_html` are compiled via `configure`."
   },
   {
@@ -6876,12 +7032,17 @@
   },
   {
     "Package": "xgboost",
-    "Version": "1.7.7.1",
+    "Version": "1.7.8.1",
     "SystemRequirements": "GNU make, C++17"
   },
   {
+    "Package": "xlcharts",
+    "Version": "0.0.2",
+    "SystemRequirements": "Python (>= 2.7.0), Conda"
+  },
+  {
     "Package": "XLConnect",
-    "Version": "1.0.8",
+    "Version": "1.0.10",
     "SystemRequirements": "Java (>= 8)"
   },
   {
@@ -6891,7 +7052,7 @@
   },
   {
     "Package": "XML",
-    "Version": "3.99-0.16.1",
+    "Version": "3.99-0.17",
     "SystemRequirements": "libxml2 (>= 2.6.3)"
   },
   {
@@ -6906,17 +7067,12 @@
   },
   {
     "Package": "XRJulia",
-    "Version": "0.9.0",
+    "Version": "0.9.0.1",
     "SystemRequirements": "Julia, v 1.0 or later"
   },
   {
-    "Package": "xrnet",
-    "Version": "0.1.7",
-    "SystemRequirements": "C++11"
-  },
-  {
     "Package": "xslt",
-    "Version": "1.4.4",
+    "Version": "1.4.5",
     "SystemRequirements": "libxslt: libxslt1-dev (deb), libxslt-devel (rpm)"
   },
   {
@@ -6946,7 +7102,7 @@
   },
   {
     "Package": "zoomerjoin",
-    "Version": "0.1.4",
+    "Version": "0.1.5",
     "SystemRequirements": "Cargo (>= 1.56) (Rust's package manager), rustc"
   }
 ]
