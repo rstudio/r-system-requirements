@@ -6,7 +6,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "ubuntu"
+          "distribution": "ubuntu",
+          "versions": ["22.04", "24.04"]
         },
         {
           "os": "linux",
