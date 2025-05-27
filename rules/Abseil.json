@@ -19,7 +19,7 @@
       "packages": ["abseil-cpp-devel"],
       "pre_install": [
         {
-          "command": "yum install -y epel-release"
+          "command": "dnf install -y epel-release"
         }
       ],
       "constraints": [
