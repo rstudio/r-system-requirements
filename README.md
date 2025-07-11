@@ -52,9 +52,9 @@ The rules in this catalog support the following operating systems:
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.6
 - SUSE Linux Enterprise 15 SP6
-- Debian 11, 12, unstable
-- Fedora 40, 41
-- Windows (for R 4.0+ only)
+- Debian 12, unstable
+- Fedora 41
+- Windows (for R 4.0-4.1 only)
 
 [^1]: Rocky Linux 8 is specified as `centos8` for backward compatibility.
 CentOS 8 reached end of support on December 31, 2021.
@@ -245,24 +245,19 @@ Available tags:
 - `focal` (Ubuntu 20.04)
 - `jammy` (Ubuntu 22.04)
 - `noble` (Ubuntu 24.04)
-- `buster` (Debian 10)
-- `bullseye` (Debian 11)
 - `bookworm` (Debian 12)
 - `sid` (Debian unstable)
 - `centos7` (CentOS 7)
 - `centos8` (Rocky Linux 8)
 - `rockylinux9` (Rocky Linux 9)
-- `opensuse155` (openSUSE 15.5)
-- `fedora36` (Fedora 36)
-- `fedora37` (Fedora 37)
-- `fedora38` (Fedora 38)
-- `fedora39` (Fedora 39)
+- `opensuse156` (openSUSE 15.6)
+- `fedora41` (Fedora 41)
 
 To build the images:
 
 ```sh
-# Build a specific image (e.g. focal)
-make build-focal
+# Build a specific image (e.g. noble)
+make build-noble
 
 # Build all images
 make build-all
@@ -271,8 +266,8 @@ make build-all
 To test the rules:
 
 ```sh
-# Test a specific rule on an OS (e.g. focal)
-make test-focal RULES=rules/libcurl.json
+# Test a specific rule on an OS (e.g. noble)
+make test-noble RULES=rules/libcurl.json
 
 # Test a specific rule on all OSs
 make test-all RULES=rules/libcurl.json
