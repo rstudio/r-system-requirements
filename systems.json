@@ -17,12 +17,12 @@
     {
         "os": "linux",
         "distribution": "rockylinux",
-        "versions": [ "8", "9" ]
+        "versions": [ "8", "9", "10" ]
     },
     {
         "os": "linux",
         "distribution": "redhat",
-        "versions": [ "6", "7", "8", "9" ]
+        "versions": [ "6", "7", "8", "9", "10" ]
     },
     {
         "os": "linux",
