@@ -49,7 +49,7 @@
         ]
       },
       {
-        "packages": ["libblosc-dev"],
+        "packages": ["blosc-dev"],
         "constraints": [
           {
             "os": "linux",
