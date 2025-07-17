@@ -19,14 +19,6 @@
         "constraints": [
           {
             "os": "linux",
-            "distribution": "centos"
-          },
-          {
-            "os": "linux",
-            "distribution": "rockylinux"
-          },
-          {
-            "os": "linux",
             "distribution": "redhat"
           },
           {
@@ -51,6 +43,14 @@
       {
         "packages": ["blosc-dev"],
         "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          },
+          {
+            "os": "linux",
+            "distribution": "rockylinux"
+          },
           {
             "os": "linux",
             "distribution": "alpine"
