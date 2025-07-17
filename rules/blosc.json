@@ -38,7 +38,7 @@
       {
         "packages": ["blosc-devel"],
         "pre_install": [
-          { "command": "dnf install -y epel-release" }
+          { "command": "yum install -y epel-release" }
         ],
         "constraints": [
           {
