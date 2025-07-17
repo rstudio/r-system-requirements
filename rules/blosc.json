@@ -24,19 +24,6 @@
           {
             "os": "linux",
             "distribution": "fedora"
-          }
-        ]
-      },
-      {
-        "packages": ["blosc-devel"],
-        "constraints": [
-          {
-            "os": "linux",
-            "distribution": "centos"
-          },
-          {
-            "os": "linux",
-            "distribution": "rockylinux"
           },
           {
             "os": "linux",
@@ -45,6 +32,22 @@
           {
             "os": "linux",
             "distribution": "sle"
+          }
+        ]
+      },
+      {
+        "packages": ["blosc-devel"],
+        "pre_install": [
+          { "command": "dnf install -y epel-release" }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "centos"
+          },
+          {
+            "os": "linux",
+            "distribution": "rockylinux"
           }
         ]
       },
