@@ -1,22 +1,9 @@
 {
-  "name": "cln",
-  "title": "CLN: Class Library for Numbers (dependency for GiNaC)",
-  "system_requirements": [
-    {
-      "packages": ["libgmp-dev", "libcln-dev", "pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "debian" }]
-    },
-    {
-      "packages": ["gmp-devel", "cln-devel", "pkgconf-pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "fedora" }]
-    },
-    {
-      "packages": ["gmp-devel", "cln-devel", "pkgconf-pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "opensuse" }]
-    },
-    {
-      "packages": ["gmp", "cln", "pkg-config"],
-      "constraints": [{ "os": "macos" }]
-    }
+  "patterns": ["\\bcln\\b", "\\bCLN\\b"],
+  "dependencies": [
+    { "packages": ["libcln-dev"], "constraints": [{ "os": "linux", "distribution": "ubuntu" }] },
+    { "packages": ["libcln-dev"], "constraints": [{ "os": "linux", "distribution": "debian" }] },
+    { "packages": ["cln-devel"],  "constraints": [{ "os": "linux", "distribution": "fedora" }] },
+    { "packages": ["cln-devel"],  "constraints": [{ "os": "linux", "distribution": "opensuse" }] }
   ]
 }

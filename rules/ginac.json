@@ -1,22 +1,9 @@
 {
-  "name": "ginac",
-  "title": "GiNaC: Symbolic Computation Library (depends on CLN)",
-  "system_requirements": [
-    {
-      "packages": ["libgmp-dev", "libcln-dev", "libginac-dev", "pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "debian" }]
-    },
-    {
-      "packages": ["gmp-devel", "cln-devel", "ginac-devel", "pkgconf-pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "fedora" }]
-    },
-    {
-      "packages": ["gmp-devel", "cln-devel", "ginac-devel", "pkgconf-pkg-config"],
-      "constraints": [{ "os": "linux", "distribution": "opensuse" }]
-    },
-    {
-      "packages": ["gmp", "cln", "ginac", "pkg-config"],
-      "constraints": [{ "os": "macos" }]
-    }
+  "patterns": ["\\bginac\\b", "\\bGiNaC\\b"],
+  "dependencies": [
+    { "packages": ["libginac-dev"], "constraints": [{ "os": "linux", "distribution": "ubuntu" }] },
+    { "packages": ["libginac-dev"], "constraints": [{ "os": "linux", "distribution": "debian" }] },
+    { "packages": ["ginac-devel"],  "constraints": [{ "os": "linux", "distribution": "fedora" }] },
+    { "packages": ["ginac-devel"],  "constraints": [{ "os": "linux", "distribution": "opensuse" }] }
   ]
 }
