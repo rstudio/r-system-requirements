@@ -1,5 +1,9 @@
 {
-  "patterns": ["\\bginac\\b", "\\bGiNaC\\b"],
+    "patterns": [
+    "libginac-dev",
+    "\\bginac\\b",
+    "\\bGiNaC\\b"
+  ],
   "dependencies": [
     { "packages": ["libginac-dev"], "constraints": [{ "os": "linux", "distribution": "ubuntu" }] },
     { "packages": ["libginac-dev"], "constraints": [{ "os": "linux", "distribution": "debian" }] },
