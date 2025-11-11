@@ -54,7 +54,8 @@ declare -A versions=(
 
 test_package_ubuntu() {
     pkg=$1
-    found=$(apt-cache search --names-only "^${pkg}$")
+    # Escape + signs, e.g. for libmagick++
+    found=$(apt-cache search --names-only "^${pkg//+/\\+}$")
     if [ -z "$found" ]; then
         echo "$pkg | error: package not found"
         exit 1
