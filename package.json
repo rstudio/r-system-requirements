@@ -14,9 +14,9 @@
     "test-patterns-all": "node test/test-patterns.js rules/**"
   },
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@eslint/json": "^0.14.0",
-    "@sourcemeta/jsonschema": "^12.2.1",
-    "eslint": "^9.39.1"
+    "eslint": "^9.39.1",
+    "@sourcemeta/jsonschema": "^12.2.1"
   }
 }
