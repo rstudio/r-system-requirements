@@ -5,17 +5,18 @@
   "scripts": {
     "test": "npm run generate-schema && npm run lint && npm run validate && npm run test-patterns-all",
     "lint": "eslint rules/**",
+    "fmt": "jsonschema fmt schema.json",
     "validate": "npm run validate-schema && npm run validate-rules",
-    "validate-schema": "ajv compile -s schema.json",
-    "validate-rules": "ajv -s schema.json -d 'rules/*.json' --errors=json",
-    "generate-schema": "node generate-schema.js",
+    "validate-schema": "jsonschema metaschema schema.json",
+    "validate-rules": "jsonschema validate schema.json rules/*.json",
+    "generate-schema": "node generate-schema.js && npm run fmt",
     "test-patterns": "node test/test-patterns.js",
     "test-patterns-all": "node test/test-patterns.js rules/**"
   },
   "license": "MIT",
-  "dependencies": {
-    "ajv-cli": "^5.0.0",
-    "eslint": "^8.44.0",
-    "eslint-plugin-json": "^1.2.0"
+  "devDependencies": {
+    "@eslint/json": "^0.14.0",
+    "eslint": "^9.39.1",
+    "@sourcemeta/jsonschema": "^12.2.1"
   }
 }
