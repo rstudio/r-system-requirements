@@ -52,7 +52,7 @@ The rules in this catalog support the following operating systems:
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.6
 - SUSE Linux Enterprise 15 SP6
-- Debian 12, unstable
+- Debian 12, 13, unstable
 - Fedora 41
 - Windows (for R 4.0-4.1 only)
 
