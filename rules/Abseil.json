@@ -81,7 +81,7 @@
           "versions": ["8"]
         }
       ]
-    }
+    },
     {
       "packages": ["abseil-cpp-dev-20250814.1-r0"],
       "constraints": [
