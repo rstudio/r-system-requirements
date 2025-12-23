@@ -87,7 +87,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "alpine"
+          "distribution": "alpine",
           "versions": ["3.23"]
         }
       ]
@@ -97,7 +97,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "alpine"
+          "distribution": "alpine",
           "versions": ["3.22"]
         }
       ]
@@ -107,7 +107,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "alpine"
+          "distribution": "alpine",
           "versions": ["3.21"]
         }
       ]
@@ -117,7 +117,7 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "alpine"
+          "distribution": "alpine",
           "versions": ["3.20"]
         }
       ]
