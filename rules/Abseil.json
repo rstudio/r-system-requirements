@@ -101,26 +101,6 @@
           "versions": ["3.22"]
         }
       ]
-    },
-    {
-      "packages": ["abseil-cpp-dev-20240722.0-r0"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "alpine",
-          "versions": ["3.21"]
-        }
-      ]
-    },
-    {
-      "packages": ["abseil-cpp-dev-20230802.1-r0"],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "alpine",
-          "versions": ["3.20"]
-        }
-      ]
     }
   ]
 }
