@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": [ "patterns", "dependencies" ],
   "properties": {
     "patterns": {
       "type": "array",
@@ -15,20 +14,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": [ "packages" ],
         "properties": {
           "pre_install": {
             "type": "array",
             "items": {
               "type": "object",
-              "oneOf": [
-                {
-                  "required": [ "command" ]
-                },
-                {
-                  "required": [ "script" ]
-                }
-              ],
               "properties": {
                 "command": {
                   "type": "string"
@@ -36,21 +26,25 @@
                 "script": {
                   "type": "string"
                 }
-              }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "command"
+                  ]
+                },
+                {
+                  "required": [
+                    "script"
+                  ]
+                }
+              ]
             }
           },
           "post_install": {
             "type": "array",
             "items": {
               "type": "object",
-              "oneOf": [
-                {
-                  "required": [ "command" ]
-                },
-                {
-                  "required": [ "script" ]
-                }
-              ],
               "properties": {
                 "command": {
                   "type": "string"
@@ -58,7 +52,19 @@
                 "script": {
                   "type": "string"
                 }
-              }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "command"
+                  ]
+                },
+                {
+                  "required": [
+                    "script"
+                  ]
+                }
+              ]
             }
           },
           "packages": {
@@ -115,13 +121,94 @@
             }
           }
         },
+        "required": [
+          "packages"
+        ],
         "additionalProperties": false
       }
     }
   },
+  "required": [
+    "patterns",
+    "dependencies"
+  ],
   "additionalProperties": false,
   "definitions": {
     "versions": {
+      "debian": {
+        "enum": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "unstable"
+        ]
+      },
+      "ubuntu": {
+        "enum": [
+          "14.04",
+          "16.04",
+          "18.04",
+          "20.04",
+          "22.04",
+          "24.04"
+        ]
+      },
+      "centos": {
+        "enum": [
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "rockylinux": {
+        "enum": [
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "redhat": {
+        "enum": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "opensuse": {
+        "enum": [
+          "42.3",
+          "15.0",
+          "15.2",
+          "15.3",
+          "15.4",
+          "15.5",
+          "15.6"
+        ]
+      },
+      "sle": {
+        "enum": [
+          "12.3",
+          "15.0",
+          "15.2",
+          "15.3",
+          "15.4",
+          "15.5",
+          "15.6"
+        ]
+      },
+      "fedora": {
+        "enum": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ]
+      },
       "alpine": {
         "enum": [
           "3.15",
@@ -131,32 +218,10 @@
           "3.19",
           "3.20",
           "3.21",
+          "3.22",
+          "3.23",
           "edge"
         ]
-      },
-      "centos": {
-        "enum": [ "6", "7", "8" ]
-      },
-      "debian": {
-        "enum": [ "10", "11", "12", "13", "unstable" ]
-      },
-      "fedora": {
-        "enum": [ "36", "37", "38", "39", "40", "41" ]
-      },
-      "opensuse": {
-        "enum": [ "42.3", "15.0", "15.2", "15.3", "15.4", "15.5", "15.6" ]
-      },
-      "redhat": {
-        "enum": [ "6", "7", "8", "9", "10" ]
-      },
-      "rockylinux": {
-        "enum": [ "8", "9", "10" ]
-      },
-      "sle": {
-        "enum": [ "12.3", "15.0", "15.2", "15.3", "15.4", "15.5", "15.6" ]
-      },
-      "ubuntu": {
-        "enum": [ "14.04", "16.04", "18.04", "20.04", "22.04", "24.04" ]
       },
       "windows": {
         "enum": []
@@ -164,7 +229,6 @@
     },
     "debian": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -179,11 +243,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "ubuntu": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -198,11 +264,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "centos": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -217,11 +285,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "rockylinux": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -236,11 +306,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "redhat": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -255,11 +327,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "opensuse": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -274,11 +348,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "sle": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -293,11 +369,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "fedora": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -312,11 +390,13 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "alpine": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "linux"
@@ -331,16 +411,21 @@
           }
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     },
     "windows": {
       "type": "object",
-      "required": [ "os" ],
       "properties": {
         "os": {
           "const": "windows"
         }
       },
+      "required": [
+        "os"
+      ],
       "additionalProperties": false
     }
   }

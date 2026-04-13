@@ -26,6 +26,8 @@ declare -A os_identifiers=(
     [alpine-3.19]='alpine'
     [alpine-3.20]='alpine'
     [alpine-3.21]='alpine'
+    [alpine-3.22]='alpine'
+    [alpine-3.23]='alpine'
     [alpine-edge]='alpine'
 )
 
@@ -51,6 +53,8 @@ declare -A versions=(
     [alpine-3.19]='3.19'
     [alpine-3.20]='3.20'
     [alpine-3.21]='3.21'
+    [alpine-3.22]='3.22'
+    [alpine-3.23]='3.23'
     [alpine-edge]='edge'
 )
 

@@ -81,6 +81,16 @@
           "versions": ["8"]
         }
       ]
+    },
+    {
+      "packages": ["abseil-cpp-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine",
+          "versions": ["3.22", "3.23"]
+        }
+      ]
     }
   ]
 }
