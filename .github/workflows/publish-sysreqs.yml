@@ -19,7 +19,7 @@ permissions:
 
 env:
   AWS_REGION: us-east-2
-  S3_BUCKET: r-manifest-cran
+  S3_BUCKET: ${{ secrets.MANIFEST_BUCKET }}
   S3_PREFIX: sysreqs/v1
 
 jobs:
