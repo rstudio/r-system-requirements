@@ -46,7 +46,7 @@ or see the [For Developers](#for-developers) section for how to contribute to th
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 20.04, 22.04, 24.04
+- Ubuntu 20.04, 22.04, 24.04, 26.04
 - CentOS 7
 - Rocky Linux 8[^1], 9
 - Red Hat Enterprise Linux 7, 8, 9
