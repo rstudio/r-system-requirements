@@ -1,0 +1,104 @@
+name: Publish System Requirements
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rules/**'
+      - 'scripts/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Generate bundle but do not upload'
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-2
+  S3_BUCKET: ${{ secrets.MANIFEST_BUCKET }}
+  S3_PREFIX: sysreqs/v1
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test rules
+        run: |
+          npm install
+          npm test
+
+      - name: Create rules bundle
+        run: |
+          GIT_SHA=$(git rev-parse HEAD)
+          echo "Git SHA: ${GIT_SHA}"
+
+          # Create staging directory
+          STAGING_DIR=$(mktemp -d)
+          BUNDLE_DIR="${STAGING_DIR}/rstudio-sysreqs-rules"
+          mkdir -p "${BUNDLE_DIR}"
+
+          # Copy rules, scripts, and license
+          cp -r rules/* "${BUNDLE_DIR}/"
+          if [ -d scripts ]; then
+            mkdir -p "${BUNDLE_DIR}/scripts"
+            cp -r scripts/* "${BUNDLE_DIR}/scripts/" 2>/dev/null || true
+          fi
+          cp LICENSE "${BUNDLE_DIR}/LICENSE"
+
+          # Add git SHA marker inside the archive
+          echo "${GIT_SHA}" > "${BUNDLE_DIR}/latest_git_sha.txt"
+
+          # Create tar archive
+          tar -czvf /tmp/sysreqs.tar.gz -C "${STAGING_DIR}" rstudio-sysreqs-rules
+
+          # Generate checksum
+          CHECKSUM=$(md5sum /tmp/sysreqs.tar.gz | cut -c -32)
+          echo "${GIT_SHA}" > /tmp/latest_git_sha.txt
+          echo "${CHECKSUM}" > /tmp/latest_checksum.txt
+
+          echo "Bundle created: $(ls -lh /tmp/sysreqs.tar.gz)"
+          echo "Checksum: ${CHECKSUM}"
+          echo "Git SHA: ${GIT_SHA}"
+
+      - name: Configure AWS credentials
+        if: ${{ inputs.dry_run != true }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload to S3
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          aws s3 cp /tmp/sysreqs.tar.gz "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest.tar.gz"
+          aws s3 cp /tmp/latest_git_sha.txt "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest_git_sha.txt"
+          aws s3 cp /tmp/latest_checksum.txt "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest_checksum.txt"
+          echo "Uploaded sysreqs to s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/"
+
+      - name: Configure AWS credentials (Main account for CloudFront)
+        if: ${{ inputs.dry_run != true }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_MAIN_ACCOUNT_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Invalidate CloudFront cache
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/sysreqs/*"
+          echo "CloudFront invalidation created for /sysreqs/*"
