@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 env:
-  AWS_REGION: us-east-2
+  AWS_REGION: us-east-1
   S3_BUCKET: ${{ secrets.MANIFEST_BUCKET }}
   S3_PREFIX: sysreqs/v1
 
