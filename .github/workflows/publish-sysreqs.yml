@@ -88,7 +88,17 @@ jobs:
           aws s3 cp /tmp/latest_checksum.txt "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest_checksum.txt"
           echo "Uploaded sysreqs to s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/"
 
-      # CloudFront invalidation intentionally omitted. Will be added back once
-      # the staged CloudFront cutover (rstudio/package-manager#17760) stands
-      # up a PPM-subaccount distribution with same-account invalidation
-      # permissions.
+      - name: Configure AWS credentials (main account for CloudFront)
+        if: ${{ inputs.dry_run != true }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_MAIN_ACCOUNT_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Invalidate CloudFront
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths '/sysreqs/*'
+          echo "Invalidation submitted for /sysreqs/* on ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
