@@ -108,11 +108,10 @@ jobs:
             --paths '/sysreqs/*' \
             --query 'Invalidation.Id' --output text)
           echo "Invalidation ID: ${INV_ID}"
-          # TODO(rstudio/aws-main#713): Re-enable wait once GetInvalidation permission lands.
-          # aws cloudfront wait invalidation-completed \
-          #   --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
-          #   --id "${INV_ID}"
-          echo "Invalidation submitted for /sysreqs/* on ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} (wait disabled, see TODO above)"
+          aws cloudfront wait invalidation-completed \
+            --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --id "${INV_ID}"
+          echo "Invalidation complete for /sysreqs/* on ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
 
       - name: Verify CDN serves new sysreqs bundle
         if: ${{ inputs.dry_run != true }}
