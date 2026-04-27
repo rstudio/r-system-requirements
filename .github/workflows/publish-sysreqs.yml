@@ -21,6 +21,7 @@ env:
   AWS_REGION: us-east-1
   S3_BUCKET: ${{ secrets.MANIFEST_BUCKET }}
   S3_PREFIX: sysreqs/v1
+  MANIFEST_URL: https://rspm-sync.rstudio.com
 
 jobs:
   publish:
@@ -73,6 +74,10 @@ jobs:
           echo "Checksum: ${CHECKSUM}"
           echo "Git SHA: ${GIT_SHA}"
 
+          # Expose for later smoke test.
+          echo "GIT_SHA=${GIT_SHA}" >> "$GITHUB_ENV"
+          echo "CHECKSUM=${CHECKSUM}" >> "$GITHUB_ENV"
+
       - name: Configure AWS credentials
         if: ${{ inputs.dry_run != true }}
         uses: aws-actions/configure-aws-credentials@v4
@@ -88,7 +93,51 @@ jobs:
           aws s3 cp /tmp/latest_checksum.txt "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest_checksum.txt"
           echo "Uploaded sysreqs to s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/"
 
-      # CloudFront invalidation intentionally omitted. Will be added back once
-      # the staged CloudFront cutover (rstudio/package-manager#17760) stands
-      # up a PPM-subaccount distribution with same-account invalidation
-      # permissions.
+      - name: Configure AWS credentials (main account for CloudFront)
+        if: ${{ inputs.dry_run != true }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_MAIN_ACCOUNT_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Invalidate CloudFront
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          INV_ID=$(aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths '/sysreqs/*' \
+            --query 'Invalidation.Id' --output text)
+          echo "Invalidation ID: ${INV_ID}"
+          aws cloudfront wait invalidation-completed \
+            --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --id "${INV_ID}"
+          echo "Invalidation complete for /sysreqs/* on ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
+
+      - name: Verify CDN serves new sysreqs bundle
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          # Confirm the CDN is now serving exactly what we just uploaded.
+          # This catches stale-cache issues and corrupt uploads without needing
+          # to stand up a full PPM instance (sysreqs has no PPM config override
+          # equivalent to Vulnerabilities.ManifestURL today).
+          CDN_SHA=$(curl -fsS "${{ env.MANIFEST_URL }}/sysreqs/v1/latest_git_sha.txt" | tr -d '[:space:]')
+          if [ "${CDN_SHA}" != "${GIT_SHA}" ]; then
+            echo "::error::CDN latest_git_sha.txt (${CDN_SHA}) does not match uploaded SHA (${GIT_SHA})"
+            exit 1
+          fi
+          echo "latest_git_sha.txt matches: ${CDN_SHA}"
+
+          CDN_CHECKSUM=$(curl -fsS "${{ env.MANIFEST_URL }}/sysreqs/v1/latest_checksum.txt" | tr -d '[:space:]')
+          if [ "${CDN_CHECKSUM}" != "${CHECKSUM}" ]; then
+            echo "::error::CDN latest_checksum.txt (${CDN_CHECKSUM}) does not match uploaded checksum (${CHECKSUM})"
+            exit 1
+          fi
+          echo "latest_checksum.txt matches: ${CDN_CHECKSUM}"
+
+          curl -fsS -o /tmp/cdn-sysreqs.tar.gz "${{ env.MANIFEST_URL }}/sysreqs/v1/latest.tar.gz"
+          TARBALL_MD5=$(md5sum /tmp/cdn-sysreqs.tar.gz | cut -c -32)
+          if [ "${TARBALL_MD5}" != "${CHECKSUM}" ]; then
+            echo "::error::CDN tarball md5 (${TARBALL_MD5}) does not match expected checksum (${CHECKSUM})"
+            exit 1
+          fi
+          echo "✓ CDN sync test passed -- ${MANIFEST_URL}/sysreqs/v1/ serves bundle ${GIT_SHA}"
