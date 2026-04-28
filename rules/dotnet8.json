@@ -1,5 +1,5 @@
 {
-  "patterns": ["\\bdotnet\\b"],
+  "patterns": ["\\bdotnet8\\b"],
   "dependencies": [
     {
       "packages": ["dotnet-runtime-8.0"],
