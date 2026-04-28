@@ -1,13 +1,13 @@
 {
-  "patterns": ["\\bdotnet8\\b"],
+  "patterns": ["\\bdotnet10\\b"],
   "dependencies": [
     {
-      "packages": ["dotnet-runtime-8.0"],
+      "packages": ["dotnet-runtime-10.0"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "ubuntu",
-          "versions": ["22.04", "24.04"]
+          "versions": ["24.04", "26.04"]
         },
         {
           "os": "linux",
