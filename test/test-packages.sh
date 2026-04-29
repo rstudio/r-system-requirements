@@ -5,7 +5,6 @@ set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 declare -A os_identifiers=(
-    [focal]='ubuntu'
     [jammy]='ubuntu'
     [noble]='ubuntu'
     [bookworm]='debian'
@@ -23,8 +22,6 @@ declare -A os_identifiers=(
     [opensuse156]='opensuse'
     [sle156]='sle'
     [fedora41]='fedora'
-    [alpine-3.19]='alpine'
-    [alpine-3.20]='alpine'
     [alpine-3.21]='alpine'
     [alpine-3.22]='alpine'
     [alpine-3.23]='alpine'
@@ -32,7 +29,6 @@ declare -A os_identifiers=(
 )
 
 declare -A versions=(
-    [focal]='20.04'
     [jammy]='22.04'
     [noble]='24.04'
     [bookworm]='12'
@@ -50,8 +46,6 @@ declare -A versions=(
     [opensuse156]='15.6'
     [sle156]='15.6'
     [fedora41]='41'
-    [alpine-3.19]='3.19'
-    [alpine-3.20]='3.20'
     [alpine-3.21]='3.21'
     [alpine-3.22]='3.22'
     [alpine-3.23]='3.23'

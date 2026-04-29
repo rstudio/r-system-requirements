@@ -46,7 +46,7 @@ or see the [For Developers](#for-developers) section for how to contribute to th
 
 The rules in this catalog support the following operating systems:
 
-- Ubuntu 20.04, 22.04, 24.04, 26.04
+- Ubuntu 22.04, 24.04, 26.04
 - CentOS 7
 - Rocky Linux 8[^1], 9
 - Red Hat Enterprise Linux 7, 8, 9
@@ -54,6 +54,7 @@ The rules in this catalog support the following operating systems:
 - SUSE Linux Enterprise 15 SP6
 - Debian 12, 13, unstable
 - Fedora 41
+- Alpine 3.21, 3.22, 3.23, edge
 - Windows (for R 4.0-4.1 only)
 
 [^1]: Rocky Linux 8 is specified as `centos8` for backward compatibility.
@@ -242,7 +243,6 @@ make update-sysreqs
 packages on supported OSs.
 
 Available tags:
-- `focal` (Ubuntu 20.04)
 - `jammy` (Ubuntu 22.04)
 - `noble` (Ubuntu 24.04)
 - `bookworm` (Debian 12)
@@ -252,6 +252,10 @@ Available tags:
 - `rockylinux9` (Rocky Linux 9)
 - `opensuse156` (openSUSE 15.6)
 - `fedora41` (Fedora 41)
+- `alpine-3.21` (Alpine 3.21)
+- `alpine-3.22` (Alpine 3.22)
+- `alpine-3.23` (Alpine 3.23)
+- `alpine-edge` (Alpine edge)
 
 To build the images:
 
@@ -280,11 +284,29 @@ make test-all
 
 The JSON schema is defined in the file [`schema.json`](schema.json). Do not
 modify this file directly, since it is automatically generated. Instead, modify
-`schema.template.json` and then run `npm run generate-schema`. The
+`schema.template.json` and then run `npm run generate-schema` (not
+`node generate-schema.js` directly, which skips the formatter). The
 `generate-schema` target is automatically run when running `npm test`.
 
 If you need to modify the distros and/or versions supported in the schema definitions,
 modify [`systems.json`](systems.json).
+
+### Platform updates
+
+[`systems.json`](systems.json) is the source of truth for supported platforms.
+
+When adding a new platform, add it to:
+- [`systems.json`](systems.json) (version list)
+- [`rules/`](rules) (any rules that need platform-specific packages or install steps)
+- [`Makefile`](Makefile) (VARIANTS list)
+- [`docker/`](docker) (new Dockerfile for testing)
+- [`test/test-packages.sh`](test/test-packages.sh) (OS and version mappings)
+- [`README.md`](README.md) (supported OS list and Docker tags)
+
+When removing an end-of-life platform, remove it from the Makefile, Docker
+images, test script, and README only. Do not remove versions from
+`systems.json` or `rules/*.json`, since those are still used for resolving
+system requirements on existing installations.
 
 ## Acknowledgements
 
