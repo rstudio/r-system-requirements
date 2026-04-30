@@ -141,3 +141,30 @@ jobs:
             exit 1
           fi
           echo "✓ CDN sync test passed -- ${MANIFEST_URL}/sysreqs/v1/ serves bundle ${GIT_SHA}"
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [publish]
+    if: always() && inputs.dry_run != true
+    steps:
+      - name: Determine notification status
+        id: notify_vars
+        run: |
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          if [ "${{ contains(needs.*.result, 'failure') }}" = "true" ]; then
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "text=Sysreqs publish failed (commit ${SHORT_SHA}). <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>" >> $GITHUB_OUTPUT
+          else
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "text=Sysreqs published from ${SHORT_SHA}; CDN sync verified. <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Notify Slack
+        uses: 8398a7/action-slack@v3
+        with:
+          username: "GitHub Actions"
+          status: ${{ steps.notify_vars.outputs.status }}
+          text: ${{ steps.notify_vars.outputs.text }}
+          channel: "#ppm-manifests"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_PPM_MANIFESTS_WEBHOOK }}
