@@ -93,13 +93,6 @@ jobs:
           aws s3 cp /tmp/latest_checksum.txt "s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/latest_checksum.txt"
           echo "Uploaded sysreqs to s3://${{ env.S3_BUCKET }}/${{ env.S3_PREFIX }}/"
 
-      - name: Configure AWS credentials (main account for CloudFront)
-        if: ${{ inputs.dry_run != true }}
-        uses: aws-actions/configure-aws-credentials@v6
-        with:
-          role-to-assume: ${{ secrets.AWS_MAIN_ACCOUNT_ROLE_ARN }}
-          aws-region: us-east-1
-
       - name: Invalidate CloudFront
         if: ${{ inputs.dry_run != true }}
         run: |
