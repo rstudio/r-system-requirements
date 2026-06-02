@@ -153,11 +153,17 @@ jobs:
           fi
 
       - name: Notify Slack
-        uses: 8398a7/action-slack@v3
-        with:
-          username: "GitHub Actions"
-          status: ${{ steps.notify_vars.outputs.status }}
-          text: ${{ steps.notify_vars.outputs.text }}
-          channel: "#ppm-manifests"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_PPM_MANIFESTS_WEBHOOK }}
+          STATUS: ${{ steps.notify_vars.outputs.status }}
+          TEXT: ${{ steps.notify_vars.outputs.text }}
+        run: |
+          case "$STATUS" in
+            success) COLOR="#36a64f" ;;
+            failure) COLOR="#cc0000" ;;
+            *)       COLOR="#daa038" ;;
+          esac
+          payload=$(jq -n --arg color "$COLOR" --arg text "$TEXT" \
+            '{username: "GitHub Actions", attachments: [{color: $color, text: $text}]}')
+          curl -fsS -X POST -H 'Content-type: application/json' \
+            --data "$payload" "$SLACK_WEBHOOK_URL"
