@@ -95,6 +95,9 @@ jobs:
 
       - name: Invalidate CloudFront
         if: ${{ inputs.dry_run != true }}
+        env:
+          AWS_MAX_ATTEMPTS: "5"
+          AWS_RETRY_MODE: adaptive
         run: |
           INV_ID=$(aws cloudfront create-invalidation \
             --distribution-id "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" \
@@ -165,5 +168,7 @@ jobs:
           esac
           payload=$(jq -n --arg color "$COLOR" --arg text "$TEXT" \
             '{username: "GitHub Actions", attachments: [{color: $color, text: $text}]}')
-          curl -fsS -X POST -H 'Content-type: application/json' \
-            --data "$payload" "$SLACK_WEBHOOK_URL"
+          curl -fsS --max-time 30 --retry 4 --retry-all-errors \
+            -X POST -H 'Content-type: application/json' \
+            --data "$payload" "$SLACK_WEBHOOK_URL" \
+            || echo "::warning::Slack notification failed (non-fatal)"
