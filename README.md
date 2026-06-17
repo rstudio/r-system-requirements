@@ -52,7 +52,7 @@ The rules in this catalog support the following operating systems:
 - Red Hat Enterprise Linux 7, 8, 9
 - openSUSE 15.6
 - SUSE Linux Enterprise 15 SP6
-- Debian 12, 13, unstable
+- Debian 13, unstable
 - Fedora 41
 - Alpine 3.21, 3.22, 3.23, edge
 - Windows (for R 4.0-4.1 only)
@@ -245,7 +245,6 @@ packages on supported OSs.
 Available tags:
 - `jammy` (Ubuntu 22.04)
 - `noble` (Ubuntu 24.04)
-- `bookworm` (Debian 12)
 - `sid` (Debian unstable)
 - `centos7` (CentOS 7)
 - `centos8` (Rocky Linux 8)
