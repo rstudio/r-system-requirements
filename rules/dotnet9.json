@@ -6,6 +6,10 @@
       "constraints": [
         {
           "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
           "distribution": "redhat",
           "versions": ["8", "9", "10"]
         },
