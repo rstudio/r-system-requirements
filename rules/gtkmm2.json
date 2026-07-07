@@ -42,6 +42,7 @@
     {
       "packages": ["gtkmm24-devel"],
       "pre_install": [
+        { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled powertools" }
       ],
       "constraints": [
