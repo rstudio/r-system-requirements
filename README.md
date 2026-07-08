@@ -288,6 +288,7 @@ Hat Subscription Management at test time, so `RH_ORG_ID` and
 `RH_ACTIVATION_KEY` must be exported in the environment before running
 `make test-rhel*` (or `make test-all`). Create an activation key in the
 [Red Hat customer portal](https://access.redhat.com/management/activation_keys).
+
 In CI, these are provided as repository secrets; when the secrets are not
 available (e.g. pull requests from forks), the `rhel*` variants are
 automatically excluded from the test matrix.
