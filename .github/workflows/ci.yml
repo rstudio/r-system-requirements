@@ -26,9 +26,14 @@ jobs:
 
       - name: Set up matrix of variants
         id: setup-matrix
+        env:
+          HAS_RHN: ${{ secrets.RH_ORG_ID != '' }}
         run: |
           variants="$(make print-variants)"
-          variants=$(echo "$variants" | jq -R -c '[splits(" ")]')
+          if [ "$HAS_RHN" != "true" ]; then
+            variants="$(echo "$variants" | tr ' ' '\n' | grep -v '^rhel' | tr '\n' ' ')"
+          fi
+          variants=$(echo "$variants" | tr -s ' ' | sed 's/^ //; s/ $//' | jq -R -c '[splits(" ")]')
           echo "variants=$variants" >> $GITHUB_OUTPUT
 
   test-rules:
@@ -40,6 +45,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VARIANTS: ${{ matrix.variant }}
+      RH_ORG_ID: ${{ secrets.RH_ORG_ID }}
+      RH_ACTIVATION_KEY: ${{ secrets.RH_ACTIVATION_KEY }}
     steps:
       - uses: actions/checkout@v7
 
