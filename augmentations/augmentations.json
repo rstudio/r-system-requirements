@@ -1,8 +1,0 @@
-{
-  "Rmpi": "openmpi",
-  "tkrplot": "tk",
-  "Rhdf5lib": "openssl",
-  "pqsfinder": "boost",
-  "SICtools": "ncurses",
-  "HilbertVisGUI": "gtkmm-2.4"
-}

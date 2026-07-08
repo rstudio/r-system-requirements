@@ -6,7 +6,6 @@ on:
     paths:
       - 'rules/**'
       - 'scripts/**'
-      - 'augmentations/**'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -57,10 +56,6 @@ jobs:
           if [ -d scripts ]; then
             mkdir -p "${BUNDLE_DIR}/scripts"
             cp -r scripts/* "${BUNDLE_DIR}/scripts/" 2>/dev/null || true
-          fi
-          if [ -d augmentations ]; then
-            mkdir -p "${BUNDLE_DIR}/augmentations"
-            cp -r augmentations/* "${BUNDLE_DIR}/augmentations/" 2>/dev/null || true
           fi
           cp LICENSE "${BUNDLE_DIR}/LICENSE"
 
