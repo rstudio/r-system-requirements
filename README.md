@@ -283,6 +283,15 @@ make test-all RULES=rules/libcurl.json
 make test-all
 ```
 
+The `rhel8`, `rhel9`, and `rhel10` variants register the container with Red
+Hat Subscription Management at test time, so `RH_ORG_ID` and
+`RH_ACTIVATION_KEY` must be exported in the environment before running
+`make test-rhel*` (or `make test-all`). Create an activation key in the
+[Red Hat customer portal](https://access.redhat.com/management/activation_keys).
+In CI, these are provided as repository secrets; when the secrets are not
+available (e.g. pull requests from forks), the `rhel*` variants are
+automatically excluded from the test matrix.
+
 ### Schema
 
 The JSON schema is defined in the file [`schema.json`](schema.json). Do not
