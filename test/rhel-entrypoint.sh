@@ -15,4 +15,4 @@ trap cleanup EXIT
 subscription-manager register --org="$RH_ORG_ID" --activationkey="$RH_ACTIVATION_KEY"
 dnf config-manager --set-disabled "*ubi*"
 
-exec /work/test/test-packages.sh
+bash -x  /work/test/test-packages.sh
