@@ -42,7 +42,7 @@
           {
             "os": "linux",
             "distribution": "redhat",
-            "version": "8"
+            "versions": ["8"]
           }
         ]
       },
@@ -57,7 +57,7 @@
           {
             "os": "linux",
             "distribution": "redhat",
-            "version": "9"
+            "versions": ["9"]
           }
         ]
       },
@@ -72,7 +72,7 @@
           {
             "os": "linux",
             "distribution": "redhat",
-            "version": "10"
+            "versions": ["10"]
           }
         ]
       },
