@@ -19,10 +19,6 @@
         "constraints": [
           {
             "os": "linux",
-            "distribution": "redhat"
-          },
-          {
-            "os": "linux",
             "distribution": "fedora"
           },
           {
@@ -32,6 +28,51 @@
           {
             "os": "linux",
             "distribution": "sle"
+          }
+        ]
+      },
+      {
+        "packages": ["blosc-devel"],
+        "pre_install": [
+          {
+            "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "version": "8"
+          }
+        ]
+      },
+      {
+        "packages": ["blosc-devel"],
+        "pre_install": [
+          {
+            "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "version": "9"
+          }
+        ]
+      },
+      {
+        "packages": ["blosc-devel"],
+        "pre_install": [
+          {
+            "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm"
+          }
+        ],
+        "constraints": [
+          {
+            "os": "linux",
+            "distribution": "redhat",
+            "version": "10"
           }
         ]
       },
