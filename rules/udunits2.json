@@ -129,6 +129,23 @@
       ]
     },
     {
+      "packages": ["udunits2-devel"],
+      "pre_install": [
+        {
+          "command": "zypper repos --uri 2>/dev/null | grep -q 'devel:languages:R:released' || zypper --non-interactive --gpg-auto-import-keys addrepo https://download.opensuse.org/repositories/devel:languages:R:released/15.6/devel:languages:R:released.repo"
+        },
+        {
+          "command": "zypper --non-interactive --gpg-auto-import-keys refresh"
+        }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    },
+    {
       "packages": ["udunits-dev"],
       "pre_install": [
         {
