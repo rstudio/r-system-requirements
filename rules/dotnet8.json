@@ -20,6 +20,21 @@
           "versions": ["8", "9", "10"]
         }
       ]
+    },
+    {
+      "pre_install": [
+        { "command": "apt-get install -y software-properties-common" },
+        { "command": "add-apt-repository -y ppa:dotnet/backports" },
+        { "command": "apt-get update" }
+      ],
+      "packages": ["dotnet-runtime-8.0"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu",
+          "versions": ["26.04"]
+        }
+      ]
     }
   ]
 }
