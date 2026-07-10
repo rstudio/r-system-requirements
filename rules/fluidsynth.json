@@ -47,44 +47,14 @@
       "packages": ["fluidsynth-devel"],
       "pre_install": [
         {
-          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm"
         }
       ],
       "constraints": [
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["8"]
-        }
-      ]
-    },
-    {
-      "packages": ["fluidsynth-devel"],
-      "pre_install": [
-        {
-          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
-        }
-      ],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "redhat",
-          "versions": ["9"]
-        }
-      ]
-    },
-    {
-      "packages": ["fluidsynth-devel"],
-      "pre_install": [
-        {
-          "command": "rpm -q epel-release || yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm"
-        }
-      ],
-      "constraints": [
-        {
-          "os": "linux",
-          "distribution": "redhat",
-          "versions": ["10"]
+          "versions": ["8", "9", "10"]
         }
       ]
     },
