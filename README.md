@@ -200,6 +200,13 @@ A typical workflow for adding a new rule consists of:
    # openSUSE/SLE
    zypper search <package-name>
    ```
+
+   Only add a third-party repository via `pre_install` when a package isn't in
+   the base OS repos and the source is trusted; prefer official/base repos for
+   security and compatibility. For example, openSUSE's `udunits2` comes from the
+   `devel:languages:R:released` OBS project, accepted only because that's where
+   openSUSE's R itself is published. Make repo-adds idempotent so re-running is a
+   no-op.
 3. Add the new rule as a <code><i>rule-name</i>.json</code> file in the `rules` directory.
 4. Run the schema tests and (optionally) the system package tests locally.
 5. Submit a pull request.
