@@ -56,6 +56,26 @@ jobs:
           driver: docker
           install: true
 
+      - name: Restore RHEL DNF cache
+        if: startsWith(matrix.variant, 'rhel')
+        uses: actions/cache@v4
+        with:
+          path: .cache/dnf-${{ matrix.variant }}
+          key: dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant)) }}-${{ github.run_id }}
+          restore-keys: |
+            dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant)) }}-
+            dnf-${{ matrix.variant }}-
+
+      - name: Restore Rocky Linux DNF cache
+        if: startsWith(matrix.variant, 'rockylinux')
+        uses: actions/cache@v4
+        with:
+          path: .cache/dnf-${{ matrix.variant }}
+          key: dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant), 'test/rocky-dnf.conf') }}-${{ github.run_id }}
+          restore-keys: |
+            dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant), 'test/rocky-dnf.conf') }}-
+            dnf-${{ matrix.variant }}-
+
       - name: Build image(s)
         run: |
           make build-all
