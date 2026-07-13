@@ -141,7 +141,8 @@
       "constraints": [
         {
           "os": "linux",
-          "distribution": "opensuse"
+          "distribution": "opensuse",
+          "versions": ["15.6"]
         }
       ]
     },
