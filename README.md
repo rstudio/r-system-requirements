@@ -48,8 +48,8 @@ The rules in this catalog support the following operating systems:
 
 - Ubuntu 22.04, 24.04, 26.04
 - CentOS 7
-- Rocky Linux 8[^1], 9
-- Red Hat Enterprise Linux 7, 8, 9
+- Rocky Linux 8[^1], 9, 10
+- Red Hat Enterprise Linux 7, 8, 9, 10
 - openSUSE 15.6
 - SUSE Linux Enterprise 15 SP6
 - Debian 13, unstable
@@ -256,6 +256,10 @@ Available tags:
 - `centos7` (CentOS 7)
 - `centos8` (Rocky Linux 8)
 - `rockylinux9` (Rocky Linux 9)
+- `rockylinux10` (Rocky Linux 10)
+- `rhel8` (Red Hat Enterprise Linux 8)
+- `rhel9` (Red Hat Enterprise Linux 9)
+- `rhel10` (Red Hat Enterprise Linux 10)
 - `opensuse156` (openSUSE 15.6)
 - `fedora41` (Fedora 41)
 - `alpine-3.21` (Alpine 3.21)
@@ -285,6 +289,16 @@ make test-all RULES=rules/libcurl.json
 # Test all rules on all OSs
 make test-all
 ```
+
+The `rhel8`, `rhel9`, and `rhel10` variants register the container with Red
+Hat Subscription Management at test time, so `RH_ORG_ID` and
+`RH_ACTIVATION_KEY` must be exported in the environment before running
+`make test-rhel*` (or `make test-all`). Create an activation key in the
+[Red Hat customer portal](https://access.redhat.com/management/activation_keys).
+
+In CI, these are provided as repository secrets; when the secrets are not
+available (e.g. pull requests from forks), the `rhel*` variants are
+automatically excluded from the test matrix.
 
 ### Schema
 
