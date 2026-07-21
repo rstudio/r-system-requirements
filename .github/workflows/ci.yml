@@ -58,7 +58,7 @@ jobs:
 
       - name: Restore RHEL DNF cache
         if: startsWith(matrix.variant, 'rhel')
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .cache/dnf-${{ matrix.variant }}
           key: dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant)) }}-${{ github.run_id }}
@@ -68,7 +68,7 @@ jobs:
 
       - name: Restore Rocky Linux DNF cache
         if: startsWith(matrix.variant, 'rockylinux')
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .cache/dnf-${{ matrix.variant }}
           key: dnf-${{ matrix.variant }}-${{ hashFiles(format('docker/{0}/Dockerfile', matrix.variant), 'test/rocky-dnf.conf') }}-${{ github.run_id }}
