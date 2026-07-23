@@ -60,7 +60,7 @@
       ]
     },
     {
-      "packages": ["opencv-devel"],
+      "packages": ["opencv-devel", "opencv"],
       "pre_install": [
         { "command": "dnf install -y dnf-plugins-core" },
         { "command": "dnf config-manager --set-enabled powertools" }
@@ -83,12 +83,26 @@
         { "command": "subscription-manager repos --enable codeready-builder-for-rhel-$(rpm -E %rhel)-$(arch)-rpms" },
         { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm" }
       ],
+      "packages": ["opencv-devel", "opencv"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "redhat",
+          "versions": ["8"]
+        }
+      ]
+    },
+    {
+      "pre_install": [
+        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-$(rpm -E %rhel)-$(arch)-rpms" },
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm" }
+      ],
       "packages": ["opencv-devel"],
       "constraints": [
         {
           "os": "linux",
           "distribution": "redhat",
-          "versions": ["8", "9"]
+          "versions": ["9"]
         }
       ]
     },
