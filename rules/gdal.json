@@ -135,10 +135,9 @@
       ]
     },
     {
-      "packages": ["gdal-devel", "gdal"],
+      "packages": ["gdal3.4-devel", "gdal3.4"],
       "pre_install": [
-        { "command": "dnf install -y dnf-plugins-core" },
-        { "command": "dnf config-manager --set-enabled crb" }
+        { "command": "dnf install -y epel-release" }
       ],
       "constraints": [
         {
@@ -149,9 +148,9 @@
       ]
     },
     {
-      "packages": ["gdal-devel", "gdal"],
+      "packages": ["gdal3.4-devel", "gdal3.4"],
       "pre_install": [
-        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms" }
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm" }
       ],
       "constraints": [
         {
@@ -162,9 +161,9 @@
       ]
     },
     {
-      "packages": ["gdal-devel", "gdal"],
+      "packages": ["gdal3.4-devel", "gdal3.4"],
       "pre_install": [
-        { "command": "subscription-manager repos --enable codeready-builder-for-rhel-10-$(arch)-rpms" }
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm" }
       ],
       "constraints": [
         {
