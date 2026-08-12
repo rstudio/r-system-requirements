@@ -15,7 +15,14 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": [ "packages" ],
+        "anyOf": [
+          {
+            "required": [ "packages" ]
+          },
+          {
+            "required": [ "build" ]
+          }
+        ],
         "properties": {
           "pre_install": {
             "type": "array",
@@ -66,6 +73,28 @@
             "items": {
               "type": "string",
               "minLength": 1
+            }
+          },
+          "build": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "required": [ "command" ]
+                },
+                {
+                  "required": [ "script" ]
+                }
+              ],
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "script": {
+                  "type": "string"
+                }
+              }
             }
           },
           "apt_satisfy": {

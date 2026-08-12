@@ -74,6 +74,32 @@
               "minLength": 1
             }
           },
+          "build": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "script": {
+                  "type": "string"
+                }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "command"
+                  ]
+                },
+                {
+                  "required": [
+                    "script"
+                  ]
+                }
+              ]
+            }
+          },
           "apt_satisfy": {
             "type": "array",
             "items": {
@@ -121,8 +147,17 @@
             }
           }
         },
-        "required": [
-          "packages"
+        "anyOf": [
+          {
+            "required": [
+              "packages"
+            ]
+          },
+          {
+            "required": [
+              "build"
+            ]
+          }
         ],
         "additionalProperties": false
       }

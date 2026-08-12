@@ -13,6 +13,25 @@
           "distribution": "debian"
         }
       ]
+    },
+    {
+      "pre_install": [
+        { "command": "dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm" },
+        { "command": "dnf install -y gcc gcc-c++ gcc-gfortran make curl tar flexiblas-devel" }
+      ],
+      "build": [
+        { "script": "jags.sh" }
+      ],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "rockylinux"
+        },
+        {
+          "os": "linux",
+          "distribution": "redhat"
+        }
+      ]
     }
   ]
 }

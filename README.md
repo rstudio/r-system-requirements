@@ -105,6 +105,7 @@ Other examples:
 - OS version constraints (package names vary by OS version): [`libmysqlclient.json`](rules/libmysqlclient.json)
 - Pre-install steps (adding the EPEL repo on CentOS/RHEL): [`gdal.json`](rules/gdal.json)
 - Post-install steps (reconfiguring R for Java): [`java.json`](rules/java.json)
+- Build-from-source steps, no package manager involved: see [`build`](#prepost-install-actions) below.
 
 ### JSON Fields
 
@@ -114,6 +115,12 @@ Other examples:
   "dependencies": [
     {
       "packages": [...],
+      "build": [
+        {
+          "command": ...,
+          "script": ...
+        }
+      ],
       "constraints": [
         {
           "os": ...,
@@ -150,9 +157,12 @@ Other examples:
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | `packages` | Array | Packages installed through the default system package manager (e.g. apt, yum, zypper). Examples: `["libxml2-dev"]`, `["tcl", "tk"]` |
+| `build` | Array | Optional commands or scripts to compile/install software from source instead of (or in addition to) `packages`. See [pre/post-install actions](#prepost-install-actions). At least one of `packages` or `build` is required. |
 | `constraints` | Array | One or more operating system constraints. See [constraints](#constraints). |
 | `pre_install` | Array | Optional commands or scripts to run before installing packages (e.g. adding a third-party repository). See [pre/post-install actions](#prepost-install-actions).
 | `post_install` | Array | Optional commands or scripts to run after installing packages (e.g. cleaning up). See [pre/post-install actions](#prepost-install-actions).
+
+Ordering when both are present: `pre_install` → `packages` → `build` → `post_install`.
 
 #### Constraints
 
@@ -164,13 +174,20 @@ Other examples:
 
 #### Pre/post-install actions
 
-Pre-install and post-install actions can be specified as either a `command` or
-`script`. Commands are preferred unless there's complicated logic involved.
+Pre-install, post-install, and build actions can be specified as either a
+`command` or `script`. Commands are preferred unless there's complicated
+logic involved.
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | `command` | String | A shell command. Example: `"dnf install -y epel-release"` |
 | `script` | String | A shell script found in the [`scripts`](scripts) directory. Example: `"centos_epel.sh"` |
+
+> [!NOTE]
+> `build` uses this catalog's schema and CI validation, but the downstream
+> consumers of this data (Posit Package Manager and [`pak`](https://pak.r-lib.org/))
+> must also implement support for it before it has any effect on real
+> installs. Check there before relying on `build` in a published rule.
 
 ### Adding a rule
 

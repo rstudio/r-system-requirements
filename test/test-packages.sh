@@ -152,12 +152,13 @@ find_dependencies() {
 }
 
 run_extra_cmd() {
-    # Run pre/post-install commands quietly on success, verbose on failure:
+    # Run pre/post-install/build commands quietly on success, verbose on failure:
     # capture combined stdout+stderr and only replay it if the command fails.
     # Keeps CI logs terse for the golden path while preserving debug context.
+    label=${2:-pre/post-install}
     command=$(jq -r ".command // empty" <<< "$1")
     if [[ ! -z "$command" ]]; then
-        echo "pre/post-install | $command"
+        echo "$label | $command"
         if ! output=$(bash -c "$command" 2>&1); then
             echo "$output" >&2
             return 1
@@ -168,7 +169,7 @@ run_extra_cmd() {
     if [[ ! -z "$script" ]]; then
         script_file="$DIR/../scripts/$script"
         chmod +x "$script_file"
-        echo "pre/post-install | $script"
+        echo "$label | $script"
         if ! output=$(bash -c "$script_file" 2>&1); then
             echo "$output" >&2
             return 1
@@ -189,7 +190,8 @@ test_packages() {
         jq -c ".[]" <<< "$deps" | while read dep; do
             # Run any pre-install commands (e.g. adding a repo)
             pre_install_cmds=$(echo "$dep" | jq ".pre_install[]?")
-            pkgs=$(echo "$dep" | jq -r ".packages[]")
+            pkgs=$(echo "$dep" | jq -r ".packages[]?")
+            build_cmds=$(echo "$dep" | jq ".build[]?")
             sats=$(echo "$dep" | jq -r ".apt_satisfy[]?")
             jq -c <<< "$pre_install_cmds" | while read cmd; do
                 run_extra_cmd "$cmd"
@@ -197,6 +199,10 @@ test_packages() {
             # Test that all packages are valid
             for pkg in $pkgs; do
                 $test_package $pkg
+            done
+            # Run any build-from-source steps in place of / in addition to packages
+            jq -c <<< "$build_cmds" | while read cmd; do
+                run_extra_cmd "$cmd" "build"
             done
             if [ ! -z "$sats" ]; then
                 echo "$sats" | while read sat; do
