@@ -3,11 +3,20 @@
   "dependencies": [
     {
       "pre_install": [
-        { "command": "apt-get install -y software-properties-common" },
-        { "command": "add-apt-repository -y ppa:xtradeb/apps" },
-        { "command": "apt-get update" }
+        {
+          "command": "[ $(which google-chrome) ] || [ $(which chromium) ] || apt-get install -y software-properties-common"
+        },
+        {
+          "command": "[ $(which google-chrome) ] || [ $(which chromium) ] || add-apt-repository -y ppa:xtradeb/apps"
+        },
+        {
+          "command": "[ $(which google-chrome) ] || [ $(which chromium) ] || apt-get update"
+        },
+        {
+          "command": "[ $(which google-chrome) ] || [ $(which chromium) ] || DEBIAN_FRONTEND='noninteractive' apt-get install -y chromium"
+        }
       ],
-      "packages": ["chromium"],
+      "packages": [],
       "post_install": [],
       "constraints": [
         {

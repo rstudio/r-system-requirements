@@ -156,6 +156,12 @@ run_extra_cmd() {
     # capture combined stdout+stderr and only replay it if the command fails.
     # Keeps CI logs terse for the golden path while preserving debug context.
     command=$(jq -r ".command // empty" <<< "$1")
+    # Simulate apt installs: checks that packages resolve without downloading
+    # them (e.g. chromium from a PPA). software-properties-common is installed
+    # for real because add-apt-repository needs it.
+    if [[ ("$DIST" == "ubuntu" || "$DIST" == "debian") && "$command" != *software-properties-common* ]]; then
+        command=${command//apt-get install/apt-get install -s}
+    fi
     if [[ ! -z "$command" ]]; then
         echo "pre/post-install | $command"
         if ! output=$(bash -c "$command" 2>&1); then
