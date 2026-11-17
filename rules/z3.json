@@ -1,0 +1,40 @@
+{
+  "patterns": ["\\bz3\\b"],
+  "dependencies": [
+    {
+      "packages": ["libz3-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "ubuntu"
+        },
+        {
+          "os": "linux",
+          "distribution": "debian"
+        }
+      ]
+    },
+    {
+      "packages": ["z3-devel"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "fedora"
+        },
+        {
+          "os": "linux",
+          "distribution": "opensuse"
+        }
+      ]
+    },
+    {
+      "packages": ["z3-dev"],
+      "constraints": [
+        {
+          "os": "linux",
+          "distribution": "alpine"
+        }
+      ]
+    }
+  ]
+}
